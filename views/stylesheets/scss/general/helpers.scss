@@ -1,0 +1,96 @@
+
+.ir {
+  background-repeat: no-repeat;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.ie6 legend, .ie7 legend {
+  margin-left: -7px;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+.ie_hand {
+  cursor: url(/images/cursors/openhand.cur), default !important;
+}
+
+.ie_hand_grab {
+  cursor: url(/images/cursors/closedhand.cur), default !important;
+}
+
+.sherpa-box {
+  background-color: $sherpa_bg;
+  text-align: $sherpa_align;
+  color: $sherpa_color;
+}
+
+#no_js_warning {
+  display: none;
+}
+.no-js #no_js_warning {
+  background-color: rgba(0, 0, 0, .9);
+  color: #CCC;
+  display: block;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  font-weight: bold;
+  p {
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+}
+

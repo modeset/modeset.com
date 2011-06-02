@@ -1,0 +1,130 @@
+
+body {
+  background: $body_bg;
+  color: $body_color;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $header_color;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 96px;
+}
+
+h2 {
+  border-top: $body_border;
+  padding-top: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 14px;
+  font-style: italic;
+}
+
+h1 a, h1 a:active, h1 a:visited,
+h2 a, h2 a:active, h2 a:visited,
+h3 a, h3 a:active, h3 a:visited,
+h4 a, h4 a:active, h4 a:visited,
+h5 a, h5 a:active, h5 a:visited,
+h6 a, h6 a:active, h6 a:visited {
+  color: $header_color;
+  text-decoration: none;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover,
+h4 a:hover, h5 a:hover, h6 a:hover {
+  color: $header_hover;
+}
+
+a, a:active, a:visited {
+  color: $body_link;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease-out;
+}
+
+a:hover {
+  color: $body_hover;
+  font-size: 14px;
+}
+
+a:link {
+  -webkit-tap-highlight-color: $tap_highlight;
+}
+
+pre, code {
+  background: $code_bg;
+  border: $body_border;
+  color: $code_color;
+}
+
+blockquote {
+  border-left: $body_border;
+  color: $block_color;
+}
+
+hr {
+  border-top: $body_border;
+}
+
+table th {
+  border-bottom: $th_border;
+}
+
+table td {
+  border-bottom: $td_border;
+}
+
+/* section specific styles */
+#header {
+  margin-top: 80px;
+  h1 {
+    color: $logo_h1;
+  }
+  h1 span {
+    color: $logo_span;
+  }
+}
+
+#footer {
+  background-color: #F3F3F3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F3F3F3), to(#FFFFFF));
+  background-image: -webkit-linear-gradient(top, #F3F3F3, #FFFFFF);
+  background-image:    -moz-linear-gradient(top, #F3F3F3, #FFFFFF);
+  background-image:     -ms-linear-gradient(top, #F3F3F3, #FFFFFF);
+  background-image:      -o-linear-gradient(top, #F3F3F3, #FFFFFF);
+  background-image:         linear-gradient(top, #F3F3F3, #FFFFFF);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F3F3F3', EndColorStr='#FFFFFF');
+  margin: 40px 0 20px 0;
+  padding-top: 20px;
+}
+
+#home .home,
+#services .services,
+#jobs .jobs,
+#contact .contact {
+  color: #000;
+  font-weight: bold;
+  cursor: default;
+}
+
