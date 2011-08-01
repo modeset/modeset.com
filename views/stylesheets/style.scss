@@ -1,0 +1,84 @@
+
+/* Load me some typefaces */
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Th';
+  src: url('/fonts/HelveticaNeueLTStd-Th.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Roman';
+  src: url('/fonts/HelveticaNeueLTStd-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Bd';
+  src: url('/fonts/HelveticaNeueLTStd-Bd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Hv';
+  src: url('/fonts/HelveticaNeueLTStd-Hv.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MrsEavesBold';
+  src: url('/fonts/MrsEavesBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* fonts */
+$sans_thin: "HelveticaNeueLTStd-Th", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$sans_norm: "HelveticaNeueLTStd-Roman", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$sans_bold: "HelveticaNeueLTStd-Bd", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$sans_thick: "HelveticaNeueLTStd-Hv", sans-serif;
+$serif_bold: "MrsEavesBold", serif;
+
+/* colors */
+$dkgrey: #434343;
+$grey: #5b5e5b;
+$mdgrey: #7d7e7c;
+$ltgrey: #9f9f9f;
+$blue: #0091ce;
+$ltblue: #7fddf1;
+$white: #fff;
+
+/* base.scss */
+$body_bg_color: $white;
+$body_bg: $white;
+$body_color: $mdgrey;
+
+$hr_color: #cfd0cf;
+$select_bg: $blue;
+$select_color: $body_bg_color;
+
+$link_static: $grey;
+$link_visited: $grey;
+$link_active: $grey;
+$link_hover: $blue;
+$link_highlight: $ltgrey;
+$util_highlight: $dkgrey;
+$tap_highlight: $blue;
+
+/* import the styles */
+@import 'scss/general/normalize';
+@import 'scss/general/mixins';
+@import 'scss/general/base';
+@import 'scss/general/typography';
+@import 'scss/general/elements';
+@import 'scss/general/forms.scss';
+@import 'scss/general/helpers';
+@import 'scss/layout/header';
+@import 'scss/layout/sections';
+@import 'scss/layout/footer';
+/* @import 'scss/general/media'; */
+/* @import 'scss/general/print'; */
+

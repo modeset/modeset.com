@@ -1,31 +1,31 @@
+
 !!! 5
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie ie9"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
+/[if lt IE 7] <html class="no-js ie6 oldie" lang="en">
+/[if IE 7] <html class="no-js ie7 oldie" lang="en">
+/[if IE 8] <html class="no-js ie8 oldie" lang="en">
+/ [if gt IE 8]><!
 %html.no-js{:lang => "en"}
-  <!--<![endif]-->
+  / <![endif]
   %head
-    %title bit theory. #{@page.nil? ? '' : @page.downcase}.
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bit Theory / #{@page.nil? ? '' : @page.split(/(\W)/).map(&:capitalize).join}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
-    %meta{:name => "imagetoolbar", :content => "no"}
-    %meta{:name => "description", :content => "Search Engine"}
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %meta{:name => "apple-touch-fullscreen", :content => "YES"}
-    %meta{:name => "apple-mobile-web-app-capable", :content => "YES"}
-    %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}
-    %link{:rel => "apple-touch-startup-image", :href => "/startup.png"}
-    %link{:rel => "stylesheet", :href => "/stylesheets/white.css", :type => "text/css"}
-    %script{:src => "/javascripts/modernizr-1.7.min.js", :type => "text/javascript"}
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta(name="description" content="A Software Development Consultancy")
+    %meta(name="author" content="Bit Theory")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta(name="imagetoolbar" content="no")
+    %meta(name="apple-touch-fullscreen" content="YES")
+    %meta(name="apple-mobile-web-app-capable" content="YES")
+    %meta(name="apple-mobile-web-app-status-bar-style" content="black")
+    %link(rel="stylesheet" href="/stylesheets/style.css" type="text/css")
+    -# %script(src="/javascripts/modernizr-2.0.min.js" type="text/javascript")
 
-  %body{:id => @page}
-    = haml(:"/layouts/header", :layout => false)
 
-    = yield
-
-    = haml(:"/layouts/footer", :layout => false)
-    = haml(:"/layouts/nojs", :layout => false)
-    = haml(:"/layouts/tail", :layout => false)
+  %body(id=@page)
+    .guider
+    #container
+      = haml(:"/layouts/header", :layout => false)
+      = yield
+      = haml(:"/layouts/footer", :layout => false)
+      -# = haml(:"/layouts/nojs", :layout => false)
 

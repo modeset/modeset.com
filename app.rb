@@ -1,3 +1,4 @@
+
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'haml'
@@ -25,11 +26,6 @@ module App
     get '/:name' do
       @page = params[:name]
       haml :"/#{@page}", :layout => :"/layouts/layout"
-    end
-
-    get '/sherpa/:name' do
-      @page = params[:name]
-      haml :"/sherpa/#{@page}", :layout => :"/layouts/layout"
     end
 
   end
