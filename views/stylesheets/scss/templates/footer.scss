@@ -12,7 +12,11 @@ footer {
 
   nav ul li {
     display: inline;
-    margin: 0 18px 0 0;
+    margin: 0 36px 0 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     a, a:visited {
       color: $mdgrey;
