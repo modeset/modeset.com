@@ -19,7 +19,6 @@ footer {
     }
 
     a:hover {
-      @include link_transition(0.25s);
       color: $link_hover;
     }
 

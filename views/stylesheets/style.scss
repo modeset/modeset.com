@@ -49,7 +49,9 @@ $mdgrey: #7d7e7c;
 $ltgrey: #9f9f9f;
 $blue: #0091ce;
 $ltblue: #7fddf1;
+$cyan: #00bce4;
 $white: #fff;
+$black: #000;
 
 /* base.scss */
 $body_bg_color: $white;
@@ -68,6 +70,9 @@ $link_highlight: $ltgrey;
 $util_highlight: $dkgrey;
 $tap_highlight: $blue;
 
+$p_link_static: $cyan;
+$p_link_hover: $dkgrey;
+
 /* import the styles */
 @import 'scss/general/normalize';
 @import 'scss/general/mixins';
@@ -76,9 +81,9 @@ $tap_highlight: $blue;
 @import 'scss/general/elements';
 @import 'scss/general/forms.scss';
 @import 'scss/general/helpers';
-@import 'scss/layout/header';
-@import 'scss/layout/sections';
-@import 'scss/layout/footer';
+@import 'scss/templates/header';
+@import 'scss/templates/sections';
+@import 'scss/templates/footer';
 /* @import 'scss/general/media'; */
 /* @import 'scss/general/print'; */
 
