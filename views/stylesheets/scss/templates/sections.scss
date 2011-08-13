@@ -78,3 +78,30 @@
   .col-last { width: 333px; }
 }
 
+/* Components
+ *****************************************************************************/
+
+article.event {
+  margin: 0 0 24px 2px;
+  display: inline-block;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.as-copy {
+  ul li {
+    font-size: 11px;
+    color: $mdgrey;
+    line-height: 16px;
+
+    a, a:visited, a:active {
+      color: $p_link_static;
+    }
+
+    a:hover {
+      color: $p_link_hover;
+    }
+  }
+}
