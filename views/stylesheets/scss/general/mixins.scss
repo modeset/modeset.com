@@ -1,25 +1,4 @@
 
-/* Helpers */
-@mixin top_gradient($color_top, $color_bottom) {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, $color_top), color-stop(0.7, $color_bottom));
-  background-image: -webkit-linear-gradient(top, $color_top, $color_bottom 30%);
-  background-image: -moz-linear-gradient(top, $color_top, $color_bottom 30%);
-  background-image: -ms-linear-gradient(top, $color_top, $color_bottom 30%);
-  background-image: -o-linear-gradient(top, $color_top, $color_bottom 30%);
-  background-image: linear-gradient(top, $color_top, $color_bottom 30%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$color_top, EndColorStr=$color_bottom);
-}
-
-@mixin body_gradient($color_top, $color_bottom) {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, $color_top), color-stop(0.85, $color_bottom));
-  background-image: -webkit-linear-gradient(top, $color_top, $color_bottom 15%);
-  background-image: -moz-linear-gradient(top, $color_top, $color_bottom 15%);
-  background-image: -ms-linear-gradient(top, $color_top, $color_bottom 15%);
-  background-image: -o-linear-gradient(top, $color_top, $color_bottom 15%);
-  background-image: linear-gradient(top, $color_top, $color_bottom 15%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$color_top, EndColorStr=$color_bottom);
-}
-
 @mixin link_transition($timing) {
   -webkit-transition: color $timing ease-out;
      -moz-transition: color $timing ease-out;
@@ -27,3 +6,4 @@
       -ms-transition: color $timing ease-out;
           transition: color $timing ease-out;
 }
+

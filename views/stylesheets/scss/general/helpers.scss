@@ -64,6 +64,18 @@
   margin-right: 0;
 }
 
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 .guider {
   background: transparent;
   outline: 1px dotted magenta;

@@ -44,6 +44,7 @@ hr {
  *****************************************************************************/
 
 a {
+  @include link_transition(0.25s);
   color: $link_static;
   text-decoration: none;
 }
@@ -58,12 +59,12 @@ a:focus {
 }
 
 a:hover, a:active {
+  @include link_transition(0.25s);
   outline: 0;
   text-decoration: none;
 }
 
 a:hover {
-  @include link_transition(0.25s);
   color: $link_hover;
 }
 

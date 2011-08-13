@@ -96,6 +96,14 @@ p {
   font-size: 11px;
   color: $mdgrey;
   line-height: 16px;
+
+  a, a:visited, a:active {
+    color: $p_link_static;
+  }
+
+  a:hover {
+    color: $p_link_hover;
+  }
 }
 
 address {
