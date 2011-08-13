@@ -8,7 +8,7 @@ header {
     font-size: 11px;
     font-family: $sans_bold;
     text-transform: uppercase;
-    margin: 46px 70px 0 0;
+    margin: 43px 70px 0 0;
     float: left;
   }
 
@@ -24,21 +24,16 @@ header {
     }
   }
 
+  .jib-jab {
+    margin: 0 0 2px 1px;
+    background-color: $cyan;
+    width: 10px;
+    height: 1px;
+  }
+
   img {
     margin: 22px 0 0 2px;
     float: right;
-  }
-
-  .logo {
-    float: right;
-    margin: 0;
-    img {
-      float: right;
-      display: block;
-      margin: 0;
-      width: 69px;
-      height: 50px;
-    }
   }
 }
 
