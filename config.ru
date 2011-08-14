@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler'
 Bundler.setup
-require 'app'
+require './app'
 
 run App::Application
