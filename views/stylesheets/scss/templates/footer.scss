@@ -12,11 +12,7 @@ footer {
 
   nav ul li {
     display: inline;
-    margin: 0 36px 0 0;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    margin: 0 24px 0 0;
 
     a, a:visited {
       color: $mdgrey;
@@ -26,7 +22,13 @@ footer {
       color: $link_hover;
     }
 
-  }
+    .img {
+      background: transparent url(/images/assets/011-jibjab-19x10.png) no-repeat top left;
+      float: right;
+      width: 19px;
+      height: 10px;
+    }
 
+  }
 }
 
