@@ -1,4 +1,14 @@
 
+/* Containers
+ *****************************************************************************/
+
+#container {
+  width: 992px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #fff url(/images/backgrounds/default.png) no-repeat top left;
+}
+
 #home #container {
   background: #fff url(/images/backgrounds/home.png) no-repeat top left;
 }
@@ -116,6 +126,24 @@ article {
     margin: 12px 0 0 2px;
     width: 64px;
     height: 47px;
+  }
+}
+
+#knowledge .content {
+  h2 {
+    margin-bottom: 0;
+  }
+
+  date {
+    color: $cyan;
+    display: block;
+    margin: 0 0 12px 2px;
+    font-size: 12px;
+    font-family: $serif_bold;
+  }
+
+  img {
+    margin: 0 0 0 2px;
   }
 }
 
