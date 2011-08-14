@@ -81,9 +81,11 @@ $p_link_hover: $dkgrey;
 @import 'scss/general/elements';
 @import 'scss/general/forms.scss';
 @import 'scss/general/helpers';
+@import 'scss/templates/containers';
 @import 'scss/templates/header';
 @import 'scss/templates/sections';
 @import 'scss/templates/footer';
+@import 'scss/templates/queries';
 /* @import 'scss/general/media'; */
 /* @import 'scss/general/print'; */
 
