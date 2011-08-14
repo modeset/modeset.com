@@ -44,6 +44,10 @@
   float: left;
   margin: 0 7px 22px 7px;
   overflow: hidden;
+
+  &.borderless {
+    border-top: 0;
+  }
 }
 
 .col-first {
