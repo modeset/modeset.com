@@ -20,13 +20,6 @@
   }
 }
 
-/* Pages
- *****************************************************************************/
-#home .content {
-  margin-top: 250px;
-  margin-bottom: 120px;
-}
-
 /* Grids
  *****************************************************************************/
 .row {
@@ -81,7 +74,7 @@
 /* Components
  *****************************************************************************/
 
-article.event {
+article {
   margin: 0 0 24px 2px;
   display: inline-block;
 
@@ -105,3 +98,25 @@ article.event {
     }
   }
 }
+
+.gravatar-small,
+.gravatar-small-bt {
+  width: 24px;
+  height: 24px
+}
+
+/* Pages
+ *****************************************************************************/
+#home .content {
+  margin-top: 250px;
+  margin-bottom: 120px;
+}
+
+#company .content {
+  img {
+    margin: 12px 0 0 2px;
+    width: 64px;
+    height: 47px;
+  }
+}
+
