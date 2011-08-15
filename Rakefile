@@ -2,6 +2,8 @@
 ROOT_DIR           = File.expand_path(File.dirname(__FILE__))
 PUBLIC_DIR         = File.join(ROOT_DIR, "public")
 
+# Helpers
+# -----------------------------------------------------------------------------
 def self.curl_and_save(routes, dirname)
   pages = curl(routes)
   save(pages, dirname)
@@ -24,7 +26,8 @@ def self.save(pages, dirname)
   end
 end
 
-
+# Tasks
+# -----------------------------------------------------------------------------
 namespace :markup do
   desc "Generate static markup files from their haml templates"
   task :statics do
