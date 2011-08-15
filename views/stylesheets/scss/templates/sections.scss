@@ -34,12 +34,12 @@ article {
 
 /* Pages
  *****************************************************************************/
-#home .content {
+#home #content {
   margin-top: 250px;
   margin-bottom: 120px;
 }
 
-#company .content {
+#company #content {
   img {
     margin: 12px 0 0 2px;
     width: 64px;
@@ -47,7 +47,7 @@ article {
   }
 }
 
-#knowledge .content {
+#knowledge #content {
   h2 {
     margin-bottom: 0;
   }

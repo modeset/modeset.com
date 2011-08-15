@@ -2,7 +2,7 @@
 /* iPad landscape */
 @media (min-device-width:1024px) and (max-width:960px),(min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
 
-  #home .content {
+  #home #content {
     margin-bottom: 84px;
   }
 
@@ -20,11 +20,11 @@
     @include background_size(760px, 368px)
   }
 
-  .content {
+  #content {
     margin-top: 116px;
   }
 
-  #home .content {
+  #home #content {
     margin-top: 176px;
     margin-bottom: 120px;
   }
@@ -73,11 +73,11 @@
     @include background_size(470px, 227px)
   }
 
-  .content {
+  #content {
     margin-top: 116px;
   }
 
-  #home .content {
+  #home #content {
     margin-top: 76px;
     margin-bottom: 20px;
   }
@@ -156,11 +156,11 @@
     @include background_size(310px, 150px)
   }
 
-  .content {
+  #content {
     margin-top: 116px;
   }
 
-  #home .content {
+  #home #content {
     margin-top: 76px;
     margin-bottom: 20px;
   }
