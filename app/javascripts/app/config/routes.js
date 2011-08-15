@@ -1,4 +1,5 @@
-// ## Context Router
+
+// ## Main Router
 // **File: router.js**
 
 // Main Application startup and central dispatch
@@ -7,24 +8,20 @@ bittheory.Router = Backbone.Router.extend({
 
   routes: {
     '': 'index',
-    ':id': 'area',
+    ':id': 'section',
   },
 
   initialize: function() {
-    _.bindAll(this, 'startup', 'addListeners', 'navigator')
+    _.bindAll(this, 'startup', 'addListeners', 'update')
     this.startup()
-    // var loader = new exhibit.JsonService(data_url, this.startup)
   },
 
-  startup: function(response) {
-    // var data = response
+  startup: function() {
     this.templates = bittheory.util.mapTemplates('#templates')
-
-    this.header_view = new bittheory.HeaderView({model: null, template: null})
-    this.section_view = new bittheory.SectionView({model: null, template: null})
+    this.document_view = new bittheory.DocumentView()
+    this.section_view = new bittheory.SectionView()
 
     this.addListeners()
-    // console.log(this.templates)
   },
 
   index: function(route) {
@@ -32,24 +29,26 @@ bittheory.Router = Backbone.Router.extend({
     this.render(path)
   },
 
-  area: function(route) {
+  section: function(route) {
     this.render(route)
   },
 
   render: function(route) {
     var tmpl = route + '_template'
+    this.document_view.render(route)
     this.section_view.render(this.templates[tmpl])
   },
 
-  navigator: function(e) {
+  update: function(e) {
     this.navigate(e.target.pathname.substr(1), true)
   },
 
   addListeners: function() {
-    this.header_view.bind('navigate:click', this.navigator)
+    this.document_view.bind('internal:click', this.update)
   },
 
   removeListeners: function() {
+    this.document_view.unbind('internal:click', this.update)
   },
 
   dispose: function() {
@@ -59,6 +58,7 @@ bittheory.Router = Backbone.Router.extend({
 })
 
 
+// ## Melt faces
 $(document).ready(function() {
   bittheory.app = new bittheory.Router()
   Backbone.history.start({pushState: true, silent: true})

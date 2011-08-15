@@ -4,7 +4,7 @@
 
 // Applications primary namespace
 var bittheory = {
-  VERSION: '0.0.1'
+  VERSION: '0.1.0'
 }
 
 // ### Various Utility functions that probably should have a home
@@ -16,7 +16,7 @@ bittheory.util = {
     var kids = node.children()
     var templates = {}
 
-    // store the id (key) and converted template (value)
+    // store the id (key) and html string (value)
     _.each(kids, function(kid) {
       templates[kid.id] = $(kid).html()
     })

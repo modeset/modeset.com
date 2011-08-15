@@ -24,9 +24,7 @@ libs:
 
 app:
 	cat $(JS_APP_DIR)/config/namespace.js > $(JS_OUTPUT_DIR)/app.js
-	# cat $(JS_APP_DIR)/services/json_service.js >> $(JS_OUTPUT_DIR)/app.js
-	# cat $(JS_APP_DIR)/model.js >> $(JS_OUTPUT_DIR)/app.js
-	cat $(JS_APP_DIR)/views/header_view.js >> $(JS_OUTPUT_DIR)/app.js
+	cat $(JS_APP_DIR)/views/document_view.js >> $(JS_OUTPUT_DIR)/app.js
 	cat $(JS_APP_DIR)/views/section_view.js >> $(JS_OUTPUT_DIR)/app.js
 	cat $(JS_APP_DIR)/config/routes.js >> $(JS_OUTPUT_DIR)/app.js
 
