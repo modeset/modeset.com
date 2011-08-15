@@ -1,0 +1,30 @@
+
+// ## Global Namespace and Utility functions
+// **File: namespace.js**
+
+// Applications primary namespace
+var bittheory = {
+  VERSION: '0.0.1'
+}
+
+// ### Various Utility functions that probably should have a home
+bittheory.util = {
+
+  // map each template to their id's
+  mapTemplates: function(el) {
+    var node = $(el)
+    var kids = node.children()
+    var templates = {}
+
+    // store the id (key) and converted template (value)
+    _.each(kids, function(kid) {
+      templates[kid.id] = $(kid).html()
+    })
+
+    // blow it out of the html
+    node.remove()
+    return templates
+  }
+
+}
+
