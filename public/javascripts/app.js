@@ -85,7 +85,6 @@ bittheory.SectionView = Backbone.View.extend({
 
 
   initialize: function() {
-    console.log(this.el)
   },
 
   render: function(content) {
@@ -126,7 +125,7 @@ bittheory.Router = Backbone.Router.extend({
     this.section_view = new bittheory.SectionView({model: null, template: null})
 
     this.addListeners()
-    console.log(this.templates)
+    // console.log(this.templates)
   },
 
   index: function(route) {
@@ -152,7 +151,6 @@ bittheory.Router = Backbone.Router.extend({
   },
 
   removeListeners: function() {
-    $(window).unbind('resize', this.resize)
   },
 
   dispose: function() {

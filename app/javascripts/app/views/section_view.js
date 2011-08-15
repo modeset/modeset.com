@@ -4,7 +4,6 @@ bittheory.SectionView = Backbone.View.extend({
 
 
   initialize: function() {
-    console.log(this.el)
   },
 
   render: function(content) {
