@@ -2,6 +2,8 @@
 ROOT_DIR           = File.expand_path(File.dirname(__FILE__))
 PUBLIC_DIR         = File.join(ROOT_DIR, "public")
 
+IMAGES_DIR         = File.join(PUBLIC_DIR, "images")
+
 JS_SOURCE_DIR      = File.join(ROOT_DIR, "app/javascripts")
 JS_APP_DIR         = File.join(JS_SOURCE_DIR, "app")
 JS_LIB_DIR         = File.join(JS_SOURCE_DIR, "libs")
@@ -14,6 +16,11 @@ JS_FILES           = ["#{JS_LIB_DIR}/underscore.js",
                       "#{JS_APP_DIR}/views/navigation_view.js",
                       "#{JS_APP_DIR}/views/section_view.js",
                       "#{JS_APP_DIR}/config/routes.js"]
+
+DEPS_DIR           = File.join(ROOT_DIR, "deps")
+PNG_TOOLS          = File.join(DEPS_DIR, "pngtools")
+JPEG_TOOLS         = File.join(DEPS_DIR, "jpegtools")
+GIF_TOOLS          = File.join(DEPS_DIR, "giftools")
 
 # Helpers
 # -----------------------------------------------------------------------------
@@ -50,6 +57,24 @@ def self.concatenate(files, output)
 end
 
 
+def self.compress(dirname)
+  puts("Compressing images in #{dirname}")
+  Dir["#{dirname}/**/*.{png,jpeg,jpg,gif}"].each do |file|
+    if File.extname(file) == ".png" && File.basename(file) != "content-box.png"
+      system "#{PNG_TOOLS}/optipng -o7 -q #{file}"
+      system "#{PNG_TOOLS}/advpng -z -4 -q  #{file}"
+      system "#{PNG_TOOLS}/pngout -q #{file}"
+    end
+    if File.extname(file) == ".jpg" or File.extname(file) ==  ".jpeg"
+      system "#{JPEG_TOOLS}/jpegoptim --strip-all -q #{file}"
+    end
+    if File.extname(file) ==  ".gif"
+      system "#{GIF_TOOLS}/gifsicle --batch #{file}"
+    end
+    puts "Compressed #{file}"
+  end
+end
+
 # Tasks
 # -----------------------------------------------------------------------------
 task :default => ["deploy:prep"]
@@ -73,6 +98,13 @@ namespace :js do
   desc "Uglify the concatenated app.js"
   task :uglify do
     system "uglifyjs --overwrite #{JS_OUTPUT_DIR}/app.js"
+  end
+end
+
+namespace :images do
+  desc "Compress the images"
+  task :compress do
+    compress(IMAGES_DIR)
   end
 end
 
