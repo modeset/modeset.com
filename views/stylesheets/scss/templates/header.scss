@@ -25,10 +25,15 @@ header {
   }
 
   .jib-jab {
-    margin: 0 0 2px 1px;
+    @include size_transition(width, 0.15s);
     background-color: $cyan;
-    width: 10px;
+    margin: 0 0 2px 1px;
     height: 1px;
+    width: 0px;
+  }
+  .active, .over {
+    @include size_transition(width, 0.15s);
+    width: 10px;
   }
 
   img {

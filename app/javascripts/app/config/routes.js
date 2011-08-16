@@ -19,6 +19,7 @@ bittheory.Router = Backbone.Router.extend({
   startup: function() {
     this.templates = bittheory.util.mapTemplates('#templates')
     this.document_view = new bittheory.DocumentView()
+    this.navigation_view = new bittheory.NavigationView()
     this.section_view = new bittheory.SectionView()
 
     this.addListeners()
@@ -36,6 +37,7 @@ bittheory.Router = Backbone.Router.extend({
   render: function(route) {
     var tmpl = route + '_template'
     this.document_view.render(route)
+    this.navigation_view.render(route)
     this.section_view.render(this.templates[tmpl])
   },
 
@@ -61,6 +63,6 @@ bittheory.Router = Backbone.Router.extend({
 // ## Melt faces
 $(document).ready(function() {
   bittheory.app = new bittheory.Router()
-  Backbone.history.start({pushState: true, silent: true})
+  Backbone.history.start({pushState: true})
 })
 

@@ -15,3 +15,11 @@
 
 }
 
+@mixin size_transition($property, $timing) {
+  -webkit-transition: $property $timing ease-out;
+     -moz-transition: $property $timing ease-out;
+      -ms-transition: $property $timing ease-out;
+       -o-transition: $property $timing ease-out;
+          transition: $property $timing ease-out;
+}
+
