@@ -38,6 +38,7 @@ bittheory.Router = Backbone.Router.extend({
     var tmpl = route + '_template'
     this.document_view.render(route)
     this.section_view.render(this.templates[tmpl])
+    _gaq.push(['_trackPageview', route])
   },
 
   update: function(e) {
