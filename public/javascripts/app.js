@@ -108,12 +108,6 @@ bittheory.NavigationView = Backbone.View.extend({
   },
 
   render: function(route) {
-    this.jibs.removeClass('active')
-    var link = this.el.find('.' + route)[0]
-
-    if (link) {
-      this.getJib(link).addClass('active')
-    }
     return this
   },
 
@@ -178,7 +172,6 @@ bittheory.Router = Backbone.Router.extend({
   render: function(route) {
     var tmpl = route + '_template'
     this.document_view.render(route)
-    this.navigation_view.render(route)
     this.section_view.render(this.templates[tmpl])
   },
 
@@ -204,6 +197,6 @@ bittheory.Router = Backbone.Router.extend({
 // ## Melt faces
 $(document).ready(function() {
   bittheory.app = new bittheory.Router()
-  Backbone.history.start({pushState: true})
+  Backbone.history.start({pushState: true, silent: true})
 })
 

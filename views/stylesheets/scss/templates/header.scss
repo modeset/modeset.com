@@ -52,9 +52,14 @@ header {
 #community .community,
 #company .company,
 #contact .contact {
-  font-family: $sans_bold;
-  color: $link_highlight;
-  cursor: default;
+  a {
+    font-family: $sans_bold;
+    color: $link_highlight;
+    cursor: default;
+  }
+  .jib-jab {
+    width: 10px;
+  }
 }
 
 #careers .careers {

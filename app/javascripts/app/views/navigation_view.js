@@ -33,12 +33,6 @@ bittheory.NavigationView = Backbone.View.extend({
   },
 
   render: function(route) {
-    this.jibs.removeClass('active')
-    var link = this.el.find('.' + route)[0]
-
-    if (link) {
-      this.getJib(link).addClass('active')
-    }
     return this
   },
 
