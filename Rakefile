@@ -66,7 +66,7 @@ end
 
 namespace :js do
   desc "Concatenate the javascripts into a single file"
-  task :concate do
+  task :concat do
     concatenate(JS_FILES, "#{JS_OUTPUT_DIR}/app.js")
   end
 
@@ -78,7 +78,7 @@ end
 
 namespace :deploy do
   desc "Run the tasks before running a deployment"
-  task :prep => ["markup:statics","js:concate", "js:uglify"]
+  task :prep => ["markup:statics","js:concat", "js:uglify"]
 
   desc "Deploy app to heroku's staging branch"
   task :staging  do
