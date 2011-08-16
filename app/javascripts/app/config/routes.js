@@ -63,5 +63,6 @@ bittheory.Router = Backbone.Router.extend({
 $(document).ready(function() {
   bittheory.app = new bittheory.Router()
   Backbone.history.start({pushState: true, silent: true})
+  window.scrollTo(0, 1)
 })
 
