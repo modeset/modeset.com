@@ -1,4 +1,32 @@
 
+/* Pages
+ *****************************************************************************/
+#company #content {
+  img {
+    margin: 12px 0 0 2px;
+    width: 64px;
+    height: 47px;
+  }
+}
+
+#knowledge #content {
+  h2 {
+    margin-bottom: 0;
+  }
+
+  date {
+    color: $cyan;
+    display: block;
+    margin: 0 0 12px 2px;
+    font-size: 12px;
+    font-family: $serif_bold;
+  }
+
+  img {
+    margin: 0 0 0 2px;
+  }
+}
+
 /* Components
  *****************************************************************************/
 
@@ -37,36 +65,9 @@ article {
   }
 }
 
-.gravatar-small {
+img.gravatar-small {
   width: 24px;
-  height: 24px
-}
-
-/* Pages
- *****************************************************************************/
-#company #content {
-  img {
-    margin: 12px 0 0 2px;
-    width: 64px;
-    height: 47px;
-  }
-}
-
-#knowledge #content {
-  h2 {
-    margin-bottom: 0;
-  }
-
-  date {
-    color: $cyan;
-    display: block;
-    margin: 0 0 12px 2px;
-    font-size: 12px;
-    font-family: $serif_bold;
-  }
-
-  img {
-    margin: 0 0 0 2px;
-  }
+  height: 24px;
+  vertical-align: top;
 }
 

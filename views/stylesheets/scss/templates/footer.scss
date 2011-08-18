@@ -6,8 +6,8 @@ footer {
   text-transform: uppercase;
 
   nav ul {
-    margin: 8px auto 0;
-    text-align: center;
+    margin: 8px 0 0;
+    /* text-align: center; */
   }
 
   nav ul li {
@@ -24,7 +24,7 @@ footer {
 
     .img {
       background: #fff url(/images/assets/011-jibjab-19x10.png) no-repeat top left;
-      margin-left: 11px;
+      margin: 1px 15px 0 11px;
       float: left;
       width: 19px;
       height: 10px;
