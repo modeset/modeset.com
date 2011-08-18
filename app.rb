@@ -16,7 +16,7 @@ module App
       register Sinatra::Reloader
     end
 
-    configure :staging, :production do
+    configure do
 
       set :cache, Dalli::Client.new
       set :raise_errors, Proc.new { false }
