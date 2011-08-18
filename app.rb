@@ -19,6 +19,8 @@ module App
     configure :staging, :production do
 
       set :cache, Dalli::Client.new
+      set :raise_errors, Proc.new { false }
+      set :show_exceptions, false
 
       use Rack::Cache,
         :verbose      => true,
@@ -43,6 +45,15 @@ module App
     get '/:name' do
       @page = params[:name]
       haml :"/#{@page}", :layout => :"/layouts/layout"
+    end
+
+    error do
+      case env['sinatra.error']
+      when Errno::ENOENT
+        haml :'404', :layout => :'/layouts/layout'
+      else
+        File.read(File.join('public', '500.html'))
+      end
     end
 
   end
