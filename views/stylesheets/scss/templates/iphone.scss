@@ -1,0 +1,298 @@
+
+/* iPhone landscape */
+@media (min-device-width:1024px) and (max-width:747px),(max-device-width:480px) and (orientation:landscape) {
+
+  /* containers */
+  #container, #top_smoke, #content {
+    width: 470px;
+  }
+
+  .top {
+    margin-top: 110px;
+  }
+
+  #top_smoke {
+    height: 15px;
+    @include background_size(470px, 135px);
+    background-position: 0 0;
+  }
+
+  #content {
+    @include background_size(470px, 135px);
+    margin-bottom: 20px;
+  }
+
+  #process, #services, #knowledge,
+  #community, #company {
+    .top {
+      margin-top: 85px;
+    }
+    #content {
+      margin-bottom: 20px;
+    }
+  }
+
+  #process {
+    #content {
+      @include background_size(470px, 69px);
+    }
+  }
+
+  #services {
+    #top_smoke {
+      background-position: 0 -45px;
+    }
+    #content {
+      @include background_size(470px, 47px);
+    }
+  }
+
+  #knowledge {
+    #top_smoke {
+      background-position: 0 -75px;
+    }
+    #content {
+      @include background_size(470px, 83px);
+    }
+  }
+
+  #community {
+    #top_smoke {
+      background-position: 0 -90px;
+    }
+    #content {
+      @include background_size(470px, 90px);
+    }
+  }
+
+
+  #company {
+    #top_smoke {
+      background-position: 0 -120px;
+    }
+    #content {
+      @include background_size(470px, 137px);
+    }
+  }
+
+  .col-first,
+  .col-mid,
+  .col-last {
+    margin-left: 0;
+    margin-right: 7px;
+  }
+
+  .single,
+  .double,
+  .triple {
+    p, address {
+      margin-right: 20px;
+    }
+    .col-first { width: 460px; }
+    .col-mid   { width: 460px; }
+    .col-last  { width: 460px; }
+  }
+
+  /* sections */
+  header {
+    height: 50px;
+    nav ul li {
+      margin: 10px 20px 0 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .wrapme {
+      margin-left: 0;
+    }
+
+    .logotype {
+      float: none;
+      margin: 5px 0 0 0;
+    }
+    img {
+      width: 45px;
+      height: 40px;
+      margin-top: 10px;
+    }
+  }
+
+  footer {
+    margin-bottom: 10px;
+    nav ul {
+      margin: 8px 0 0 0;
+      text-align: left;
+    }
+
+    nav ul li {
+      margin-right: 14px;
+      display: block;
+      .img {
+        text-align: right;
+        float: right;
+        margin: -12px 0 0 0;
+      }
+
+    }
+
+    .github {
+      display: none;
+    }
+
+  }
+
+}
+
+/* iPhone portrait */
+@media (min-device-width:1024px) and (max-width:469px),(max-device-width:480px) and (orientation:portrait) {
+
+  /* containers */
+  #container, #top_smoke, #content {
+    width: 310px;
+  }
+
+  .top {
+    margin-top: 90px;
+  }
+
+  #top_smoke {
+    height: 9px;
+    @include background_size(310px, 56px);
+    background-position: 0 0;
+  }
+
+  #content {
+    @include background_size(310px, 89px);
+    margin-bottom: 20px;
+  }
+
+  #process, #services, #knowledge,
+  #community, #company {
+    .top {
+      margin-top: 65px;
+    }
+    #content {
+      margin-bottom: 20px;
+    }
+  }
+
+  #process {
+    #top_smoke {
+      background-position: 0 -10px;
+    }
+    #content {
+      @include background_size(310px, 45px);
+    }
+  }
+
+  #services {
+    #top_smoke {
+      background-position: 0 -18px;
+    }
+    #content {
+      @include background_size(310px, 31px);
+    }
+  }
+
+  #knowledge {
+    #top_smoke {
+      background-position: 0 -28px;
+    }
+    #content {
+      @include background_size(310px, 55px);
+    }
+  }
+
+  #community {
+    #top_smoke {
+      background-position: 0 -38px;
+    }
+    #content {
+      @include background_size(310px, 59px);
+    }
+  }
+
+  #company {
+    #top_smoke {
+      background-position: 0 -48px;
+    }
+    #content {
+      @include background_size(310px, 91px);
+    }
+  }
+
+  /* rows */
+  .col-first,
+  .col-mid,
+  .col-last {
+    margin-left: 0px;
+    margin-right: 7px;
+  }
+
+  .single,
+  .double,
+  .triple {
+    p, address {
+      margin-right: 20px;
+    }
+    .col-first { width: 300px; }
+    .col-mid   { width: 300px; }
+    .col-last  { width: 300px; }
+  }
+
+  /* sections */
+  header {
+    height: 45px;
+    nav ul li {
+      font-size: 9px;
+      margin: 10px 10px 0 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .wrapme {
+      margin-left: 0;
+    }
+
+    .logotype {
+      float: none;
+      margin: 10px 0 0 0;
+    }
+    img {
+      display: none;
+      width: 34px;
+      height: 30px;
+      margin-top: 14px;
+    }
+  }
+
+  footer {
+    margin-bottom: 10px;
+    nav ul {
+      margin: 8px 0 0 0;
+      text-align: left;
+    }
+
+    nav ul li {
+      margin-right: 14px;
+      display: block;
+      .img {
+        text-align: right;
+        float: right;
+        margin: -12px 0 0 0;
+      }
+    }
+    .github {
+      display: none;
+    }
+
+  }
+
+}
+
+/* Poor bastards */
+.no-js {
+}
+
