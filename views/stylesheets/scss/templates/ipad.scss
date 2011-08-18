@@ -9,10 +9,19 @@
   footer {
     margin-bottom: 10px;
   }
+
+  a:hover {
+    color: $link_static;
+  }
+
 }
 
 /* iPad portrait */
 @media (min-device-width:1024px) and (max-width:960px),(min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+
+  a:hover {
+    color: $link_static;
+  }
 
   /* containers */
   #container, #top_smoke, #content {
@@ -26,15 +35,12 @@
   }
 
   #content {
-    @include background_size(760px, 218px);
+    @include background_size(760px, 222px);
   }
 
   #process {
     #top_smoke {
       background-position: 0 -23px;
-    }
-    #content {
-      @include background_size(760px, 111px);
     }
   }
 
@@ -42,17 +48,11 @@
     #top_smoke {
       background-position: 0 -46px;
     }
-    #content {
-      @include background_size(760px, 76px);
-    }
   }
 
   #knowledge {
     #top_smoke {
       background-position: 0 -69px;
-    }
-    #content {
-      @include background_size(760px, 134px);
     }
   }
 
@@ -60,17 +60,11 @@
     #top_smoke {
       background-position: 0 -92px;
     }
-    #content {
-      @include background_size(760px, 146px);
-    }
   }
 
   #company {
     #top_smoke {
       background-position: 0 -115px;
-    }
-    #content {
-      @include background_size(760px, 222px);
     }
   }
 

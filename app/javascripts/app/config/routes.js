@@ -42,7 +42,8 @@ bittheory.Router = Backbone.Router.extend({
   },
 
   update: function(e) {
-    this.navigate(e.target.pathname.substr(1), true)
+    var href = $(e.currentTarget).attr('href')
+    this.navigate(href.substr(1), true)
   },
 
   addListeners: function() {

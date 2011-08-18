@@ -2,6 +2,10 @@
 /* iPhone landscape */
 @media (min-device-width:1024px) and (max-width:747px),(max-device-width:480px) and (orientation:landscape) {
 
+  a:hover {
+    color: $link_static;
+  }
+
   /* containers */
   #container, #top_smoke, #content {
     width: 470px;
@@ -18,7 +22,7 @@
   }
 
   #content {
-    @include background_size(470px, 135px);
+    @include background_size(470px, 137px);
     margin-bottom: 20px;
   }
 
@@ -33,17 +37,11 @@
   }
 
   #process {
-    #content {
-      @include background_size(470px, 69px);
-    }
   }
 
   #services {
     #top_smoke {
       background-position: 0 -45px;
-    }
-    #content {
-      @include background_size(470px, 47px);
     }
   }
 
@@ -51,17 +49,11 @@
     #top_smoke {
       background-position: 0 -75px;
     }
-    #content {
-      @include background_size(470px, 83px);
-    }
   }
 
   #community {
     #top_smoke {
       background-position: 0 -90px;
-    }
-    #content {
-      @include background_size(470px, 90px);
     }
   }
 
@@ -69,9 +61,6 @@
   #company {
     #top_smoke {
       background-position: 0 -120px;
-    }
-    #content {
-      @include background_size(470px, 137px);
     }
   }
 
@@ -147,6 +136,10 @@
 /* iPhone portrait */
 @media (min-device-width:1024px) and (max-width:469px),(max-device-width:480px) and (orientation:portrait) {
 
+  a:hover {
+    color: $link_static;
+  }
+
   /* containers */
   #container, #top_smoke, #content {
     width: 310px;
@@ -163,7 +156,7 @@
   }
 
   #content {
-    @include background_size(310px, 89px);
+    @include background_size(310px, 91px);
     margin-bottom: 20px;
   }
 
@@ -181,17 +174,11 @@
     #top_smoke {
       background-position: 0 -10px;
     }
-    #content {
-      @include background_size(310px, 45px);
-    }
   }
 
   #services {
     #top_smoke {
       background-position: 0 -18px;
-    }
-    #content {
-      @include background_size(310px, 31px);
     }
   }
 
@@ -199,26 +186,17 @@
     #top_smoke {
       background-position: 0 -28px;
     }
-    #content {
-      @include background_size(310px, 55px);
-    }
   }
 
   #community {
     #top_smoke {
       background-position: 0 -38px;
     }
-    #content {
-      @include background_size(310px, 59px);
-    }
   }
 
   #company {
     #top_smoke {
       background-position: 0 -48px;
-    }
-    #content {
-      @include background_size(310px, 91px);
     }
   }
 
