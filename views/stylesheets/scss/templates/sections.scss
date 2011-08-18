@@ -11,6 +11,15 @@ article {
   }
 }
 
+#content {
+  ul li {
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: lowercase;
+    margin: 0 0 0 2px;
+  }
+}
+
 #content .as-copy,
 .as-copy {
   ul li {
@@ -35,11 +44,6 @@ article {
 
 /* Pages
  *****************************************************************************/
-#home #content {
-  margin-top: 250px;
-  margin-bottom: 120px;
-}
-
 #company #content {
   img {
     margin: 12px 0 0 2px;

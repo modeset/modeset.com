@@ -6,29 +6,88 @@
   width: 992px;
   overflow: hidden;
   margin: 0 auto;
-  background: transparent url(/images/backgrounds/default.png) no-repeat top left;
-}
-
-#home #container {
-  background: transparent url(/images/backgrounds/home.png) no-repeat top left;
-}
-
-#careers #container {
-  background: transparent url(/images/backgrounds/careers.png) no-repeat top left;
 }
 
 #content {
+  width: 992px;
   display: inline-block;
-  margin-top: 190px;
-  margin-bottom: 44px;
+  margin-bottom: 120px;
+  background: #fff url(/images/backgrounds/home-background.png) no-repeat 0 0;
+}
 
-  ul li {
-    font-size: 13px;
-    line-height: 18px;
-    text-transform: lowercase;
-    margin: 0 0 0 2px;
+#top_smoke {
+  width: 992px;
+  height: 30px;
+  background: #fff url(/images/backgrounds/top-background-sprites.png) no-repeat 0 0;
+}
+
+.top {
+  margin-top: 250px;
+}
+
+#process, #services, #knowledge, 
+#community, #company {
+  .top {
+    margin-top: 110px;
+  }
+  #content {
+    margin-bottom: 44px;
   }
 }
+
+#process {
+  #top_smoke {
+    background-position: 0 -30px;
+  }
+  #content {
+    background-image: url(/images/backgrounds/process-background.png);
+  }
+}
+
+#services {
+  #top_smoke {
+    background-position: 0 -60px;
+  }
+  #content {
+    background-image: url(/images/backgrounds/services-background.png);
+  }
+}
+
+#knowledge {
+  #top_smoke {
+    background-position: 0 -90px;
+  }
+  #content {
+    background-image: url(/images/backgrounds/knowledge-background.png);
+  }
+}
+
+#community {
+  #top_smoke {
+    background-position: 0 -120px;
+  }
+  #content {
+    background-image: url(/images/backgrounds/community-background.png);
+  }
+}
+
+#company {
+  #top_smoke {
+    background-position: 0 -150px;
+  }
+  #content {
+    background-image: url(/images/backgrounds/company-background.png);
+  }
+}
+
+
+/* #home #container { */
+  /* background: transparent url(/images/backgrounds/home.png) no-repeat top left; */
+/* } */
+
+/* #careers #container { */
+  /* background: transparent url(/images/backgrounds/careers.png) no-repeat top left; */
+/* } */
 
 /* Grids
  *****************************************************************************/
