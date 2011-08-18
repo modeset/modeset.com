@@ -110,7 +110,7 @@ end
 
 namespace :deploy do
   desc "Run the tasks before running a deployment"
-  task :prep => ["markup:statics","js:concat", "js:uglify"]
+  task :prep => ["markup:statics","js:concat", "js:uglify", "images:compress"]
 
   desc "Deploy app to heroku's staging branch"
   task :staging  do
