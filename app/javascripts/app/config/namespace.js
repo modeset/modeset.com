@@ -3,12 +3,12 @@
 // **File: namespace.js**
 
 // Applications primary namespace
-var bittheory = {
+var modeset = {
   VERSION: '0.1.0'
 }
 
 // ### Various Utility functions that probably should have a home
-bittheory.util = {
+modeset.util = {
 
   // map each template to their id's
   mapTemplates: function(el) {

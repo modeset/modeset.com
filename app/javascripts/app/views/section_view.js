@@ -1,5 +1,5 @@
 
-bittheory.SectionView = Backbone.View.extend({
+modeset.SectionView = Backbone.View.extend({
   el: $('#content'),
 
   initialize: function() {

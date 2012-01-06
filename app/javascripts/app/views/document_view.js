@@ -4,7 +4,7 @@
 
 // The view for the primary router
 
-bittheory.DocumentView = Backbone.View.extend({
+modeset.DocumentView = Backbone.View.extend({
   el: $('body'),
   tt: $('head title'),
 
@@ -30,7 +30,7 @@ bittheory.DocumentView = Backbone.View.extend({
     var path = (route === 'index') ? 'home' : route
     var title = path.charAt(0).toUpperCase() + path.slice(1)
     this.el.attr('id', path)
-    this.tt.text('Bit Theory / ' + title)
+    this.tt.text('Mode Set / ' + title)
     return this
   },
 

@@ -4,7 +4,7 @@
 
 // Main Application startup and central dispatch
 
-bittheory.Router = Backbone.Router.extend({
+modeset.Router = Backbone.Router.extend({
 
   routes: {
     '': 'index',
@@ -17,10 +17,10 @@ bittheory.Router = Backbone.Router.extend({
   },
 
   startup: function() {
-    this.templates = bittheory.util.mapTemplates('#templates')
-    this.document_view = new bittheory.DocumentView()
-    this.navigation_view = new bittheory.NavigationView()
-    this.section_view = new bittheory.SectionView()
+    this.templates = modeset.util.mapTemplates('#templates')
+    this.document_view = new modeset.DocumentView()
+    this.navigation_view = new modeset.NavigationView()
+    this.section_view = new modeset.SectionView()
 
     this.addListeners()
   },
@@ -63,7 +63,7 @@ bittheory.Router = Backbone.Router.extend({
 
 // ## Melt faces
 $(document).ready(function() {
-  bittheory.app = new bittheory.Router()
+  modeset.app = new modeset.Router()
   Backbone.history.start({pushState: true, silent: true})
   setTimeout(function() {
     window.scrollTo(0, 1)

@@ -4,7 +4,7 @@
 
 // Controls the hover, unhover and active states on the jib jabs
 
-bittheory.NavigationView = Backbone.View.extend({
+modeset.NavigationView = Backbone.View.extend({
   el: $('#header'),
   jibs: $('.jib-jab', this.el),
 
