@@ -3,6 +3,8 @@ require 'bundler'
 Bundler.setup
 require './app'
 
+$stdout.sync = true
+
 if ENV['RACK_ENV'] == 'production'
   require 'rack/rewrite'
   puts 'REWRITES: [ enabled ]' 
