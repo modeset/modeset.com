@@ -8,6 +8,7 @@ gem 'maruku'
 gem 'thin'
 gem 'dalli'
 gem 'rack-cache'
+gem 'rack-rewrite'
 
 group :development do
   gem 'heroku',                       :require => false
