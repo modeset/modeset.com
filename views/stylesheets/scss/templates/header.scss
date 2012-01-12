@@ -3,7 +3,11 @@ header {
   margin: 0;
   height: 95px;
   background: #fff;
-
+  
+  nav {
+    position: relative;
+  }
+  
   nav ul li {
     font-size: 11px;
     font-family: $sans_bold;
@@ -42,6 +46,14 @@ header {
     height: 69px;
     margin: 13px 0 0 2px;
     float: right;
+    z-index: 30; 
+  }
+  
+  canvas {
+    z-index: 40; 
+    right: -4px; 
+    position: absolute;
+    top:40px;
   }
 }
 

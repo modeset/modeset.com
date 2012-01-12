@@ -12,6 +12,7 @@ JS_OUTPUT_DIR      = File.join(PUBLIC_DIR, "javascripts")
 JS_FILES           = ["#{JS_LIB_DIR}/underscore.js",
                       "#{JS_LIB_DIR}/backbone.js",
                       "#{JS_APP_DIR}/config/namespace.js",
+                      "#{JS_APP_DIR}/views/logo.js",
                       "#{JS_APP_DIR}/views/document_view.js",
                       "#{JS_APP_DIR}/views/navigation_view.js",
                       "#{JS_APP_DIR}/views/section_view.js",

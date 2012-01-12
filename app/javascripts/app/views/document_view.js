@@ -16,9 +16,21 @@ modeset.DocumentView = Backbone.View.extend({
   initialize: function() {
     _.bindAll(this, 'render')
     this.addListeners()
+    this.buildLogo()
   },
 
   addListeners: function() {
+  },
+  
+  isCanvasSupported: function() {
+		var elem = document.createElement('canvas');
+		return !!(elem.getContext && elem.getContext('2d'));
+  },
+
+  buildLogo: function() {
+		if( this.isCanvasSupported() ) { 
+			var logo = new Logo( $('header#header nav')[0], 43 );
+		}
   },
 
   click: function(e) {
