@@ -1,3 +1,3 @@
-# Bit Theory
+# Mode Set
 
-www.bittheory.com
+www.modeset.com
