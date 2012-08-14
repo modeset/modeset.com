@@ -105,6 +105,12 @@
       height: 40px;
       margin-top: 10px;
     }
+    canvas {
+      z-index: 40; 
+      right: 1px; 
+      position: absolute;
+      top: 8px;
+    }
   }
 
   footer {
@@ -243,6 +249,12 @@
       width: 34px;
       height: 30px;
       margin-top: 14px;
+    }
+    canvas {
+      z-index: 40; 
+      right: 4px; 
+      position: absolute;
+      top: 81px;
     }
   }
 

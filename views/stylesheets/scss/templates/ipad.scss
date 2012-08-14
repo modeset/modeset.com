@@ -14,6 +14,15 @@
     color: $link_static;
   }
 
+  header {  
+    canvas {
+      z-index: 40; 
+      right: -7px; 
+      position: absolute;
+      top:40px;
+    }
+  }
+
 }
 
 /* iPad portrait */
