@@ -1,0 +1,46 @@
+$heading-color: #5b5e5b
+$heading-font-weight: normal
+$h1-size: 19
+$h2-size: 19
+$h3-size: 16
+
+@import utensils/typography/typography
+
+h1, h2, p
+  text-transform: lowercase
+h3
+  text-transform: uppercase
+
+p a:hover
+  text-decoration: none
+
+section > h1,
+section > h2,
+article > h1,
+article > h2
+  border-top: 1px solid #7fddf1
+  padding-top: 0.5em
+
+.single > h2
+  margin-top: 1.5em
+
+.single ul,
+.double ul
+  @extend .unstyled-list
+  +font-size(13)
+  text-transform: lowercase
+  margin-top: 1em
+
+.single p,
+.double p,
+.triple p
+  width: 90%
+
+.address
+  +font-size(13)
+  text-transform: lowercase
+  margin-bottom: 1.5em
+
+.address p
+  margin-bottom: 0
+

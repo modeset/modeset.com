@@ -1,0 +1,41 @@
+@import utensils/container/container
+
+.container
+  padding-left: 1%
+  padding-right: 1%
+
+.single, .double, .triple
+  @extend %base-row
+
+.single:first-child,
+.double:first-child,
+.triple:first-child
+  margin-top: 110px
+
+.body-home .triple:first-child
+  margin-top: 250px
+
+.single + .double
+  margin-top: 1.5em
+
+.single
+  width: 65%
+
+.double > section,
+.triple > section
+  @extend %base-column
+
+.double > section
+  width: 49%
+  margin-bottom: 1.5em
+
+.triple > section
+  width: 32.5%
+
+.double > section:nth-child(odd),
+.triple > section:first-child
+  margin-right: 1%
+
+.triple > section:last-child
+  margin-left: 1%
+

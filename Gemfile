@@ -1,16 +1,26 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem 'sinatra',              '1.2.6'
-gem 'sinatra-reloader',     '0.5.0'
-gem 'haml',                 '3.1.1'
-gem 'sass',                 '3.1.1'
-gem 'maruku'
+
+gem 'rails'
+gem 'capybara'
 gem 'thin'
-gem 'dalli'
-gem 'rack-cache'
-gem 'rack-rewrite'
+gem 'redcarpet'
 
-group :development do
-  gem 'heroku',                       :require => false
+
+group :assets do
+  gem 'haml-rails'
+  gem 'sass-rails'
+  gem 'bourbon'
+  gem 'coffee-rails'
+  gem 'underscore-rails'
+  gem 'uglifier'
+  # gem 'utensils', git: 'git@github.com:modeset/utensils.git'
+  gem 'utensils', path: '../utensils'
+end
+
+
+group :development, :test do
+  gem 'pry'
+  gem 'teabag', git: 'git@github.com:modeset/teabag.git'
 end
 

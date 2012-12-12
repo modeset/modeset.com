@@ -1,0 +1,128 @@
+// Output configuration
+// -----------------------------------------------------------------------------
+$legacy-support-for-ie: false
+$legacy-support-for-ie8: $legacy-support-for-ie
+$support-for-original-webkit-gradients: true
+$experimental-support-for-mozilla: true
+$experimental-support-for-opera: true
+$experimental-support-for-microsoft: true
+
+
+// Required settings
+// -----------------------------------------------------------------------------
+
+// Fonts
+@font-face
+  font-family: 'HelveticaNeueLTStd55Roman'
+  src: font-url('fonts/helveticaneueltstd-roman-webfont.eot')
+  src: font-url('fonts/helveticaneueltstd-roman-webfont.eot?#iefix') format('embedded-opentype'), font-url('fonts/helveticaneueltstd-roman-webfont.woff') format('woff'), font-url('fonts/helveticaneueltstd-roman-webfont.ttf') format('truetype'), font-url('fonts/helveticaneueltstd-roman-webfont.svg#HelveticaNeueLTStd55Roman') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'HelveticaNeueLTStd75Bold'
+  src: font-url('fonts/helveticaneueltstd-bd-webfont.eot')
+  src: font-url('fonts/helveticaneueltstd-bd-webfont.eot?#iefix') format('embedded-opentype'), font-url('fonts/helveticaneueltstd-bd-webfont.woff') format('woff'), font-url('fonts/helveticaneueltstd-bd-webfont.ttf') format('truetype'), font-url('fonts/helveticaneueltstd-bd-webfont.svg#HelveticaNeueLTStd75Bold') format('svg')
+  font-weight: normal
+  font-style: normal
+
+
+$sans-family: "HelveticaNeueLTStd55Roman", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$sans-bold-family: "HelveticaNeueLTStd75Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$serif-family: "Georgia", "Times", "Times New Roman", serif
+$mono-family: "Bitstream Vera Sans Mono", "Menslo LG M", "Menlo", "Monaco", monospace
+
+// Base Sizing
+$context-px: 16
+$base-font-size: 11
+$base-width: 1000
+$base-line-height: 1.4
+$base-vertical: $base-font-size * $base-line-height
+$base-padding: 0.5em 0.8em
+
+// Colors
+$magenta: #ff00ff
+$red: #b22222
+$yellow: #ffc40d
+$blue: #268bd2
+
+// Status colors
+$danger: $red
+$important: $blue
+
+
+// CI
+$primary: #00bce4
+
+// Base element colors
+$base-color: #7d7e7c
+$base-color-hover: #434343
+$base-color-active: $base-color-hover
+$base-color-selected: $base-color-active
+
+$link-color: $primary
+$link-hover: #434343
+$link-active: $link-hover
+$link-selected: $link-active
+
+$base-bgc: white
+$base-bgc-hover: darken($base-bgc, 5%)
+$base-bgc-active: $base-bgc-hover
+$base-bgc-selected: $base-bgc-active
+
+$base-border: #ccc
+$base-border-hover: $primary
+$base-border-active: $base-border-hover
+$base-border-selected: $base-border-active
+
+// Focus state
+$focus-color: $base-color-hover
+$focus-bgc: #fafafa
+$focus-border: $base-border-hover
+$focus-glow: 0 0 6px 2px #52a8ec
+
+// Disabled state
+$disabled-color: #bbb
+$disabled-bgc: #eee
+$disabled-border: #ddd
+$disabled-opacity: 0.65
+
+// Shadows
+$small-drop-dark: 0 1px 0 rgba(black, 0.3)
+$large-drop-dark: 0 1px 4px rgba(black, 0.3)
+$small-drop-lite: 0 1px 0 rgba(white, 0.7)
+$large-drop-lite: 0 1px 4px rgba(white, 0.7)
+
+$small-inset-dark: 0 -1px 0 rgba(black, 0.3)
+$large-inset-dark: inset 0 1px 4px rgba(black, 0.3)
+$small-inset-lite: 0 -1px 0 rgba(white, 0.7)
+$large-inset-lite: inset 0 1px 4px rgba(white, 0.7)
+
+// Settings
+$radii: 0.4em
+$speed: 0.25s
+$horiz-offset: 130px
+$horiz-offset-padding: 10
+
+
+// Status colors and lists
+// -----------------------------------------------------------------------------
+
+// Define core list pairings (class name, color value)
+$primary-list: primary $primary
+$nil-list: nil nil
+$progress-list: $nil-list
+
+
+// Top level component settings
+// -----------------------------------------------------------------------------
+
+// z-indexing
+$zindex-drop: 1000
+$zindex-tip: 1010
+$zindex-pop: 1020
+$zindex-navbar: 1030
+$zindex-modal-backdrop: 1040
+$zindex-modal: 1050
+$zindex-flash-message: 1060
+
