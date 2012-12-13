@@ -14,8 +14,8 @@ group :assets do
   gem 'coffee-rails'
   gem 'underscore-rails'
   gem 'uglifier'
-  # gem 'utensils', git: 'git@github.com:modeset/utensils.git'
-  gem 'utensils', path: '../utensils'
+  gem 'utensils', git: 'git@github.com:modeset/utensils.git'
+  # gem 'utensils', path: '../utensils'
 end
 
 
