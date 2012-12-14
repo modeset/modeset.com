@@ -50,6 +50,7 @@ class PagesController < ActionController::Base
   def index
   end
   def show
+    @sections = ['careers', 'community', 'company', 'index', 'knowledge', 'process', 'services']
     @page = params['page']
     render :action => params['page']
   end

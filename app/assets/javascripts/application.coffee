@@ -1,6 +1,8 @@
+#= require json2
 #= require underscore
-#= require utensils/utensils
+#= require backbone
 #= require utensils/bindable
+#= require modeset
 #= require components/navigation
 
 # ready set..

@@ -9,7 +9,7 @@
   height: 30px
 
 #content
-  background-image: image-url('backgrounds/home-background.png')
+  background-image: image-url('backgrounds/index-background.png')
 
 // Generate the background image positions per page
 @mixin page_backgrounds($list_...)
@@ -22,5 +22,5 @@
         background-image: image-url("backgrounds/#{$page_}-background.png")
     $i_: $i_ + 30
 
-+page_backgrounds(home, process, services, knowledge, community, company)
++page_backgrounds(index, process, services, knowledge, community, company)
 
