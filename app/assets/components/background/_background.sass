@@ -4,12 +4,12 @@
   background: white no-repeat 0 0
 
 #smoke
-  background-image: asset-url('backgrounds/top-background-sprites.png', 'image')
+  background-image: image-url('backgrounds/top-background-sprites.png')
   width: $base-width
   height: 30px
 
 #content
-  background-image: asset-url('backgrounds/home-background.png', 'image')
+  background-image: image-url('backgrounds/home-background.png')
 
 // Generate the background image positions per page
 @mixin page_backgrounds($list_...)
@@ -19,7 +19,8 @@
       #smoke
         background-position: 0 -#{$i_}px
       #content
-        background-image: asset-url("backgrounds/#{$page_}-background.png", "image")
+        background-image: image-url("backgrounds/#{$page_}-background.png")
     $i_: $i_ + 30
+
 +page_backgrounds(home, process, services, knowledge, community, company)
 
