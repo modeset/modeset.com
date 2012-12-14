@@ -1,7 +1,10 @@
-@import config
+$legacy-support-for-ie: false
+$legacy-support-for-ie8: $legacy-support-for-ie
+
 @import bourbon
-@import utensils/normalize/normalize
 @import utensils/mixin/mixins
+@import config
+@import utensils/normalize/normalize
 @import utensils/transition/transition
 
 
@@ -13,6 +16,5 @@
 @import components/navigation/navigation
 @import components/footer/footer
 @import components/upgrade/upgrade
-
-// @import utensils/print/print
+@import utensils/print/print
 
