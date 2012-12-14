@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@github.com:modeset/utensils.git
-  revision: c4e9191edc2bc5b46e0a95394484b7e0d149b92a
+  revision: f4d314624d4d17b27a7e739cb094c63c00b1efc0
   specs:
     utensils (0.0.1)
       coffee-rails
@@ -125,7 +125,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (10.0.2)
+    rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
     redcarpet (2.2.2)
