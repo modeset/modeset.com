@@ -43,12 +43,10 @@ Modeset::Application.initialize!
 
 Modeset::Application.routes.draw do
   match '*page' => 'pages#show'
-  root :to => 'pages#index'
+  root :to => 'pages#show', :page => 'index'
 end
 
 class PagesController < ActionController::Base
-  def index
-  end
   def show
     @sections = ['careers', 'community', 'company', 'index', 'knowledge', 'process', 'services']
     @page = params['page']
