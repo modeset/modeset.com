@@ -30,6 +30,7 @@ class modeset.ApplicationRouter extends Backbone.Router
   changed: (e) ->
     route = $(e.target).attr 'href'
     @navigate route, {trigger: true}
+    window.scrollTo 0, 0
 
 
   addListeners: ->
