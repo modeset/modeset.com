@@ -9,12 +9,12 @@
 %section.double.postings
   -(1..9).each do |i|
     %section
+      %h2 Article Title #{i}.
+      %date 12.15.2012
+      = image_tag 'fpo/test-thumb.png', alt: 'mode set', class: 'postings-figure', width: '480', height:'135'
+      %p
+        %small written by Jeremy Jackson
       :markdown
-        ## Article Title #{i}.
-        <date>12.15.2012</date>
-        ![mode set](/assets/images/fpo/test-thumb.png)
-        jeremy
-
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna molit aliqua.
 
@@ -23,5 +23,7 @@
         fugiat nulla pariatur. Excepteur sint occecat cupidatat non proident,
         sunt in culpa qui officia deserunt anim 400 characters...
 
-        <a href="/post" class="internal">&raquo; read full article</a>
+      %footer
+        %p<
+          %a(href="/post" class="internal") &raquo; read full article
 
