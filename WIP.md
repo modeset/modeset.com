@@ -1,5 +1,4 @@
 # WIP
-- Layout for Community section
 - Work through more of the postings and a post
 - Double load on Backbone views?
 - Make templates out of everything
@@ -7,4 +6,5 @@
 - Add media queries
 - Better pattern for postings backgrounds and icons
 - Better pattern around background images
+- Add JG's canvas logo back in
 
