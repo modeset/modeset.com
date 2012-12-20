@@ -1,10 +1,19 @@
 # WIP
-- Work through more of the postings and a post
-- Double load on Backbone views?
-- Make templates out of everything
-- Figure out the work section (case studies)
-- Add media queries
-- Better pattern for postings backgrounds and icons
+- Figure out the template system
 - Better pattern around background images
+- Add media queries
 - Add JG's canvas logo back in
+
+## Templates
+
+### Single
+- community
+- careers
+- possibly process?
+
+### Oddballs
+- company: single, then double
+- knowledge: single then double.postings, similar to company
+- index
+- post
 

@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@github.com:modeset/utensils.git
-  revision: f4d314624d4d17b27a7e739cb094c63c00b1efc0
+  revision: 97683bf443157bf3bee093781d1f1cc34010c783
   specs:
     utensils (0.0.1)
       coffee-rails
