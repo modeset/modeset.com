@@ -18,8 +18,8 @@ class modeset.ContentView extends Backbone.View
 
 
   template: (id) ->
-    @templ_el ?= $('#templates')
+    @tmpl_el ?= $('#templates')
     if !@templates[id]
-      @templates[id] = @templ_el.find("##{id}_template").html()
+      @templates[id] = @tmpl_el.find("##{id}_template").html()
     @templates[id]
 

@@ -6,11 +6,11 @@ class modeset.ApplicationRouter extends Backbone.Router
 
   constructor: (@app, @view_classes) ->
     super
-    @initialize()
+    @init()
     @addListeners()
 
 
-  initialize: ->
+  init: ->
     @views = []
     @views.push(new view()) for view in @view_classes
 
