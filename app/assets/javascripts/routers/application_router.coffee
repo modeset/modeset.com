@@ -17,13 +17,13 @@ class modeset.ApplicationRouter extends Backbone.Router
 
   page: (route) ->
     route ?= 'index'
-    _(@views).invoke 'render', route
+    _.invoke @views, 'render', route
 
 
   dispose: ->
     return unless @views.length
     @removeListeners()
-    _(@views).invoke 'dispose'
+    _.invoke @views, 'dispose'
     @views = []
 
 

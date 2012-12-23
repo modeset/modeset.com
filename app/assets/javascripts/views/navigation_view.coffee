@@ -29,7 +29,7 @@ class modeset.NavigationView extends Backbone.View
 
   indexed: (id) ->
     if !@indexes[id]
-      _(@internals).each (element, index) =>
+      _.each @internals, (element, index) =>
         @indexes[id] = index if $(element).attr('href') is "/#{id}"
     @indexes[id]
 
