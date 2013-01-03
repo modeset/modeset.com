@@ -21,6 +21,6 @@ end
 
 group :development, :test do
   gem 'pry'
-  gem 'teabag', git: 'git@github.com:modeset/teabag.git'
+  gem 'teabag'
 end
 

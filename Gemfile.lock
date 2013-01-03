@@ -1,14 +1,6 @@
 GIT
-  remote: git@github.com:modeset/teabag.git
-  revision: e5c8c0d3316a8ba2c7995b56721106ca49d4d1f9
-  specs:
-    teabag (0.2.9)
-      phantomjs.rb (~> 0.0.4)
-      railties (~> 3.2.5)
-
-GIT
   remote: git@github.com:modeset/utensils.git
-  revision: 97683bf443157bf3bee093781d1f1cc34010c783
+  revision: fab1162a6dbb0769df2017f8f8fbe6127784f56f
   specs:
     utensils (0.0.1)
       coffee-rails
@@ -83,7 +75,7 @@ GEM
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
-    json (1.7.5)
+    json (1.7.6)
     libwebsocket (0.1.7.1)
       addressable
       websocket
@@ -96,7 +88,7 @@ GEM
     multi_json (1.5.0)
     nokogiri (1.5.5)
     phantomjs-mac (0.0.3)
-    phantomjs.rb (0.0.4)
+    phantomjs.rb (0.0.5)
       phantomjs-mac
     polyglot (0.3.3)
     pry (0.9.10)
@@ -130,7 +122,7 @@ GEM
       json (~> 1.4)
     redcarpet (2.2.2)
     rubyzip (0.9.9)
-    sass (3.2.3)
+    sass (3.2.4)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -146,6 +138,9 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    teabag (0.4.6)
+      phantomjs.rb (~> 0.0.5)
+      railties (>= 3.2.5, < 5)
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -176,7 +171,7 @@ DEPENDENCIES
   rails
   redcarpet
   sass-rails
-  teabag!
+  teabag
   thin
   uglifier
   underscore-rails
