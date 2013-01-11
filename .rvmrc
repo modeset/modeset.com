@@ -1,1 +1,1 @@
-rvm 1.9.2@bittheory.com
+rvm --create 1.9.3@modeset.com
