@@ -10,7 +10,7 @@ class modeset.ContentView extends Backbone.View
   render: (route) ->
     tmpl = @template route
     @$el.html tmpl
-    return this
+    @
 
 
   dispose: ->

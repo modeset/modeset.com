@@ -8,6 +8,7 @@ class modeset.BackgroundView extends Backbone.View
 
   render: (route) ->
     @$el.attr 'class', "body-#{route}"
+    @
 
 
   dispose: ->

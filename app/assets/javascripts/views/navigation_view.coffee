@@ -15,7 +15,7 @@ class modeset.NavigationView extends Backbone.View
   render: (route) ->
     @listings.removeClass 'active'
     @listings.eq(@indexed(route)).addClass 'active'
-    return this
+    @
 
 
   dispose: ->

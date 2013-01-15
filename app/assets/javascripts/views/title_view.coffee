@@ -10,6 +10,7 @@ class modeset.TitleView extends Backbone.View
     route = if route is 'index' then 'home' else route
     title = route.charAt(0).toUpperCase() + route.slice(1)
     @$el.text "Mode Set / #{title}"
+    @
 
 
   dispose: ->
