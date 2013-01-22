@@ -1,6 +1,6 @@
 GIT
-  remote: git@github.com:modeset/utensils.git
-  revision: fab1162a6dbb0769df2017f8f8fbe6127784f56f
+  remote: git://github.com/modeset/utensils.git
+  revision: 50b19a4862f1faa07cfbe7c30cdccd1b8ce06d81
   specs:
     utensils (0.0.1)
       coffee-rails
@@ -8,7 +8,7 @@ GIT
       sass-rails
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (3.2.9)
       actionpack (= 3.2.9)
@@ -66,6 +66,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.2.0)
+    gravtastic (3.2.6)
     haml (3.1.7)
     haml-rails (0.3.5)
       actionpack (>= 3.1, < 4.1)
@@ -76,6 +77,9 @@ GEM
     i18n (0.6.1)
     journey (1.0.4)
     json (1.7.6)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     libwebsocket (0.1.7.1)
       addressable
       websocket
@@ -91,6 +95,13 @@ GEM
     phantomjs.rb (0.0.5)
       phantomjs-mac
     polyglot (0.3.3)
+    postmarkdown (0.0.6)
+      gravtastic
+      haml (~> 3.1)
+      kaminari
+      nokogiri
+      rails (~> 3.0)
+      rdiscount
     pry (0.9.10)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -118,6 +129,7 @@ GEM
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     rake (10.0.3)
+    rdiscount (1.6.8)
     rdoc (3.12)
       json (~> 1.4)
     redcarpet (2.2.2)
@@ -167,6 +179,7 @@ DEPENDENCIES
   capybara
   coffee-rails
   haml-rails
+  postmarkdown
   pry
   rails
   redcarpet

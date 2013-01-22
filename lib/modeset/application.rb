@@ -42,9 +42,12 @@ end
 Modeset::Application.initialize!
 
 Modeset::Application.routes.draw do
+  postmarkdown :as => :posts
   match '*page' => 'pages#show'
   root :to => 'pages#show', :page => 'index'
 end
+
+Postmarkdown::Config.options[:layout] = 'pages'
 
 class PagesController < ActionController::Base
   def show

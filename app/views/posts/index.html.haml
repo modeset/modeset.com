@@ -1,0 +1,16 @@
+= render 'feed_link'
+
+%article.single
+  :markdown
+    # knowledge.
+    this is where we drop some knowledge on the internets. the good, the bad,
+    the opinionated. if you have any questions, hit us up on
+    [twitter](http://twitter.com/modeset_). the [rss feed](#{posts_feed_path}) is ready for your
+    subscription.
+
+%section.double.postings
+  - if collection.present?
+    = render collection, :summary => true
+    = paginate collection
+  - else
+    No posts found.

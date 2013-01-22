@@ -1,0 +1,11 @@
+= render 'feed_link'
+
+%article.single.post
+  %h1= resource.title
+  ~ post_content_html resource
+
+  %footer.pub-deets
+    %img(src="https://secure.gravatar.com/avatar/42daadccf24dfa8556aa4a5b1e6d4c26?s=60" alt="jejacks0n" width="60" height="60" title="Jeremy Jackson")
+    %p= "&raquo; #{resource.author}".html_safe
+    %date= resource.date.strftime('%-m.%-d.%Y')
+

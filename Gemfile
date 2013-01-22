@@ -1,11 +1,10 @@
-source 'https://rubygems.org'
-
+source :rubygems
 
 gem 'rails'
 gem 'capybara'
 gem 'thin'
 gem 'redcarpet'
-
+gem 'postmarkdown'
 
 group :assets do
   gem 'haml-rails'
@@ -14,13 +13,10 @@ group :assets do
   gem 'coffee-rails'
   gem 'underscore-rails'
   gem 'uglifier'
-  gem 'utensils', git: 'git@github.com:modeset/utensils.git'
-  # gem 'utensils', path: '../utensils'
+  gem 'utensils', github: 'modeset/utensils'
 end
-
 
 group :development, :test do
   gem 'pry'
   gem 'teabag'
 end
-
