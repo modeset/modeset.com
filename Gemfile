@@ -5,6 +5,7 @@ gem 'capybara'
 gem 'thin'
 gem 'redcarpet'
 gem 'postmarkdown'
+gem 'html-pipeline', require: 'html/pipeline'
 
 group :assets do
   gem 'haml-rails'

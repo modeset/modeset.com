@@ -1,4 +1,3 @@
-
 module Haml::Filters::Markdown
   include Haml::Filters::Base
   lazy_require "redcarpet"
