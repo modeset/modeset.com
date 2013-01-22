@@ -25,7 +25,7 @@
     = csrf_meta_tag
     = content_for :head
 
-  %body(role="document" class="body-#{@page.nil? ? 'index' : @page}")
+  %body(role="document" class="body-#{controller_name == 'posts' ? 'what-we-know' : (@page.presence || 'index')}")
     = content_for :pre_body
     %div#smoke(aria-hidden="true")
     = render partial: 'layouts/shared/navigation'

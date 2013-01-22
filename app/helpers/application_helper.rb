@@ -1,5 +1,6 @@
 module ApplicationHelper
   def sections
-    %w(careers community company index knowledge process post)
+    %w(share-the-love who-we-are index how-we-work)
+  end
   end
 end

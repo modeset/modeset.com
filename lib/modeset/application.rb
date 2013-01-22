@@ -42,7 +42,7 @@ end
 Modeset::Application.initialize!
 
 Modeset::Application.routes.draw do
-  postmarkdown :as => :posts
+  postmarkdown :as => 'what-we-know'
   match '*page' => 'pages#show'
   root :to => 'pages#show', :page => 'index'
 end
