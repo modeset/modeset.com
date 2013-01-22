@@ -37,7 +37,7 @@
 
 
     #templates(style="display:none;")
-      - @sections.each do |section|
+      - sections.each do |section|
         %script(id="#{section}_template" type="text/html")
           = render file: "pages/#{section}"
 
