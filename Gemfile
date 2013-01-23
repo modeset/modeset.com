@@ -6,6 +6,8 @@ gem 'thin'
 gem 'redcarpet'
 gem 'postmarkdown'
 gem 'html-pipeline', require: 'html/pipeline'
+gem 'jquery-rails'
+gem 'jquery-rails-cdn'
 
 group :assets do
   gem 'haml-rails'
