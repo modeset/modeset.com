@@ -1,7 +1,5 @@
 # WIP
-- Images for post summaries
-- Tracking!
 - Better colors around code highlighting
-- Retinify the assets (mainly logos)
+- Images for post summaries
 - Add JG's canvas logo back in
 

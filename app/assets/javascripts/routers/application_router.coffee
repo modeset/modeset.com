@@ -17,6 +17,7 @@ class modeset.ApplicationRouter extends Backbone.Router
 
   page: (route) ->
     route ?= 'index'
+    _gaq.push(['_trackPageview', route])
     _.invoke @views, 'render', route
 
 
