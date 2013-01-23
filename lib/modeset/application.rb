@@ -52,6 +52,7 @@ Postmarkdown::Config.options[:layout] = 'pages'
 class PagesController < ActionController::Base
   def show
     @page = params['page']
+    @title = (@page == 'index' ? 'Home' : @page)
     render :action => params['page']
   end
 end

@@ -6,7 +6,7 @@
   %head
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
-    %title Mode Set / #{@page.nil? ? 'Home' : @page.split(/(\W)/).map(&:capitalize).join}
+    %title Mode Set / #{(controller_name == 'posts' ? 'what-we-know' : (@title.presence || 'Home')).gsub(/\-/, ' ').split(/(\W)/).map(&:capitalize).join}
     %meta(name="description" content="A Software Development Consultancy")
     %meta(name="keywords" content="'Keywords")
     %meta(name="author" content="Mode Set")
