@@ -2,6 +2,7 @@
 title: CoffeeScript and the Concept of Private -- and TDD considerations
 author: Jeremy Jackson
 email: jeremy.jackson@modeset.com
+image: fpo/test-thumb.png
 ---
 
 [Alex Aitkin](https://github.com/aaitken) and myself spent some time a while working on getting [RequireJS](http://requirejs.org/) and [Evergreen](https://github.com/jnicklas/evergreen) playing nicely with each other.  I'll get into that more in another post, but in the process of doing that the concept of "private" came up.
