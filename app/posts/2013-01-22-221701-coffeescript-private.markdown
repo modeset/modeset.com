@@ -116,18 +116,18 @@ f.baz # -> undefined
 Using `send`, much like what Ruby provides, we're able to access the private methods internally and externally (from our specs), all while using a common API.  But we can clean this up even further by adding another method to `Spine.Module`, named `private` -- we added this to the moduleKeywords above.
 
 ```coffeescript
-    Spine.Module.private = (callback) ->
-      @include callback(), true
+Spine.Module.private = (callback) ->
+  @include callback(), true
 ```
 
 Which if we use, gives us a much cleaner structure for our class.
 
 ```coffeescript
-    class Foo extends Spine.Module
-      constructor: -> @foo = 'foo'
+class Foo extends Spine.Module
+  constructor: -> @foo = 'foo'
 
-      @private ->
-        baz: -> [@foo, arguments]
+  @private ->
+    baz: -> [@foo, arguments]
 ```
 
 ## We're mocking your privates
@@ -137,16 +137,16 @@ Ok, awesome.. We have a consistent API and a nice structure for using private me
 So as a final step we can expose our private methods on the instance so we can do mocking on them.  We don't just want to expose them normally, and since we already have the local `__private__`, let's just put that on the instance instead. Making a quick adjustment to the `include` method we provided above, we can shift the local variable into an instance variable by using the CoffeeScript `@::` prototype syntax.  And our end result...
 
 ```coffeescript
-    moduleKeywords = ['included', 'extended', 'private']
-    Spine.Module.include = (obj, forPrivate = false) ->
-      throw('include(obj) requires obj') unless obj
-      @::__private__ = {}
-      if forPrivate
-        @::send = -> @__private__[[].shift.call(arguments)].apply(@, arguments)
-      for key, value of obj when key not in moduleKeywords
-        if forPrivate then @::__private__[key] = value else @::[key] = value
-      obj.included?.apply(@)
-      this
+moduleKeywords = ['included', 'extended', 'private']
+Spine.Module.include = (obj, forPrivate = false) ->
+  throw('include(obj) requires obj') unless obj
+  @::__private__ = {}
+  if forPrivate
+    @::send = -> @__private__[[].shift.call(arguments)].apply(@, arguments)
+  for key, value of obj when key not in moduleKeywords
+    if forPrivate then @::__private__[key] = value else @::[key] = value
+  obj.included?.apply(@)
+  this
 ```
 
 You can call your private methods using `send`, and you can access the reference to them via the `__private__` instance variable.  And anyone using these exposed private methods knows what they're doing and the potential pitfalls of doing so.
@@ -175,3 +175,4 @@ describe 'Foo', ->
     expect(f.bar()).toEqual('baz')
     expect(spy.callCount).toEqual(1)
 ```
+
