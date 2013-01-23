@@ -18,6 +18,9 @@ $base-line-height: 1.4
 $base-vertical: $base-font-size * $base-line-height
 $base-padding: 0.5em 0.8em
 
+$tablets: to_em(800)
+$handheld: to_em(500)
+
 // Colors
 $magenta: #ff00ff
 $red: #b22222
@@ -89,18 +92,4 @@ $horiz-offset-padding: 10
 // Define core list pairings (class name, color value)
 $primary-list: primary $primary
 $nil-list: nil nil
-$progress-list: $nil-list
-
-
-// Top level component settings
-// -----------------------------------------------------------------------------
-
-// z-indexing
-$zindex-drop: 1000
-$zindex-tip: 1010
-$zindex-pop: 1020
-$zindex-navbar: 1030
-$zindex-modal-backdrop: 1040
-$zindex-modal: 1050
-$zindex-flash-message: 1060
 

@@ -42,3 +42,23 @@
   width: 19px
   height: 10px
 
+
+@media (max-width: $tablets)
+  .bits
+    float: right
+
+  .footer .nav > li > a,
+  .footer .copyright
+    margin-right: 0.75em
+
+@media (max-width: $handheld)
+  .footer .nav > li,
+  .footer .copyright
+    float: none
+
+  .footer .nav > li > a,
+  .footer .copyright
+    display: inline-block
+    margin-right: 0
+    margin-bottom: 0.5em
+

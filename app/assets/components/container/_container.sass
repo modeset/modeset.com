@@ -44,3 +44,27 @@
   border-top: 1px solid #7fddf1
   padding-top: 1.5em
 
+
+@media (max-width: $tablets)
+  .single,
+  .double > section,
+  .triple > section
+    width: 85%
+
+  .double > section,
+  .triple > section
+    float: none
+
+  .double > section:nth-child(odd),
+  .triple > section:first-child
+    margin-right: 0
+
+  .triple > section:last-child
+    margin-left: 0
+
+@media (max-width: $handheld)
+  .single,
+  .double > section,
+  .triple > section
+    width: auto
+

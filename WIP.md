@@ -1,18 +1,8 @@
 # WIP
-- Better pattern around background images
 - Add media queries
+- Clean headings for "what we know" and "share the love"
+- Images for post summaries
+- Tracking!
+- Better colors around code highlighting
 - Add JG's canvas logo back in
-
-## Templates
-
-### Single
-- community
-- careers
-- possibly process?
-
-### Oddballs
-- company: single, then double
-- knowledge: single then double.postings, similar to company
-- index
-- post
 
