@@ -4,10 +4,7 @@
   = image_tag 'fpo/test-thumb.png', alt: 'mode set', class: 'postings-figure', width: '480', height:'135'
   %p
     %small= "written by #{post.author}"
-    - if summary
-      = post_summary_html post
-      %footer
-        %p<
-          = link_to '&raquo; read full article'.html_safe, post, class: 'internal'
-    - else
-      ~ post_content_html post
+    = post_summary_html post
+    %footer
+      %p<
+        = link_to '&raquo; read full article'.html_safe, post
