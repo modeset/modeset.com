@@ -1,5 +1,4 @@
 # WIP
-- Add media queries
 - Clean headings for "what we know" and "share the love"
 - Images for post summaries
 - Tracking!

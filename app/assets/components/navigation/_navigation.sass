@@ -36,7 +36,7 @@
   width: 109px
   height: 10px
 
-.navigation img
+.navigation .crest
   position: absolute
   top: 12px
   right: 1%
@@ -66,4 +66,27 @@
 .navigation .active a
   color: #9f9f9f
   cursor: default
+
+
+@media (max-width: $tablets)
+  .navigation .nav > li > a
+    margin-right: 3em
+
+  .navigation .logotype
+    margin-right: 2em
+
+@media (max-width: $handheld)
+  .navigation .nav > li > a
+    margin-right: 2em
+
+  .navigation .nav > .logotype
+    margin-right: 0
+    position: absolute
+    top: 1em
+    left: 1%
+
+@media (max-width: $logo-swap)
+  .navigation .crest
+    display: none
+
 
