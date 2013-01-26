@@ -1,0 +1,81 @@
+@import utensils/container
+
+.container
+  padding-left: 1%
+  padding-right: 1%
+
+.single, .double, .triple
+  @extend %base-row
+
+.single:first-child,
+.double:first-child,
+.triple:first-child
+  margin-top: 110px
+
+.body-index .triple:first-child
+  margin-top: 250px
+
+.single + .double
+  margin-top: 1.5em
+
+.single
+  width: 65%
+
+.double > section,
+.triple > section
+  @extend %base-column
+
+.double > section
+  width: 49%
+  margin-bottom: 1.5em
+
+.triple > section
+  width: 32.5%
+
+.double > section:nth-child(odd),
+.triple > section:first-child
+  margin-right: 1%
+
+.triple > section:last-child
+  margin-left: 1%
+
+.pub-deets
+  margin-top: 2em
+  border-top: 1px solid #7fddf1
+  padding-top: 1.5em
+
+
+@media (max-width: $tablets)
+  .single,
+  .double > section,
+  .triple > section
+    width: 80%
+
+  .double > section,
+  .triple > section
+    float: none
+
+  .double > section:nth-child(odd),
+  .triple > section:first-child
+    margin-right: 0
+
+  .triple > section:last-child
+    margin-left: 0
+
+  .body-index .triple:first-child
+    margin-top: 200px
+
+@media (max-width: $handheld)
+  .single,
+  .double > section,
+  .triple > section
+    width: auto
+
+  .single:first-child,
+  .double:first-child,
+  .triple:first-child
+    margin-top: 50px
+
+  .body-index .triple:first-child
+    margin-top: 130px
+

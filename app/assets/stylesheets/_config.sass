@@ -1,0 +1,96 @@
+// Required settings
+// -----------------------------------------------------------------------------
+
++font-face('HelveticaNeueLTStd55Roman', 'helveticaneueltstd-roman-webfont')
++font-face('HelveticaNeueLTStd75Bold', 'helveticaneueltstd-bd-webfont')
++font-face('MrsEavesBold', 'mrseavesbold-webfont')
+
+$sans-family: "HelveticaNeueLTStd55Roman", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$sans-bold-family: "HelveticaNeueLTStd75Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$serif-family: "MrsEavesBold", "Georgia", "Times", "Times New Roman", serif
+$mono-family: "Menslo LG M", "Menlo", "Bitstream Vera Sans Mono", "Monaco", monospace
+
+// Base Sizing
+$context-px: 16
+$base-font-size: 12
+$base-width: 1000
+$base-line-height: 1.4
+$base-vertical: $base-font-size * $base-line-height
+$base-padding: 0.5em 0.8em
+
+$tablets: 800px
+$handheld: 500px
+$logo-swap: 670px
+
+// Colors
+$magenta: #ff00ff
+$red: #b22222
+$yellow: #ffc40d
+$blue: #268bd2
+
+// Status colors
+$danger: $red
+$important: $blue
+
+
+// CI
+$primary: #00bce4
+
+// Base element colors
+$base-color: #7d7e7c
+$base-color-hover: #434343
+$base-color-active: $base-color-hover
+$base-color-selected: $base-color-active
+
+$link-color: $primary
+$link-hover: #434343
+$link-active: $link-hover
+$link-selected: $link-active
+
+$base-bgc: white
+$base-bgc-hover: darken($base-bgc, 5%)
+$base-bgc-active: $base-bgc-hover
+$base-bgc-selected: $base-bgc-active
+
+$base-border: #ccc
+$base-border-hover: $primary
+$base-border-active: $base-border-hover
+$base-border-selected: $base-border-active
+
+// Focus state
+$focus-color: $base-color-hover
+$focus-bgc: #fafafa
+$focus-border: $base-border-hover
+$focus-glow: 0 0 6px 2px #52a8ec
+
+// Disabled state
+$disabled-color: #bbb
+$disabled-bgc: #eee
+$disabled-border: #ddd
+$disabled-opacity: 0.65
+
+// Shadows
+$small-drop-dark: 0 1px 0 rgba(black, 0.3)
+$large-drop-dark: 0 1px 4px rgba(black, 0.3)
+$small-drop-lite: 0 1px 0 rgba(white, 0.7)
+$large-drop-lite: 0 1px 4px rgba(white, 0.7)
+
+$small-inset-dark: 0 -1px 0 rgba(black, 0.3)
+$large-inset-dark: inset 0 1px 4px rgba(black, 0.3)
+$small-inset-lite: 0 -1px 0 rgba(white, 0.7)
+$large-inset-lite: inset 0 1px 4px rgba(white, 0.7)
+
+// Settings
+$radii: 0.4em
+$speed: 0.25s
+$horiz-offset: 130px
+$horiz-offset-padding: 10
+
+
+// Status colors and lists
+// -----------------------------------------------------------------------------
+
+// Define core list pairings (class name, color value)
+$primary-list: primary $primary
+$nil-list: nil nil
+

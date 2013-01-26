@@ -1,0 +1,9 @@
+= render 'feed_link'
+
+%article.single.title
+  %h1= resource.title
+  ~ process_content_with_pipeline resource
+  %footer.pub-deets
+    %img(src="#{resource.gravatar_url}" alt="#{resource.author}" width="60" height="60" title="#{resource.author}")
+    %p= "&raquo; #{resource.author}".html_safe
+    %date= resource.date.strftime('%-m.%-d.%Y')

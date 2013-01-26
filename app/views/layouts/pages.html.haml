@@ -1,0 +1,48 @@
+!!! 5
+<!--[if lte IE 8]> <html class="no-js dinosaur" lang="en" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!-->
+%html.no-js(lang="en" xmlns:og="http://ogp.me/ns#")
+  <!--<![endif]-->
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    %title Mode Set / #{(controller_name == 'posts' ? 'what-we-know' : (@title.presence || 'Home')).gsub(/\-/, ' ').split(/(\W)/).map(&:capitalize).join}
+    %meta(name="description" content="A Software Development Consultancy")
+    %meta(name="keywords" content="'Keywords")
+    %meta(name="author" content="Mode Set")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta(name="imagetoolbar" content="no")
+    %meta(name="apple-touch-fullscreen" content="yes")
+    %meta(name="apple-mobile-web-app-capable" content="yes")
+    %meta(name="apple-mobile-web-app-status-bar-style" content="black")
+    = stylesheet_link_tag :application, :media => "all"
+
+    /[if lte IE 8]
+      = javascript_include_tag :polyfill
+
+    :javascript
+      (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+    = csrf_meta_tag
+    = content_for :head
+
+  %body(role="document" class="body-#{controller_name == 'posts' ? 'what-we-know' : (@page.presence || 'index')}")
+    = content_for :pre_body
+    %div#smoke(aria-hidden="true")
+    = render partial: 'layouts/shared/navigation'
+    %section#content(role="main" data-bindable="modeset")
+      = yield
+    = content_for :pre_footer
+    = render partial: 'layouts/shared/footer'
+    = render partial: 'layouts/shared/upgrade'
+
+
+    #templates(style="display:none;")
+      - sections.each do |section|
+        %script(id="#{section}_template" type="text/html")
+          = render file: "pages/#{section}"
+
+    = jquery_include_tag :google
+    = javascript_include_tag :application
+    = render partial: 'layouts/shared/tracking'
+    = content_for :post_js
+

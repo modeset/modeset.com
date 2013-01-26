@@ -1,0 +1,54 @@
+$bg-list: index, how-we-work, careers, what-we-know, share-the-love, who-we-are
+
+@mixin content_backgrounds
+  @each $page_ in $bg-list
+    .body-#{$page_}
+      #content
+        background-image: image-url("backgrounds/#{$page_}-background.png")
+
+@mixin smoke_positioning($increment)
+  $i_: 0
+  @each $page_ in $bg-list
+    .body-#{$page_}
+      #smoke
+        background-position: left -#{$i_}px
+    $i_: $i_ + $increment
+
+
+#smoke,
+#content
+  @extend .container
+  background: white no-repeat left top
+
+#smoke
+  background-image: image-url('backgrounds/top-background-sprites.png')
+  height: 30px
+
+#content
+  background-image: image-url('backgrounds/index-background.png')
+
+
+// Mixin backgrounds
++content_backgrounds
++smoke_positioning(30)
+
+
+@media (max-width: $tablets)
+  #content
+    +background-size(768px, 223px)
+
+  #smoke
+    +background-size(768px, 138px)
+    height: 23px
+  +smoke_positioning(23)
+
+@media (max-width: $handheld)
+  #content
+    +background-size(480px, 139px)
+
+  #smoke
+    +background-size(480px, 86px)
+    height: 11px
+  +smoke_positioning(15)
+
+

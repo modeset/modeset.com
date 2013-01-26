@@ -1,0 +1,152 @@
+// Find more at https://github.com/richleland/pygments-css
+
+$pyg_magenta: #d33682
+$pyg_cyan: #00ffff
+$pyg_red: #b22222
+$pyg_orange: #f26522
+$pyg_yellow: #ffc40d
+$pyg_green: #46a546
+$pyg_blue: #268bd2
+$pyg_indigo: #4b0082
+$pyg_violet: #ee82ee
+
+.highlight
+  // Comment, Multiline Comment, Comment.Single
+  .c, .cm, .c1
+    color: #999
+    font-style: italic
+
+  // Comment.Preproc, Comment.Special
+  .cp, .cs
+    color: #999
+    font-weight: bold
+    font-style: italic
+
+  // Error
+  .err
+    color: $pyg_red
+
+  // Keyword, Operator, Operator.Word, Keyword.Constant Keyword.Declaration Keyword.Namespace Keyword.Pseudo Keyword.Reserved
+  .k, .o, .ow, .kc, .kd, .kn, .kp, .kr
+    color: $pyg_blue
+    font-weight: bold
+
+  // Keyword.Type
+  .kt
+    color: darken($pyg_blue, 10%)
+    font-weight: bold
+
+  // Literal.String Literal.String.Single
+  // Literal.String.Backtick Literal.String.Char Literal.String.Doc Literal.String.Double
+  // Literal.String.Escape Literal.String.Heredoc Literal.String.Interpol Literal.String.Other
+  .s, .s1, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx
+    color: $pyg_green
+
+  // Literal.String.Regex
+  .sr
+    color: #009926
+
+  // Literal.String.Symbol
+  .ss
+    color: #990073
+
+
+  // Literal.Number
+  // Literal.Number.Float Literal.Number.Hex Literal.Number.Integer Literal.Number.Oct
+  // Literal.Number.Integer.Long
+  .m, .mf, .mh, .mi, .mo, .il
+    color: #009999
+
+
+  // Name.Attribute
+  // Name.Variable
+  // Name.Constant
+  // Name.Variable.Class Name.Variable.Global Name.Variable.Instance
+  .na, .nv, .no, .vc, .vg, .vi
+    color: #333
+
+  // Name.Builtin
+  .nb
+    color: #0086b3
+
+  // Name.Class
+  .nc
+    color: #445588
+    font-weight: bold
+
+
+  // Name.Decorator
+  .nd
+    color: #3c5d5d
+    font-weight: bold
+
+  // Name.Entity
+  .ni
+    color: purple
+
+  // Name.Exception Name.Function Name.Label
+  .ne, .nf, .nl
+    color: $pyg_magenta
+    font-weight: bold
+
+  // Name.Namespace
+  .nn
+    color: #555
+
+  // Name.Tag
+  .nt
+    color: navy
+
+  // Name.Builtin.Pseudo
+  .bp
+    color: #999
+
+
+  // Text.Whitespace
+  .w
+    color: #bbb
+
+
+  // Generic.Deleted
+  .gd
+    color: #333
+    background-color: #ffdddd
+
+  // Generic.Emph
+  .ge
+    color: #333
+    font-style: italic
+
+  // Generic.Error
+  .gr
+    color: $pyg_red
+
+  // Generic.Heading
+  .gh
+    color: #999
+
+  // Generic.Inserted
+  .gi
+    color: #333
+    background-color: #ddffdd
+
+  // Generic.Output
+  .go
+    color: #888
+
+  // Generic.Prompt
+  .gp
+    color: #555
+
+  // Generic.Strong
+  .gs
+    font-weight: bold
+
+  // Generic.Subheading
+  .gu
+    color: #aaa
+
+  // Generic.Traceback
+  .gt
+    color: $pyg_red
+
