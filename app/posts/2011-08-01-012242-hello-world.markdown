@@ -1,0 +1,12 @@
+---
+title: Hello World
+author: Matt Kitt
+email: matt.kitt@modeset.com
+image: fpo/test-thumb.png
+---
+
+Mode Set was born from a passion for constructing great software. Software to help people build their businesses and realize their passions. Software to scratch our own itches and solve problems that we've experienced. Software we're fortunate enough to write with friends - friends we've we worked with for many years and friends we'll meet down the road.
+ 
+From time to time, we'll write here about our confusions, frustrations, experience, knowledge, insights and more as we experience them. We hope you'll tag along.
+ 
+Welcome to Mode Set. We're glad you're here and we're glad to be here.
