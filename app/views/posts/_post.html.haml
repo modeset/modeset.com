@@ -2,9 +2,9 @@
   %h2= post.title
   %date= post.date.strftime('%-m.%-d.%Y')
   = image_tag post.metadata[:image], alt: post.title, class: 'postings-figure', width: '480', height:'135'
-  %p
+  %p<
     %small= "written by #{post.author}"
-    = post_summary_html post
-    %footer
-      %p<
-        = link_to '&raquo; read more'.html_safe, post
+  = post_summary_html post
+  %footer
+    %p<
+      = link_to '&raquo; read full article'.html_safe, post
