@@ -35,24 +35,32 @@
   float: left
   margin: 0 1.75em 0 0
 
-.bits
-  background: transparent image-url('011-jibjab-19x10.png') no-repeat 0 0
+.footer .icon-binary
   float: left
-  margin-top: 2px
   margin-right: 1.75em
-  width: 19px
-  height: 10px
+  font-size: 1.85em
+  color: #ddd
 
-.footer .crest
+.footer .slant
+  bottom: 45px
+  right: 2%
+  display: none
+
+.footer .icon-crest
+  font-size: 4em
+  line-height: 0
+  color: #00bce4
   position: absolute
   bottom: 0
-  right: 1.75em
+  right: 1%
+  z-index: 30
   display: none
 
 
 @media (max-width: $tablets)
-  .bits
+  .footer .icon-binary
     float: right
+    margin-right: 1%
 
   .footer .nav > li > a,
   .footer .copyright
@@ -69,7 +77,7 @@
     margin-right: 0
     margin-bottom: 0.5em
 
-@media (max-width: $logo-swap)
-  .footer .crest
+  .footer .slant,
+  .footer .icon-crest
     display: block
 
