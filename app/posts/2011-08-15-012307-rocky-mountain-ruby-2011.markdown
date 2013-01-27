@@ -1,0 +1,12 @@
+---
+title: Rocky mountain ruby 2011
+author: Jay Zeschin
+email: jay.zeschin@modeset.com
+image: blog/rmr-2011-logo.png
+---
+
+we’re proud to announce that we are officially a silver sponsor of the [2011 rocky mountain ruby conference](http://rockymtnruby.com/2011) in boulder. in addition, jay will be speaking on thursday afternoon, and we’ll be co-sponsoring the closing party at [avery brewing company](http://averybrewing.com/tap-room/) with our good friends at [pivotal boulder](http://pivotallabs.com/).
+ 
+to celebrate, we thought we’d do something fun and give away a free conference registration to one lucky soul. to put your name in the hat, hit us up on twitter (@modeset_) before monday. we’ll be drawing a winner at random first thing monday morning.
+ 
+**update:** and the winner is&hellip;jon hoyt ([@jonmagic](https://twitter.com/jonmagic)). congrats jon, we’ll see you in boulder!
