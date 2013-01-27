@@ -29,7 +29,7 @@
 .navigation .logotype > a
   overflow: hidden
   width: 100px
-  height: 20px
+  height: 45px
   margin-top: 2px
   margin-right: 0
 
@@ -84,8 +84,16 @@
     margin-right: 3em
 
 @media (max-width: $handheld)
+  .navigation
+    padding-top: 30px
   .navigation .nav > li > a
-    margin-right: 2em
+    margin-bottom: 0.5em
+
+@media (max-width: 320px)
+  .navigation
+    padding-top: 10px
+  .navigation .logotype > a
+    height: 60px
 
 @media (max-width: $logo-swap)
   .navigation .slant,
