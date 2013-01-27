@@ -22,3 +22,7 @@ group :development, :test do
   gem 'pry'
   gem 'teabag'
 end
+
+group :production do
+  gem 'charlock_holmes', :git => "git://github.com/brianmario/charlock_holmes.git", :branch => "bundle-icu"
+end
