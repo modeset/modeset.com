@@ -2,7 +2,8 @@
   %nav(role="navigation")
     %ul.nav(data-bindable="navigation")
       %li.logotype<
-        %a.internal(href="/") mode set
+        %a.internal(href="/")<
+          %span.icon.icon-logotype-tm
       %li<
         %a.internal(href="/how-we-work") how we work
       %li<
@@ -11,5 +12,6 @@
         %a.internal(href="/share-the-love") share the love
       %li<
         %a.internal(href="/who-we-are") who we are
-  = image_tag 'mode-set-diagonal-crest.png', alt: 'mode set crest', class: 'crest'
+  %span.slant(aria-hidden="true")
+  %span.icon.icon-crest
 
