@@ -1,7 +1,6 @@
 source :rubygems
 
 gem 'rails'
-gem 'capybara'
 gem 'thin'
 gem 'redcarpet'
 gem 'postmarkdown'
