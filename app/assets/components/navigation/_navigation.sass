@@ -26,22 +26,33 @@
 .navigation a:active
   color: #0091ce
 
-.navigation .logotype
-  margin-top: 1px
-  margin-right: 3em
-
 .navigation .logotype > a
-  @extend %ir
-  background: transparent image-url('mode-set-logotype.png') no-repeat 0 0
-  width: 109px
-  height: 10px
+  overflow: hidden
+  width: 100px
+  height: 20px
+  margin-top: 2px
+  margin-right: 0
 
-.navigation .crest
+.navigation .logotype .icon-logotype-tm
+  color: #444
+  font-size: 7.5em
+  position: relative
+  display: block
+  &:before
+    position: absolute
+    top: 0
+    left: 0
+
+.navigation .slant
+  top: 40px
+  right: 2%
+
+.navigation .icon-crest
+  font-size: 4em
+  color: #00bce4
   position: absolute
-  top: 12px
+  bottom: 0
   right: 1%
-  width: 78px
-  height: 69px
   z-index: 30
 
 .navigation canvas
@@ -72,21 +83,13 @@
   .navigation .nav > li > a
     margin-right: 3em
 
-  .navigation .logotype
-    margin-right: 2em
-
 @media (max-width: $handheld)
   .navigation .nav > li > a
     margin-right: 2em
 
-  .navigation .nav > .logotype
-    margin-right: 0
-    position: absolute
-    top: 1em
-    left: 1%
-
 @media (max-width: $logo-swap)
-  .navigation .crest
+  .navigation .slant,
+  .navigation .icon-crest
     display: none
 
 
