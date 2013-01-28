@@ -23,6 +23,7 @@ group :development, :test do
   gem 'teabag'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'ci_reporter'
 end
 
 group :production do
