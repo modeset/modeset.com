@@ -21,6 +21,8 @@ end
 group :development, :test do
   gem 'pry'
   gem 'teabag'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :production do
