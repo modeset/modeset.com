@@ -59,6 +59,8 @@ GEM
       xpath (~> 1.0.0)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
+    ci_reporter (1.7.2)
+      builder (>= 2.1.2)
     coderay (1.0.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -228,6 +230,7 @@ DEPENDENCIES
   bourbon
   capybara
   charlock_holmes!
+  ci_reporter
   coffee-rails
   haml-rails
   html-pipeline
