@@ -2,7 +2,6 @@
 title: Hello World
 author: Matthew Kitt
 email: matt.kitt@modeset.com
-image: fpo/test-thumb.png
 image: blog/modeset-logo-posts.png
 ---
 
