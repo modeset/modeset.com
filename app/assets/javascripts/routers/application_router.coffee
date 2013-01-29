@@ -13,6 +13,7 @@ class modeset.ApplicationRouter extends Backbone.Router
   init: ->
     @views = []
     @views.push(new view()) for view in @view_classes
+    @buildLogo()
 
 
   page: (route) ->
@@ -40,4 +41,12 @@ class modeset.ApplicationRouter extends Backbone.Router
 
   removeListeners: ->
     @views[0].off 'click:internal'
+
+  isCanvasSupported: ->
+      elem = document.createElement('canvas')
+      !!(elem.getContext && elem.getContext('2d'))
+
+  buildLogo: =>
+    if @isCanvasSupported()
+      @logo = new Logo( $('#navigation .icon-crest')[0], 46 )
 

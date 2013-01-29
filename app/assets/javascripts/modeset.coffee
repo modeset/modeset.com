@@ -2,6 +2,7 @@
 #= require components/namespace
 #= require_tree ./routers
 #= require_tree ./views
+#= require logo
 
 class modeset.ModeSet
 
