@@ -1,6 +1,5 @@
 # Mode Set
-
-www.modeset.com
+Rails app powering [modeset.com](http://www.modeset.com/)
 
 ## Getting the project running
 ```
