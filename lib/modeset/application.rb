@@ -42,7 +42,16 @@ end
 Modeset::Application.initialize!
 
 Modeset::Application.routes.draw do
+  # Legacy redirects
+  match '/careers' => redirect('/')
+  match '/community' => redirect('/share-the-love')
+  match '/company' => redirect('/who-we-are')
+  match '/knowledge' => redirect('/what-we-know')
+  match '/process' => redirect('/how-we-work')
+  match '/services' => redirect('/how-we-work')
+  # Blog
   postmarkdown :as => 'what-we-know'
+  # Pages
   match '*page' => 'pages#show'
   root :to => 'pages#show', :page => 'index'
 end
