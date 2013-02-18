@@ -5,6 +5,7 @@
   color: #7d7e7c
   text-transform: uppercase
   position: relative
+  overflow: hidden
   padding-top: 1em
   margin-top: 5em
   margin-bottom: 5em
@@ -35,10 +36,10 @@
   float: left
   margin: 0 1.75em 0 0
 
-.footer .icon-binary
+.footer .modicon-binary
   float: left
   margin-right: 1.75em
-  font-size: 1.85em
+  font-size: 1.25em
   color: #ddd
 
 .footer .slant
@@ -46,21 +47,19 @@
   right: 2%
   display: none
 
-.footer .icon-crest
-  font-size: 4em
-  line-height: 0
+.footer .modeset-crest
   color: #00bce4
   position: absolute
   bottom: 0
-  right: 1%
+  right: -10px
   z-index: 30
   display: none
 
 
 @media (max-width: $tablets)
-  .footer .icon-binary
+  .footer .modicon-binary
     float: right
-    margin-right: 1%
+    margin-right: 2%
 
   .footer .nav > li > a,
   .footer .copyright
@@ -78,6 +77,6 @@
     margin-bottom: 0.5em
 
   .footer .slant,
-  .footer .icon-crest
+  .footer .modeset-crest
     display: block
 

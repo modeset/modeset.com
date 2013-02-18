@@ -48,5 +48,5 @@ class modeset.ApplicationRouter extends Backbone.Router
 
   buildLogo: =>
     if @isCanvasSupported()
-      @logo = new Logo( $('#navigation .icon-crest')[0], 46 )
+      @logo = new Logo( $('#navigation .modeset-crest')[0], 46 )
 

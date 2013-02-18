@@ -15,6 +15,7 @@ group :assets do
   gem 'coffee-rails'
   gem 'underscore-rails'
   gem 'uglifier'
+  gem 'modicon', github: 'modeset/modicon'
   gem 'utensils', github: 'modeset/utensils'
 end
 
