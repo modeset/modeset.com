@@ -6,14 +6,6 @@ GIT
     charlock_holmes (0.6.13)
 
 GIT
-  remote: git://github.com/modeset/modicon.git
-  revision: b5464e415cfb7fdc6ca7a80be392264e890c5a3c
-  specs:
-    modicon (0.0.1)
-      rails
-      sass-rails
-
-GIT
   remote: git://github.com/modeset/utensils.git
   revision: 50b19a4862f1faa07cfbe7c30cdccd1b8ce06d81
   specs:
@@ -129,6 +121,9 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.19)
+    modicon (0.0.1)
+      rails
+      sass-rails
     multi_json (1.5.0)
     nokogiri (1.5.5)
     phantomjs-mac (0.0.3)
@@ -244,7 +239,7 @@ DEPENDENCIES
   html-pipeline
   jquery-rails
   jquery-rails-cdn
-  modicon!
+  modicon
   postmarkdown
   pry
   rails
