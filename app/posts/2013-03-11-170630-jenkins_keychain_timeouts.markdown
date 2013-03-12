@@ -1,8 +1,8 @@
 ---
-title: Avoiding Keychain timeout issues in Jenkins builds
+title: Avoiding Keychain issues with Jenkins Xcode builds
 author: Jay Zeschin
 email: jay.zeschin@modeset.com
-image: fpo/test-thumb.png
+image: blog/jenkins.png
 ---
 
 We have a client with a suite of iOS apps that are based on the same codebase but configured independently to build distinct apps with their own assets,content, and functionality. To ease to process of actually generating all of the working app binaries for each configuration, we use the awesome [Jenkins](http://jenkinsci.org/) build server running on a Mac Mini to fire up a parameterized matrix build that executes all of the automated testing, configuring, building, and distributing to [TestFlight](http://www.testflightapp.com/) necessary for a nice [continuous delivery flow](http://en.wikipedia.org/wiki/Continuous_delivery).
