@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'rails'
 gem 'thin'
@@ -7,6 +7,8 @@ gem 'postmarkdown'
 gem 'html-pipeline', require: 'html/pipeline'
 gem 'jquery-rails'
 gem 'jquery-rails-cdn'
+
+gem 'newrelic_rpm'
 
 group :assets do
   gem 'haml-rails'
