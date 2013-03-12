@@ -26,8 +26,9 @@
 .navigation a:active
   color: #0091ce
 
-.navigation .logotype > a
-  margin-right: 0
+.navigation .logotype
+  float: left
+  margin-right: 5em
 
 .navigation .modeset-typetrade
   font-size: 1.2em
@@ -75,12 +76,13 @@
     padding-top: 30px
   .navigation .nav > li > a
     margin-bottom: 0.5em
+  .navigation .logotype
+    margin-right: 2em
+    height: 60px
 
 @media (max-width: 320px)
   .navigation
     padding-top: 10px
-  .navigation .logotype > a
-    height: 60px
 
 @media (max-width: $logo-swap)
   .navigation .slant,

@@ -5,8 +5,8 @@ gem 'thin'
 gem 'redcarpet'
 gem 'postmarkdown'
 gem 'html-pipeline', require: 'html/pipeline'
-gem 'jquery-rails'
-gem 'jquery-rails-cdn'
+gem 'turbolinks'
+gem 'navigasmic'
 
 gem 'newrelic_rpm'
 
@@ -15,7 +15,6 @@ group :assets do
   gem 'sass-rails'
   gem 'bourbon'
   gem 'coffee-rails'
-  gem 'underscore-rails'
   gem 'uglifier'
   gem 'modicon'
   gem 'utensils', github: 'modeset/utensils'

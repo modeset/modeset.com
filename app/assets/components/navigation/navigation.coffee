@@ -7,32 +7,46 @@ class modeset.Navigation
 
 
   initialize: ->
-    @lists = @el.find('li').not '.logotype'
-    @links = @lists.find '> a'
+    @lists = @el.querySelectorAll 'li'
+    @links = @el.querySelectorAll 'li > a > span'
     @jibs = @jibbers()
 
 
+  dispose: ->
+    @removeListeners()
+
+
   jibbers: ->
-    $('<div class="jib"></div>').appendTo @lists
-    @el.find '.jib'
+    jibs = []
+    for list in @lists
+      jibs.push(list.appendChild(@render()))
+    jibs
 
 
   addListeners: ->
-    @links.on 'mouseover.navigation', => @mouseover arguments...
-    @links.on 'mouseout.navigation', => @mouseout arguments...
+    for link in @links
+      link.addEventListener 'mouseover', => @mouseover arguments...
+      link.addEventListener 'mouseout', => @mouseout arguments...
 
 
   removeListeners: ->
-    @links.off 'mouseover.navigation mouseout.navigation'
+    for link in @links
+      link.removeEventListener 'mouseover', @mouseover
+      link.removeEventListener 'mouseout', @mouseout
 
 
   mouseover: (e) ->
-    $(e.target).closest('li').addClass 'over'
+    li = e.target.parentNode.parentNode
+    li.classList.add 'over' if li
 
 
   mouseout: (e) ->
-    $(e.target).closest('li').removeClass 'over'
+    li = e.target.parentNode.parentNode
+    li.classList.remove 'over' if li
 
 
-utensils.Bindable.register 'navigation', modeset.Navigation
+  render: ->
+    div = document.createElement 'div'
+    div.className = 'jib'
+    div
 
