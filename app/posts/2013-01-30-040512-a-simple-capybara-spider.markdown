@@ -2,7 +2,7 @@
 title: A Simple Capybara Spider
 author: Jay Zeschin
 email: jay.zeschin@modeset.com
-image: fpo/test-thumb.png
+image: blog/capybara.png
 ---
 
 We're big fans of continuous integration and continuous deployment around here. Nothing beats the rapid feedback loop created when you're able to go from checked-in code to running application in a very short period of time, especially when you have the confidence of knowing your code is well-covered and guarded by a solid test suite.
