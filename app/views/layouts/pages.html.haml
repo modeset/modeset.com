@@ -22,8 +22,11 @@
 
     :javascript
       (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+
     = csrf_meta_tag
-    = javascript_include_tag :application
+    <!--[if (gte IE 8)|!(IE)]><!-->
+    = javascript_include_tag :application, defer: true
+    <!--<![endif]-->
     = render partial: 'layouts/shared/tracking'
 
   %body(role="document" class="body-#{controller_name == 'posts' ? 'what-we-know' : (@page.presence || 'index')}")
