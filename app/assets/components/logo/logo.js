@@ -69,9 +69,18 @@ var Logo = function( holder, size ) {
     };
   }
 
+  var nativeOffset = function() {
+    var parent = _canvas.offsetParent
+    var grandparent = parent.offsetParent
+    var top = _canvas.offsetTop + parent.offsetTop + grandparent.offsetTop
+    var left = _canvas.offsetLeft + parent.offsetLeft + grandparent.offsetLeft
+    return {top: top, left: left}
+  };
+
   var onMouseMoved = function(e) {
-    _mouseX = e.clientX - _canvas.offsetLeft;
-    _mouseY = e.clientY - _canvas.offsetTop;
+    var offset = nativeOffset()
+    _mouseX = e.clientX - offset.left;
+    _mouseY = e.clientY - offset.top;
     _frameCount = 0;
   };
 
@@ -87,7 +96,6 @@ var Logo = function( holder, size ) {
     _canvas.addEventListener('mousemove',onMouseMoved,false);
     document.addEventListener('keydown',handleKeyPress,false);
     draw()
-    _timer = setTimeout( function() { draw(); }, 30 );
   };
 
   var dispose = function() {
