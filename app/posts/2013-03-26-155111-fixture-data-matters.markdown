@@ -2,7 +2,7 @@
 title: Fixture data matters
 author: Jed Schneider
 email: jed.schneider@modeset.com
-image: blog/code-closeup.png
+image: blog/modeset-logo-posts.png
 ---
 
 I'm talking pretty loosely about fixture data here. In my current
