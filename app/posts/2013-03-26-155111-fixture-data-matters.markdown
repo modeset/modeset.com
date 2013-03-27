@@ -2,12 +2,12 @@
 title: Fixture data matters
 author: Jed Schneider
 email: jed.schneider@modeset.com
-image: fpo/test-thumb.png
+image: blog/code-closeup.png
 ---
 
 I'm talking pretty loosely about fixture data here. In my current
 definition, fixture data is the transactional data you use for filling
-in your specs. 
+in your specs.
 
 ```ruby
 post  = Post.new(title: "A whales tale")
@@ -38,7 +38,7 @@ end
 
 We have done two things here that lead to subtle errors in our code.
 
-The first is that we use the same method (`Date.parse`) in both the spec and the production
+The first is that we use the same method `Date.parse` in both the spec and the production
 code to determine equality. This is an easy habit to fall into, because
 it seems reasonable to believe that we can rely on built in Ruby methods
 to 'do the right thing'; and we know we can compare two date objects for
@@ -48,16 +48,20 @@ Doing so in this case only asserts that our internal instance variable is
 being set and recalled. It does not assert that our date parsing is
 working as expected.
 
-The other error here is using an ambiguous date. Depending on the way
+The other error is using an ambiguous date. Depending on the way
 the parser chooses to parse the date, we could be setting the date as
-Feb 1 or Jan 2. Instead we should choose a date that will be
+Feb 1 or Jan 2. Instead of trying to remember variability amongst
+languages, or even language implementations, we should choose a date that will be
 unambiguous to the parser and throw a parse error if invalid.
-`"01/31/2014"` would be a better example. 
+`"01/31/2014"` would be a better example.
 
-As a side note, it turns out that Rails no longer supports the above
-date format in the String#to_date method so as a side bonus using the
-Jan 31 date would also alert us to changes in an underlying API that may
-go undetected otherwise. Let us rewrite that spec to be more robust:
+>   As a side note, it turns out that Rails no longer supports the above
+>   date format in the String#to_date method. So, as a side bonus, using the
+>   unambiguous date in other places in our code could also alert us to changes
+>   in an underlying API that may otherwise go undetected in our test
+>   suite.
+
+Let us rewrite that spec to be more robust:
 
 ```ruby
 describe Assignment do
@@ -68,7 +72,7 @@ describe Assignment do
 end
 ```
 
-This fails with a Date parse error and so we can rewrite our Date
+This fails with a Date parse error. We can rewrite our Date
 parsing to be more specific about our expected date format.
 
 ```ruby
