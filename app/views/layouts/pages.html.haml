@@ -22,27 +22,18 @@
 
     :javascript
       (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+
     = csrf_meta_tag
-    = content_for :head
+    <!--[if (gte IE 8)|!(IE)]><!-->
+    = javascript_include_tag :application, defer: true
+    <!--<![endif]-->
+    = render partial: 'layouts/shared/tracking'
 
   %body(role="document" class="body-#{controller_name == 'posts' ? 'what-we-know' : (@page.presence || 'index')}")
-    = content_for :pre_body
     %div#smoke(aria-hidden="true")
     = render partial: 'layouts/shared/navigation'
-    %section#content(role="main" data-bindable="modeset")
+    %section#content(role="main")
       = yield
-    = content_for :pre_footer
     = render partial: 'layouts/shared/footer'
     = render partial: 'layouts/shared/upgrade'
-
-
-    #templates(style="display:none;")
-      - sections.each do |section|
-        %script(id="#{section}_template" type="text/html")
-          = render file: "pages/#{section}"
-
-    = jquery_include_tag :google
-    = javascript_include_tag :application
-    = render partial: 'layouts/shared/tracking'
-    = content_for :post_js
 

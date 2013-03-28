@@ -8,26 +8,46 @@
   padding-top: 45px
   height: 95px
 
-.navigation .nav > li
+.navigation .nav li
   position: relative
   float: left
 
-.navigation .nav > li > a
+.navigation .nav a
   margin-right: 5em
 
-.navigation .nav > li:last-child > a
+.navigation .nav li:last-child a
   margin-right: 0
 
-.navigation a,
-.navigation a:visited
+.navigation .nav a,
+.navigation .nav a:visited
   color: #5b5e5b
 
-.navigation a:hover,
-.navigation a:active
+.navigation .nav a:hover,
+.navigation .nav a:active
   color: #0091ce
 
-.navigation .logotype > a
-  margin-right: 0
+.navigation .nav .active a
+  color: #9f9f9f
+  cursor: default
+
+.navigation .nav a:before
+  +transition(width $speed $ease-in-out-quart)
+  content: ""
+  background-color: #0091ce
+  position: absolute
+  top: -2px
+  left: 0
+  width: 0
+  height: 1px
+
+.navigation .nav a:hover:before,
+.navigation .nav a:active:before,
+.navigation .nav .active a:before
+  width: 1em
+
+.navigation .logotype
+  float: left
+  margin-right: 5em
 
 .navigation .modeset-typetrade
   font-size: 1.2em
@@ -48,39 +68,23 @@
   right: 9px
   z-index: 40
 
-.navigation .jib
-  +transition(width $speed $ease-in-out-quart)
-  background-color: #0091ce
-  position: absolute
-  top: -2px
-  left: 0
-  width: 0
-  height: 1px
-
-.navigation .over .jib,
-.navigation .active .jib
-  width: 1em
-
-.navigation .active a
-  color: #9f9f9f
-  cursor: default
-
 
 @media (max-width: $tablets)
-  .navigation .nav > li > a
+  .navigation .nav a
     margin-right: 3em
 
 @media (max-width: $handheld)
   .navigation
     padding-top: 30px
-  .navigation .nav > li > a
+  .navigation .nav a
     margin-bottom: 0.5em
+  .navigation .logotype
+    margin-right: 2em
+    height: 60px
 
 @media (max-width: 320px)
   .navigation
     padding-top: 10px
-  .navigation .logotype > a
-    height: 60px
 
 @media (max-width: $logo-swap)
   .navigation .slant,

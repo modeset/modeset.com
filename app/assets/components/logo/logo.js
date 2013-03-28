@@ -6,6 +6,8 @@ var Logo = function( holder, size ) {
   var _context = _canvas.getContext("2d");
   var _size = size;
 
+  var _timer = null
+
   // draw mode flags
   var _drawNumbers = false;
   var _drawLines = true;
@@ -23,8 +25,8 @@ var Logo = function( holder, size ) {
 
   // displacement properties
   var _range = _size / 4;
-  var _fric = .65;
-  var _accel = .4;
+  var _fric = 0.65;
+  var _accel = 0.4;
 
   // displacement point class
   var Point = function( x, y ) {
@@ -67,8 +69,16 @@ var Logo = function( holder, size ) {
     };
   }
 
+  var nativeOffset = function() {
+    var parent = _canvas.offsetParent
+    var grandparent = parent.offsetParent
+    var top = _canvas.offsetTop + parent.offsetTop + grandparent.offsetTop
+    var left = _canvas.offsetLeft + parent.offsetLeft + grandparent.offsetLeft
+    return {top: top, left: left}
+  };
+
   var onMouseMoved = function(e) {
-    var offset = $(_canvas).offset()
+    var offset = nativeOffset()
     _mouseX = e.clientX - offset.left;
     _mouseY = e.clientY - offset.top;
     _frameCount = 0;
@@ -85,7 +95,13 @@ var Logo = function( holder, size ) {
     createPoints();
     _canvas.addEventListener('mousemove',onMouseMoved,false);
     document.addEventListener('keydown',handleKeyPress,false);
-    setTimeout( function() { draw(); }, 30 );
+    draw()
+  };
+
+  var dispose = function() {
+    clearTimeout(_timer)
+    _canvas.removeEventListener('mousemove',onMouseMoved,false);
+    document.removeEventListener('keydown',handleKeyPress,false);
   };
 
   // set up hard-coded coordinates
@@ -153,13 +169,13 @@ var Logo = function( holder, size ) {
     recalcMouseDisplacement();
     if( _drawNumbers ) drawPointNumbers();
     _frameCount++;
-    if(_frameCount == 30) {
+    if(_frameCount === 30) {
       _mouseX = -10;
       _mouseY = -10;
     }
 
     // keep timer running
-    setTimeout(function(){ draw(); },30);
+    _timer = setTimeout(function(){ draw(); },30);
   };
 
   // sets initial canvas drawing props before 
@@ -226,4 +242,8 @@ var Logo = function( holder, size ) {
   };
 
   init();
+
+  return {
+    dispose: dispose
+  }
 };
