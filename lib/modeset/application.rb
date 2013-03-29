@@ -57,6 +57,7 @@ Modeset::Application.routes.draw do
 end
 
 Postmarkdown::Config.options[:layout] = 'pages'
+Postmarkdown::Config.options[:posts_per_page] = 1000
 
 class PagesController < ActionController::Base
   def show
