@@ -20,19 +20,19 @@ module Modeset
     config.assets.compile                    = true
     config.serve_static_assets               = true
     config.assets.prefix                     = 'assets'
-    config.assets.digest                     = false
-    config.assets.compress                   = false
     config.active_support.deprecation        = :log
 
-    # Configure assets for production
-    unless Rails.env.production?
-      config.assets.debug     = true
-      config.action_controller.perform_caching = false
-      config.cache_classes = false
+    if !Rails.env.production?
+      config.action_controller.perform_caching  = false
+      config.cache_classes                      = false
+      config.assets.debug                       = true
+      config.assets.digest                      = false
+      config.assets.compress                    = false
     else
-    # Tune down the output of the css
-      config.action_controller.perform_caching = true
-      config.cache_classes = true
+      config.action_controller.perform_caching  = true
+      config.cache_classes                      = true
+      config.assets.digest                      = true
+      config.assets.compress                    = true
     end
 
   end
