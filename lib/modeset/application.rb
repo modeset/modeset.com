@@ -18,6 +18,7 @@ module Modeset
     config.assets.version                    = '1.0'
     config.assets.paths                      << 'app/assets'
     config.assets.compile                    = true
+    config.assets.digest                     = false
     config.serve_static_assets               = true
     config.assets.prefix                     = 'assets'
     config.active_support.deprecation        = :log
@@ -26,12 +27,10 @@ module Modeset
       config.action_controller.perform_caching  = false
       config.cache_classes                      = false
       config.assets.debug                       = true
-      config.assets.digest                      = false
       config.assets.compress                    = false
     else
       config.action_controller.perform_caching  = true
       config.cache_classes                      = true
-      config.assets.digest                      = true
       config.assets.compress                    = true
     end
 
