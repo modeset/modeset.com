@@ -13,3 +13,4 @@ powder link
 ```
 rails g postmarkdown:post <slug>
 ```
+
