@@ -9,8 +9,9 @@ module ApplicationHelper
   def process_content_with_pipeline(post)
     HTML::Pipeline.new([
       HTML::Pipeline::MarkdownFilter,
-      HTML::Pipeline::SyntaxHighlightFilter
-    ]).call(post.content)[:output].to_s.html_safe
+      HTML::Pipeline::SyntaxHighlightFilter,
+      HTML::Pipeline::MentionFilter
+    ]).call(post.content, base_url: 'https://twitter.com/')[:output].to_s.html_safe
   end
 
   def post_summary(post)
