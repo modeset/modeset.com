@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/brianmario/charlock_holmes.git
-  revision: fdaa437122ab5d50f7907ba09a5febe9d0b980b8
-  branch: bundle-icu
-  specs:
-    charlock_holmes (0.6.13)
-
-GIT
   remote: git://github.com/modeset/utensils.git
   revision: 87098e3ac05eb384710d3f437133216520adb74d
   specs:
@@ -59,6 +52,7 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 1.0.0)
+    charlock_holmes (0.6.9.4)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
     ci_reporter (1.7.2)
@@ -233,7 +227,7 @@ PLATFORMS
 DEPENDENCIES
   bourbon
   capybara
-  charlock_holmes!
+  charlock_holmes
   ci_reporter
   coffee-rails
   haml-rails

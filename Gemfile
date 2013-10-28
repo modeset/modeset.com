@@ -31,5 +31,5 @@ group :development, :test do
 end
 
 group :production do
-  gem 'charlock_holmes', :git => "git://github.com/brianmario/charlock_holmes.git", :branch => "bundle-icu"
+  gem 'charlock_holmes'
 end
