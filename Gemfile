@@ -31,5 +31,5 @@ group :development, :test do
 end
 
 group :production do
-  gem 'charlock_holmes', github: 'salsify/charlock_holmes'
+  gem 'charlock_holmes', github: 'tooky/charlock_holmes', branch: 'bundle-icu'
 end

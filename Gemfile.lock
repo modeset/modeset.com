@@ -10,10 +10,11 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/salsify/charlock_holmes.git
-  revision: f80ff72fe8ae51a32d37a5db9bd987b84979efe6
+  remote: git://github.com/tooky/charlock_holmes.git
+  revision: f2ac0461f39397b863e4bf5c7fecb0602b9439ab
+  branch: bundle-icu
   specs:
-    charlock_holmes (0.6.9.1)
+    charlock_holmes (0.6.13)
 
 GEM
   remote: https://rubygems.org/
