@@ -9,6 +9,12 @@ GIT
       railties (>= 3.2.5)
       sass-rails
 
+GIT
+  remote: git://github.com/salsify/charlock_holmes.git
+  revision: f80ff72fe8ae51a32d37a5db9bd987b84979efe6
+  specs:
+    charlock_holmes (0.6.9.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -52,7 +58,6 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 1.0.0)
-    charlock_holmes (0.6.9.4)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
     ci_reporter (1.7.2)
@@ -227,7 +232,7 @@ PLATFORMS
 DEPENDENCIES
   bourbon
   capybara
-  charlock_holmes
+  charlock_holmes!
   ci_reporter
   coffee-rails
   haml-rails
