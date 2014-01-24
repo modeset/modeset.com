@@ -4,8 +4,8 @@ bundler_args: --without staging,production
 rvm:
 - 1.9.3
 before_install:
-- "sudo apt-get update -qq"
-- "sudo apt-get install -qq libicu-dev"
+- sudo apt-get update -qq
+- sudo apt-get install -qq libicu-dev
 script:
 - bundle exec rake --trace
 notifications:
@@ -18,7 +18,7 @@ notifications:
 deploy:
   provider: heroku
   api_key:
-    secure: DMEhaCsYVU0tbFFxLmckcaeZk5fbYzENhofjcxO6Nak+gnhBZPITdsaPBWbuxODMIY3ooIj0OMT0ukXGMZTaqm1evMmKurPcMEBjn6n2CNhXN24lROpZ/7Lmo8s0puuif6HgQ/K1xGf/RsI81W0zRBDHh4CrefcD7j4K1v57ubM=
+    secure: aOSsTZuo4RumksqQB4Ovd9j1hCK6XP4gjHONoD0CygXxtxN43dF0+eE2wGk3B0MYZjtAuJ8lGHRw1ju7g+qo7hCuMkZI5lvjnPQilgBYjqnv34n+SULcbnL1RjoTU39eIpUAtx3ubCJq7LAc74Fe+xn9e3jp8cDK5QNt3v5ME0c=
   app: modeset
   on:
     repo: modeset/modeset.com
