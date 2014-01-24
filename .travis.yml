@@ -1,0 +1,21 @@
+language: ruby
+cache: bundler
+bundler_args: --without staging,production
+rvm:
+- 1.9.3
+script:
+- bundle exec rake --trace
+notifications:
+  email: false
+  campfire:
+    on_success: change
+    on_failure: always
+    rooms:
+    - bittheory:7d0bcc5744c0794e0fdaa47bb209151060039982@440554
+deploy:
+  provider: heroku
+  api_key:
+    secure: DMEhaCsYVU0tbFFxLmckcaeZk5fbYzENhofjcxO6Nak+gnhBZPITdsaPBWbuxODMIY3ooIj0OMT0ukXGMZTaqm1evMmKurPcMEBjn6n2CNhXN24lROpZ/7Lmo8s0puuif6HgQ/K1xGf/RsI81W0zRBDHh4CrefcD7j4K1v57ubM=
+  app: modeset
+  on:
+    repo: modeset/modeset.com
