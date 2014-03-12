@@ -1,5 +1,5 @@
 = content_tag_for :section, post do
-  %h2= post.title
+  %h2= link_to post.title, post, class: 'post'
   %date= post.date.strftime('%-m.%-d.%Y')
   = image_tag post.metadata[:image], alt: post.title, class: 'postings-figure', width: '480', height:'135'
   %p<
