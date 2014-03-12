@@ -5,13 +5,9 @@ email: jeremy.jackson@modeset.com
 image: fpo/test-thumb.png
 ---
 
-[Alex Aitkin](https://github.com/aaitken) and myself spent some time a while working on getting [RequireJS](http://requirejs.org/) and [Evergreen](https://github.com/jnicklas/evergreen) playing nicely with each other.  I'll get into that more in another post, but in the process of doing that the concept of "private" came up.
-
-I've been using [Coffeescript](http://coffeescript.org/) on most of my recent projects, and I've been pretty happy with that.  While we haven't fully determined which MVC framework to embrace, and if we're going to standardize on AMD, it's been really good -- and enlightening -- to dive into each, and to know that we have several great tools at our disposal.  But now let's talk about making private methods in Coffeescript.
-
 ## Really, private?  But it's.. it's Javascript...
 
-People who've worked with me know I'm not a big fan of the concept of "private" in Javascript.  I prefer the "we're all grown ups here" tack, but I acknowledge that it can be useful in some architectures and patterns (as Alex has persuaded me into).  And it's Javascript, there isn't private really but you can sort of achieve it, so let's investigate the way we decided to implement it.
+People who've worked with me know I'm not a big fan of the concept of "private" in Javascript.  I prefer the "we're all grown ups here" tack, but I acknowledge that it can be useful in some architectures and patterns.  And it's Javascript, there isn't private really but you can sort of achieve it, so let's investigate the way we decided to implement it.
 
 The first thing we did to accomplish a private method was by creating a local variable -- local to the scope of the class that is.  Doing so looks like the following.
 
@@ -50,7 +46,7 @@ Calling `bar` now calls the private `baz` method within the context of the insta
 
 ## TDD and your privates
 
-But wait, since we're discussing testing and TDD here as well...there's no way to write a unit test for the `baz` method!  Yeah, maybe you shouldn't test private methods, and that's partly valid -- but Ruby has the concept of a `send` method, which is pretty cool and useful.  You can use it to call any method, including private or protected methods. I sort of like that, and anyone who's done TDD in Ruby has probably found it useful at least once.  So yeah, why can't we have something like that?
+But wait...there's no way to write a unit test for the `baz` method!  Yeah, maybe you shouldn't test private methods, and that's partly valid -- but Ruby has the concept of a `send` method, which is pretty cool and useful.  You can use it to call any method, including private or protected methods. I sort of like that, and anyone who's done TDD in Ruby has probably found it useful at least once.  So yeah, why can't we have something like that?
 
 What we really want is a common API that allows us to call our private methods within the context of our instance, as well as expose them externally in such a way that we can get at them from our tests but discourages people from ever using them.
 
@@ -135,7 +131,7 @@ class Foo extends Spine.Module
 
 Ok, awesome.. We have a consistent API and a nice structure for using private methods in our classes.  But wait, there's still no way to mock our private `baz` method.  Having the ability to do so would definitely come in handy while test driving our code.  And even if you believe that private methods should only be tested indirectly, I would say if you're not mocking any of them ever, you're not doing proper unit tests.
 
-So as a final step we can expose our private methods on the instance so we can do mocking on them.  We don't just want to expose them normally, and since we already have the local `__private__`, let's just put that on the instance instead. Making a quick adjustment to the `include` method we provided above, we can shift the local variable into an instance variable by using the CoffeeScript `@::` prototype syntax.  And our end result...
+So as a final step we can expose our private methods on the instance so we can do mocking on them.  We don't just want to expose them normally, and since we already have the local `__private__`, let's just put that on the instance instead. Making a quick adjustment to the `include` method we provided above, we can shift the local variable into an instance variable by using the CoffeeScript `@::` prototype syntax.  And our end result (note: we don't consider this pretty code, but it's what spine has)...
 
 ```coffeescript
 moduleKeywords = ['included', 'extended', 'private']
