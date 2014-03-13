@@ -5,7 +5,7 @@ email: mike.pack@modeset.com
 image: fpo/test-thumb.png
 ---
 
-We've recently been using [Ember.js](http://www.emberjs.com) to build rich client-side apps, and have enjoyed it tremendously. As with groking any new technology, we've hit a number of interesting challenges, one of which is how to structure the visual layer of the application. With the release of 1.0.0.rc6, Ember introduced components, a clean way to encapsulate data and behavior in an Ember object.
+We've recently been using [Ember.js](http://www.emberjs.com) to build rich client-side apps, and have enjoyed it tremendously. As when grokking any new technology, we've hit a number of interesting challenges, one of which is how to structure the visual layer of the application. With the release of 1.0.0.rc6, Ember introduced components, a clean way to encapsulate data and behavior in an Ember object.
 
 Our app is built using visual cards. Think Pinterest cards or baseball cards. Each card has an individualized purpose, which means it doesn't need to know about any surrounding cards. Practically, each card can function in isolation. Upon considering Ember components, we thought our card-based design would fit nicely into this structure so we proceeded with components. As it turns out, we didn't fully understand how this isolation would impact the app and refactored out components in favor of views.
 
@@ -26,7 +26,7 @@ Take the following Ember example, using a GitHub user as our model:
 {{/view}}
 ```
 
-Imagine `Github.ProfileCardView` encapsulates profile data about a Github user. Additional cards could be embedded: `Github.CommitsCardView`, `Github.RecentStarsCardView`, etc. These would be independent cards that display isolated information about a Github user.
+Imagine that `Github.ProfileCardView` encapsulates profile data about a Github user. Additional cards could be embedded: `Github.CommitsCardView`, `Github.RecentStarsCardView`, etc. These would be independent cards that display isolated information about a Github user.
 
 In the above example, the context for the entire snippet is the controller managing the view. In other words, Ember will resolve the expressions `{{username}}` and `{{email}}` to the same object, the controller which represents a Github user.
 
@@ -46,7 +46,7 @@ The template for the `card-body` component is now a separate file and requires s
 <p>{{user.email}}</p>
 ```
 
-Explicitly passing the model to the component is the primary pain point I'm trying to exemplify. As it turns out, this doesn't scale well. Passing the context into components is redundant and verbose, but due to the isolated nature of components, it's the only way to keep references intact.
+Explicitly passing the model to the component is the primary pain point I'm trying to demonstrate. As it turns out, this doesn't scale well. Passing the context into components is redundant and verbose, but due to the isolated nature of components, it's the only way to keep references intact.
 
 We could accomplish the same level of expressivity and allow view composition by using a helper:
 
@@ -63,7 +63,7 @@ The `profile-card` helper could set up the appropriate contexts and call out to 
 
 ## Testability
 
-We found that testability actually decreased when replacing components with views. Due to the isolated nature of components, they've very easy to test independently. We created a [setupComponent test helper](https://gist.github.com/mikepack/9274300) that renders the component into the test harness's DOM. This allows us to setup the component on the page, make assertions about the component, and tear it down afterwards.
+We found that testability actually decreased when replacing components with views. Due to the isolated nature of components, they've very easy to test independently. We created a [setupComponent test helper](https://gist.github.com/mikepack/9274300) that renders the component into the test harness's DOM. This allows us to set up the component on the page, make assertions about the component, and tear it down afterwards.
 
 If we used the component described above:
 
@@ -142,4 +142,4 @@ If you've made it to this point, you're probably thinking, "you're doing it wron
 
 It's clear now: components should only be used for pieces you wish to widget-ize. Things like Facebook Like buttons and Twitter tweet embeds. I don't see a practical use case for components as inter-application sharable views. Specifically, if you've reach a point where you're passing Ember objects into components, you may have gone too far.
 
-I hope this article is a helpful perspective for someone considering the pros and cons of components and views. Before proceeding with components, make sure you clarify that you need the isolation, and you're ultimate goal isn't to simply and cleanly compose your views.
+I hope this article is a helpful perspective for someone considering the pros and cons of components and views. Before proceeding with components, make sure you clarify that you need the isolation, and your ultimate goal isn't to simply and cleanly compose your views.
