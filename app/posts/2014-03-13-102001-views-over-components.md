@@ -18,7 +18,7 @@ One beautiful feature of Ember is its ability to manage view hierarchy for the d
 
 Take the following Ember example, using a GitHub user as our model:
 
-```handlebars
+```html
 <h1>{{username}}</h1>
 {{#view Github.ProfileCardView}}
   <p>{{fullname}}</p>
@@ -32,7 +32,7 @@ In the above example, the context for the entire snippet is the controller manag
 
 With components, you lose the implicit binding between views and their sub-views. If you'd like to access the outer context, you need to explicitly pass it to the component:
 
-```handlebars
+```html
 <h1>{{username}}</h1>
 {{profile-card user=model}}
 ```
@@ -41,7 +41,7 @@ Where `model` is an accessor for the current controller's model (our Github user
 
 The template for the `card-body` component is now a separate file and requires scoping each property to the `user` argument:
 
-```handlebars
+```html
 <p>{{user.fullname}}</p>
 <p>{{user.email}}</p>
 ```
@@ -50,7 +50,7 @@ Explicitly passing the model to the component is the primary pain point I'm tryi
 
 We could accomplish the same level of expressivity and allow view composition by using a helper:
 
-```handlebars
+```html
 <h1>{{username}}</h1>
 {{#profile-card}}
   <p>{{fullname}}</p>
@@ -67,7 +67,7 @@ We found that testability actually decreased when replacing components with view
 
 If we used the component described above:
 
-```handlebars
+```html
 <h1>{{username}}</h1>
 {{profile-card user=model}}
 ```
@@ -98,7 +98,7 @@ With Ember's integration testing framework, you're forced to render the entire E
 
 Actions were a point of contention for us as well. In our case, we wanted a click event on the component to propagate an action up to our router. Say we wanted our Github profile component to allow the user to in-line update the email attribute. We'd want to trigger a `edit` action on the router so we can transition to a new URL that represents the state of the page:
 
-```handlebars
+```html
 <p>{{user.fullname}}</p>
 {{#if modifying}}
   {{input user.email type='email'}}
@@ -120,7 +120,7 @@ App.ProfileCardComponent = Ember.Component.extend
 
 Clicking the button will trigger the `edit` action on the component, which will propagate the `editEmail` action up to the router. The last step in hooking this up is to pass the action to the component:
 
-```handlebars
+```html
 <h1>{{username}}</h1>
 {{profile-card user=model edit='editEmail'}}
 ```
@@ -131,7 +131,7 @@ This issue affects other aspects of components as well. As discussed in the Test
 
 If we had a stats aggregator card that compares a user's comments over time against a series of baseline metrics, embedding this card component becomes quite unwieldy:
 
-```handlebars
+```html
 {{stats-card commits=commits mean=meanCommits median=medianCommits mode=modeCommits max=maxCommits min=minCommits export='exportStats' changeMonth='changeCurrentMonth'}}
 ```
 
