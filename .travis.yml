@@ -21,5 +21,7 @@ deploy:
   api_key:
     secure: aOSsTZuo4RumksqQB4Ovd9j1hCK6XP4gjHONoD0CygXxtxN43dF0+eE2wGk3B0MYZjtAuJ8lGHRw1ju7g+qo7hCuMkZI5lvjnPQilgBYjqnv34n+SULcbnL1RjoTU39eIpUAtx3ubCJq7LAc74Fe+xn9e3jp8cDK5QNt3v5ME0c=
   app: modeset
+  run: "rake db:migrate db:seed"
   on:
-    repo: modeset/modeset.com
+    repo: "modeset/modeset.com"
+    branch: master
