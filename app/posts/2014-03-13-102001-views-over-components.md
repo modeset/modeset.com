@@ -89,7 +89,7 @@ expect(Ember.$('.profile-card').text()).to.match(/Mike Pack/)
 expect(Ember.$('.profile-card').text()).to.match(/mike.pack@modeset.com/)
 ```
 
-This approach gives us a clean way to render components and make assertions about their behavior. We lose this ability when refactoring components to views. After the conversion, we had two options: use [Ember's integration testing framework](http://emberjs.com/guides/testing/integration/), or use a tool like [Capybara](https://github.com/jnicklas/capybara) since we're running on a Rails stack.
+This approach gives us a clean way to render components and make assertions about their behavior. We lost this ability when refactoring components to views. After the conversion, we had two options: use [Ember's integration testing framework](http://emberjs.com/guides/testing/integration/), or use a tool like [Capybara](https://github.com/jnicklas/capybara) since we're running on a Rails stack.
 
 With Ember's integration testing framework, you're forced to render the entire Ember stack. In order to test the component, you'd need to visit a URL that contains the component. Ember will route the "request" through the router, fetch models, setup controllers, render views and finally render the component. While this isn't a poor approach to testing components, it's clunky. Moreover, there are better tools for this style of testing; we chose Capybara.
 
