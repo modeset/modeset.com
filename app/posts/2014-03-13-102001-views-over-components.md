@@ -82,7 +82,7 @@ AppTest.setupComponent 'profile-card',
 
 The first argument to `#setupComponent` is the name of the component we'd like to render. The second argument is the model/content of the surrounding controller. The third argument is a hash of options to be passed to the component in the view.
 
-What results from running `#setupComponent` is our component rendered into the page for testing purposes. Assuming our component has `.profile-card` in it's `classNames` property, we can subsequent use normal assertions to test the component:
+What results from running `#setupComponent` is our component rendered into the page for testing purposes. Assuming our component has `.profile-card` in it's `classNames` property, we can use normal assertions to test the component:
 
 ```coffeescript
 expect(Ember.$('.profile-card').text()).to.match(/Mike Pack/)
@@ -91,7 +91,7 @@ expect(Ember.$('.profile-card').text()).to.match(/mike.pack@modeset.com/)
 
 This approach gives us a clean way to render components and make assertions about their behavior. We lose this ability when refactoring components to views. After the conversion, we had two options: use [Ember's integration testing framework](http://emberjs.com/guides/testing/integration/), or use a tool like [Capybara](https://github.com/jnicklas/capybara) since we're running on a Rails stack.
 
-With Ember's integration testing framework, you're forced to render the entire Ember stack. In order to test the component, you'd need to visit a URL that contains the component. Ember will route the "request" through the router, fetch models, setup controllers, render views and finally render the component. While this isn't a poor approach to testing components, it's clunky. Moreover, there are better tools for this style of testing. We chose Capybara.
+With Ember's integration testing framework, you're forced to render the entire Ember stack. In order to test the component, you'd need to visit a URL that contains the component. Ember will route the "request" through the router, fetch models, setup controllers, render views and finally render the component. While this isn't a poor approach to testing components, it's clunky. Moreover, there are better tools for this style of testing; we chose Capybara.
 
 
 ## Actions and Dependency Injection
@@ -138,7 +138,7 @@ If we had a stats aggregator card that compares a user's comments over time agai
 
 ## Conclusion
 
-If you've made it to this point, you're probably thinking, "you're doing it wrong." You're right, we did. We lead ourselves to this point because of our inexperience with Ember and especially our inexperience with components. Though we ultimately needed to move away from components, we learned a ton along the way.
+If you've made it to this point, you're probably thinking, "you're doing it wrong." You're right, we were. We lead ourselves to this point because of our inexperience with Ember and especially our inexperience with components. Though we ultimately needed to move away from components, we learned a ton along the way.
 
 It's clear now: components should only be used for pieces you wish to widget-ize. Things like Facebook Like buttons and Twitter tweet embeds. I don't see a practical use case for components as inter-application sharable views. Specifically, if you've reach a point where you're passing Ember objects into components, you may have gone too far.
 
