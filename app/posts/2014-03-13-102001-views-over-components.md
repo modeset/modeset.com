@@ -39,7 +39,7 @@ With components, you lose the implicit binding between views and their sub-views
 
 Where `model` is an accessor for the current controller's model (our Github user).
 
-The template for the `card-body` component is now a separate file and requires scoping each property to the `user` argument:
+The template for the `profile-card` component is now a separate file and requires scoping each property to the `user` argument:
 
 ```html
 <p>{{user.fullname}}</p>
