@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3' if respond_to?(:ruby)
+ruby '2.1.5' if respond_to?(:ruby)
 
 gem 'rails', '~> 3.2.14'
 gem 'thin'
