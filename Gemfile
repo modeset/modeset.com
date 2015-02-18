@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.5' if respond_to?(:ruby)
 
 gem 'rails', '~> 3.2.14'
-gem 'thin'
+gem 'puma'
 gem 'redcarpet'
 gem 'postmarkdown'
 gem 'html-pipeline', require: 'html/pipeline'
@@ -23,6 +23,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'foreman'
   gem 'pry'
   gem 'teabag'
   gem 'rspec-rails'
