@@ -1,3 +1,18 @@
-h1 {
-  color: red;
-}
+@import "lib/*";
+
+
+@import "skeleton/normalize";
+@import "skeleton/skeleton";
+
+@import "config";
+
+@import "components/type/fonts";
+@import "components/type/utils";
+@import "components/type/headers";
+@import "components/type/paragraph";
+@import "components/type/inline";
+@import "components/type/links";
+@import "components/type/lists";
+
+@import "components/scaffold";
+@import "components/sections";

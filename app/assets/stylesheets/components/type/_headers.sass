@@ -1,0 +1,33 @@
+h1, h2, h3, h4, h5, h6
+  @extend %regular-family
+  line-height: 1
+  margin: 0 0 2.5rem 0
+
+h1
+  text-transform: lowercase
+  color: $mint
+  font-size: 14.0rem
+
+h2
+  text-transform: lowercase
+  color: $mint
+  font-size: 9.0rem
+  position: relative
+
+h2::before
+  content: " "
+  position: absolute
+  top: -0.5rem
+  background: #BBF9D4
+  width: 3rem
+  height: 0.25rem
+
+h3
+  text-transform: lowercase
+  color: $base-color-darker
+  font-size: 5.0rem
+
+h4
+  @extend %italic-family
+  color: $base-color-darker
+  font-size: 3.2rem

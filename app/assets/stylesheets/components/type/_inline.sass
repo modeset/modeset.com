@@ -1,0 +1,16 @@
+// special typographic elements
+em, i
+  @extend %italic-family
+
+strong, b
+  @extend %bold-family
+
+strong em,
+em strong,
+b i,
+i b,
+b em,
+em b,
+strong i,
+i strong
+  @extend %bold-italic-family

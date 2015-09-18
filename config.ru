@@ -18,6 +18,7 @@ module Micro
     config.assets.enabled = true
     config.assets.version = "1.0"
     config.assets.debug = true
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
   end
 end
 
