@@ -1,5 +1,7 @@
 section
   margin-bottom: 7rem
+  background-size: cover
+  background-position: center
 
 section.bordered
   border: 2px solid $mint
@@ -17,16 +19,6 @@ section.light
     text-transform: uppercase
     font-size: 1.8rem
 
-
-section.office-photo-mode-set
-  background-image: image-url("office-photo-mode-set.jpg")
-  background-size: cover
-
-section.office-photo-crew
-  background-image: image-url("office-photo-crew.jpg")
-  background-size: cover
-  background-position: center
-
 section:empty
   position: relative
   padding-bottom: 44%
@@ -40,3 +32,15 @@ section:empty::before
   width: 2.6rem
   height: 3.3rem
   background-repeat: no-repeat
+
+section.office-photo-mode-set
+  background-image: image-url("office-photo-mode-set.jpg")
+
+section.office-photo-crew
+  background-image: image-url("office-photo-crew.jpg")
+
+section.office-photo-desk
+  background-image: image-url("office-photo-desk.jpg")
+
+section.office-photo-desktop
+  background-image: image-url("office-photo-desktop.jpg")
