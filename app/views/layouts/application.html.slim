@@ -7,5 +7,15 @@ html
     = javascript_include_tag "application"
     = stylesheet_link_tag "application"
   body
+    = link_to "Styleguide", "/styleguide", :style => "position: fixed; top: 0; left: 0"
     .container
+      header
+        = image_tag "mode-set-type.svg", :width => "132", :height => "17", :class => "my_class", :alt => "Mode Set"
+      nav
+        = link_to "The Difference", "/"
+        = link_to "The Process", "/"
+        = link_to "The Work", "/"
+        = link_to "The Team", "/"
+        = link_to "Talk Nerdy", "/"
+        = link_to "Find Us", "/"
       = yield
