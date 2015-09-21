@@ -1,0 +1,44 @@
+#home
+  position: relative
+  padding-bottom: 72%
+  border: 0
+
+#home-centered
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+#home ul
+  padding: 4rem
+  background-color: white
+
+#home ul li
+  margin-bottom: 0
+
+#home ul li:first-of-type
+  color: $primary
+
+#how-we-work,
+#how-we-work:visited
+  @extend %italic-family
+  position: relative
+  display: inline-block
+  color: white
+  font-size: 2.3rem
+  text-transform: lowercase
+  padding: 4rem
+
+#how-we-work::before
+  transition: left $speed ease
+  content: " "
+  background-image: url(/assets/how-we-work-arrow.svg)
+  background-repeat: no-repeat
+  position: absolute
+  top: 3rem
+  left: 4rem
+  width: 4.5rem
+  height: 0.6rem
+
+#how-we-work:hover::before
+  left: 13.3rem
