@@ -1,0 +1,58 @@
+#footer
+  border-top: 1px dotted #7C7B74
+  padding: 2rem 0 4rem
+
+#footer .binary
+  margin-right: 2rem
+  vertical-align: middle
+
+#footer nav
+  display: inline-block
+
+#footer nav a::after
+  content: " "
+  padding-left: 0
+  background-color: $primary
+  width: 2px
+  height: 2px
+  display: inline-block
+  border-radius: 1px
+  margin-bottom: 0px
+  overflow: hidden
+  position: absolute
+  top: 50%
+  right: -1rem
+  pointer-events: none
+
+#footer nav a:last-of-type::after
+  display: none
+
+#footer nav a,
+#footer nav a:visited
+  @extend %helvetica-family
+  text-transform: uppercase
+  font-size: 1.0rem
+  text-decoration: none
+  display: inline-block
+  letter-spacing: 1px
+  color: $nav-text-color
+  position: relative
+  margin-right: 1.8rem
+
+
+#footer span
+  @extend %helvetica-family
+  text-transform: uppercase
+  font-size: 1.0rem
+  position: relative
+  padding-left: 0.3rem
+
+#footer span::before
+  content: " "
+  width: 1px
+  background-color: $primary
+  display: block
+  position: absolute
+  left: -1rem
+  top: 0
+  height: 100%
