@@ -28,4 +28,7 @@ html
           = link_to "The Team", "/"
           = link_to "Talk Nerdy", "/"
           = link_to "Find Us", "/"
-          span<> &copy; #{Time.now.year} Mode Set
+        span#footer-copy<> &copy; #{Time.now.year} Mode Set
+        div#footer-info
+          = link_to "inquiries@modeset.com", "mailto:inquiries@modeset.com", :id => "footer-email"
+          span#footer-phone 720.440.BITS
