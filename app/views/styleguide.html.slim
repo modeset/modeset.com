@@ -1,13 +1,14 @@
 
 hr
 section
-  h1 Styleguide (h1)
-  h2 Another section (h2)
-  h3 How we work_ (h3)
-  h4 Not just another group of developers (h4)
+  h3 Headers
+  h1 h1
+  h2 h2
+  h3 h3
+  h4 h4
 hr
 section
-  h4 Special typographic elements
+  h3 Special typographic elements
   p 
     strong This is &lt;strong&gt;
   p 
@@ -16,21 +17,81 @@ section
     b
       i This is &lt;b&gt; wrapping &lt;i&gt;
 hr
+h3 Sections
 section
-  h3 This is a &lt;section&gt;
+  h3
+    code section
   p We work best as your partner. We teach early stage startups how to develop their first software product and how to build a business around it. A software business is not the same as a traditional business. A software business introduces technical nuance that can be daunting, unfamiliar, and costly territory. Our objective is to teach you to fish - and then set you up for independent growth.
   p Our approach is an iterative one, engineered to challenge assumptions along the way. We deliver working design and software in full feature slices, for the express purpose of keeping the feedback cycle short and frequent, and the train moving full steam ahead.
+h3
+  code section.bordered
 section.bordered
-  h3 This is a &lt;section&gt; with <code>.border</code>
   p Simply put - You don’t know what you don’t know. And that is dangerous. Our process exposes the unknowns and fosters working smarter, not harder. 
-section.bordered.light.office-photo-mode-set
-  h3 This is a &lt;section&gt; with <b>.photo-background</b>
-  p Simply put - You don’t know what you don’t know. And that is dangerous. Our process exposes the unknowns and fosters working smarter, not harder. 
-section.bordered.light.office-photo-desk
+h3 
+  code section.light.bordered
+div.row
+  .six.columns
+    code section:empty
+    code .office-photo-mode-set
+    section.bordered.office-photo-mode-set
+  .six.columns
+    code section:empty
+    code .office-photo-crew
+    section.bordered.office-photo-crew
+div.row
+  .six.columns
+    code section.light
+    code .office-photo-desk
+    section.light.bordered.office-photo-desk
+      p Simply put - You don’t know what you don’t know. And that is dangerous. Our process exposes the unknowns and fosters working smarter, not harder. 
+  .six.columns
+    code section.light
+    code .office-photo-desktop
+    section.light.bordered.office-photo-desktop
+      p Simply put - You don’t know what you don’t know. And that is dangerous. Our process exposes the unknowns and fosters working smarter, not harder. 
+
+hr
+h3 Columns
+section
   div.row
+    .twelve.columns
+      ul
+        li RAILS
+        li TEASPOON
+        li MERCURY
+        li CMSimple
+section
+  h3
+    span Columns with 
+    code .row.headerbars
+  div.row.headerbars
+    .four.columns
+      ul
+        li Turing
+        li Girl Develop It!
+        li gSchool
+        li The Iron Yard
+    .five.columns
+      ul
+        li BDW (Boulder Digital Works)
+        li CU Denver
+        li Metro State (Denver)
+        li Northeastern University
+    .three.columns
+      ul
+        li Turing
+        li Girl Develop It!
+        li gSchool
+        li The Iron Yard
+section
+  h3
+    code section.bordered.light.office-photo-desk
+  h3
+    code .row.headerbars
+section.bordered.light.office-photo-desk
+  div.row.headerbars
     div.six.columns
       h3 We Believe in
-      hr
       ul
         li transparent + open client relationships
         li continuous reflection + improvement
@@ -39,11 +100,13 @@ section.bordered.light.office-photo-desk
         li small cross-functional teams
     div.six.columns
       h3 We practice
-      hr
       ul
         li sustainable working schedules
         li test-driven development
         li short feedback cycles
         li paired programming
-section.bordered.light.office-photo-desktop
-section.bordered.light.office-photo-crew
+
+hr
+h3 Work
+section
+  div.row

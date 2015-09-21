@@ -1,34 +1,37 @@
-doctype html
-html
-  head
-    title Title
-    link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"
-    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-    = javascript_include_tag "application"
-    = stylesheet_link_tag "application"
-  body
-    = link_to "Styleguide", "/styleguide", :style => "position: fixed; top: 0; left: 0"
-    .container
-      header#header
-        = image_tag "mode-set-type.svg", :width => "132", :height => "17", :alt => "Mode Set"
-      nav#nav
-        = link_to "The Difference", "/"
-        = link_to "The Process", "/"
-        = link_to "The Work", "/"
-        = link_to "The Team", "/"
-        = link_to "Talk Nerdy", "/"
-        = link_to "Find Us", "/"
-      = yield
-      footer#footer
-        = image_tag "mode-set-binary.svg", :width => "32", :height => "17", :class => "binary", :alt => "011"
-        nav
-          = link_to "The Difference", "/"
-          = link_to "The Process", "/"
-          = link_to "The Work", "/"
-          = link_to "The Team", "/"
-          = link_to "Talk Nerdy", "/"
-          = link_to "Find Us", "/"
-        span#footer-copy<> &copy; #{Time.now.year} Mode Set
-        div#footer-info
-          = link_to "inquiries@modeset.com", "mailto:inquiries@modeset.com", :id => "footer-email"
-          span#footer-phone 720.440.BITS
+- if !request.xhr?
+  doctype html
+  html
+    head
+      title Title
+      link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"
+      meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      = javascript_include_tag "application"
+      = stylesheet_link_tag "application"
+    body
+      = link_to "Styleguide", "/styleguide", :style => "position: fixed; top: 0; left: 0"
+      .container
+        header#header
+          = image_tag "mode-set-type.svg", :width => "132", :height => "17", :alt => "Mode Set"
+        nav#nav
+          = link_to "The Difference", "/difference"
+          = link_to "The Process", "/process"
+          = link_to "The Work", "/work"
+          = link_to "The Team", "/team"
+          = link_to "Talk Nerdy", "/talk-nerdy"
+          = link_to "Find Us", "/find-us"
+        = yield
+        footer#footer
+          = image_tag "mode-set-binary.svg", :width => "32", :height => "17", :class => "binary", :alt => "011"
+          nav
+            = link_to "The Difference", "/difference"
+            = link_to "The Process", "/process"
+            = link_to "The Work", "/work"
+            = link_to "The Team", "/team"
+            = link_to "Talk Nerdy", "/talk-nerdy"
+            = link_to "Find Us", "/find-us"
+          span#footer-copy<> &copy; #{Time.now.year} Mode Set
+          div#footer-info
+            = link_to "inquiries@modeset.com", "mailto:inquiries@modeset.com", :id => "footer-email"
+            span#footer-phone 720.440.BITS
+- else
+  = yield
