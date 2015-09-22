@@ -1,6 +1,6 @@
 #home
   position: relative
-  padding-bottom: 72%
+  padding-bottom: 62%
   border: 0
   margin-left: 0
   margin-right: 0
@@ -12,11 +12,16 @@
   transform: translate(-50%, -50%)
 
 #home ul
-  padding: 4rem
+  padding: 1rem
   background-color: white
+  @media (min-width: 360px)
+    padding: 2rem
+  @media (min-width: 450px)
+    padding: 4rem
 
 #home ul li
   margin-bottom: 0
+  white-space: nowrap
 
 #home ul li:first-of-type
   color: $primary
@@ -29,7 +34,8 @@
   color: white
   font-size: 2.3rem
   text-transform: lowercase
-  padding: 4rem
+  padding: 4rem 4rem 0
+  text-shadow: 0 1px 0 black
 
 #how-we-work::before
   transition: left $speed ease

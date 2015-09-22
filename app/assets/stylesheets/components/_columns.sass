@@ -1,18 +1,24 @@
-.row .columns ul
-  margin: 3rem 0 0
 
 .row .columns li
-  font-size: 2.2rem
+  font-size: 1.6rem
+  @media (min-width: $tablet-size)
+    font-size: 2.2rem
 
-.row.headerbars .columns ul::before
-  content: " "
-  display: block
-  height: 1px
-  background-color: #424446
-  margin: 4rem 0
 
-.light .row.headerbars .columns ul::before
-  background-color: $mint
+@media (min-width: $tablet-size)
+  .row .columns ul
+    margin: 3rem 0
+
+  .row.headerbars .columns ul::before
+    content: " "
+    display: block
+    height: 1px
+    background-color: #424446
+    margin: 4rem 0
+
+  .light .row.headerbars .columns ul::before
+    background-color: $mint
+
 
 .row.footerbars .columns::after
   content: " "
