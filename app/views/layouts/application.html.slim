@@ -8,10 +8,10 @@
       = javascript_include_tag "application"
       = stylesheet_link_tag "application"
     body
-      = link_to "Styleguide", "/styleguide", :style => "position: fixed; top: 0; left: 0"
       .container
         header#header
-          = image_tag "mode-set-type.svg", :width => "132", :height => "17", :alt => "Mode Set"
+          = link_to "/" do
+            = image_tag "mode-set-type.svg", :width => "132", :height => "17", :alt => "Mode Set"
         nav#nav
           = link_to "The Difference", "/difference"
           = link_to "The Process", "/process"
