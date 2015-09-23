@@ -2,11 +2,13 @@ require "rubygems"
 require "bundler/setup"
 require "action_controller/railtie"
 require "sprockets/railtie"
+require "autoprefixer-rails"
 
 Bundler.require
 
 module Micro
   class Application < Rails::Application
+    AutoprefixerRails.install(config.assets)
     config.session_store :cookie_store, :key => "_app_session"
     config.secret_token = "30dd9731a121fb4a3425fb528ffed853"
     config.active_support.deprecation = :log
