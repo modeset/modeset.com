@@ -5,6 +5,14 @@ body
   @extend %regular-family
   color: $base-color
 
+::selection
+  background: $primary
+  text-shadow: none
+  color: white
+
+a, a:active, button, label
+  -webkit-tap-highlight-color: rgba(0, 188, 228, 0.2)
+
 hr
   border-top: 1px solid $mint
 
