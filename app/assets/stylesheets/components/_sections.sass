@@ -5,10 +5,11 @@ section
 
 section.bordered
   border: 2px solid $mint
-  padding: 5rem 4rem 3rem
+  padding: 4rem 2rem 2rem
   margin-left: -2rem
   margin-right: -2rem
   @media (min-width: $tablet-size)
+    padding: 5rem 4rem 3rem
     margin-left: -4rem
     margin-right: -4rem
 
@@ -54,6 +55,7 @@ section.office-photo-home
   background-image: image-url("office-photo-home.jpg")
 
 section#map
+  position: relative
   background-image: image-url("map-16010-little-raven.png")
   padding-bottom: 80%
   background-size: 240%
@@ -65,3 +67,14 @@ section#map
     padding-bottom: 60%
     background-size: cover
     background-position: center
+
+  a
+    transition: background-color $speed ease
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  a:hover
+    background-color: rgba(255,255,255,0.2)

@@ -1,23 +1,90 @@
 #nav
-  background: $mint
+  border-top: 1px solid $blue
+  // background: $mint
   text-align: center
   margin-bottom: 5rem
+  overflow: hidden
+  position: relative
+  user-select: none
 
-#nav a::after
-  content: "."
-  padding-left: 2.2rem
+#nav > div
+  transition: margin-top $speed ease
+  border-bottom: 1px solid $blue
 
-#nav a:last-of-type::after
-  content: ""
-  padding-left: 0
+// fancy checkbox toggle for mobile menu
+input#menu-toggle
+  display: none
+
+@media (max-width: $tablet-size)
+  label[for=menu-toggle]
+    position: absolute
+    overflow: hidden
+    box-sizing: border-box
+    top: 2rem
+    width: 7.5rem
+    height: 5rem
+    border: 0
+    margin: 0
+    padding: 12px 2rem 0 2rem
+
+    span
+      transition: transform $speed ease
+      display: block
+      height: 4px
+      margin-bottom: 6px
+      width: 100%
+      background-color: #555759
+
+  input#menu-toggle ~ #nav > div
+    margin-top: -350px
+
+  input#menu-toggle:checked ~ #nav > div
+    margin-top: 0
+
+  input#menu-toggle:checked ~ label
+    span:first-of-type
+      transform: translate(0, 10px) rotate(45deg)
+    span:nth-of-type(2)
+      transform: translate(-6rem, 0) scale(0)
+    span:last-of-type
+      transform: translate(0, -10px) rotate(-45deg)
+
+// nav buttons
+#nav a
+  width: 100%
+
+@media (min-width: $tablet-size)
+  label[for=menu-toggle]
+    display: none
+
+  #nav a
+    width: auto
+
+  #nav a::after
+    content: "."
+    padding-left: 1.2rem
+
+  #nav a:last-of-type::after
+    content: ""
+    padding-left: 0
+
 
 #nav a,
 #nav a:visited
   @extend %helvetica-family
   text-decoration: none
-  padding: 2rem 1rem
+  padding: 2rem 0.5rem
   display: inline-block
   text-transform: uppercase
   letter-spacing: 2px
   font-size: 1.4rem
   color: $nav-text-color
+
+@media (min-width: 850px)
+  #nav a,
+  #nav a:visited
+    padding: 2rem 1rem
+
+  #nav a::after
+    content: "."
+    padding-left: 2.2rem

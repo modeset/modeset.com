@@ -1,6 +1,6 @@
 .work-title
   position: relative
-  margin: 3rem 0 0 
+  margin: 3rem 0 0
 
 .work-title::before
   content: " "
@@ -14,6 +14,12 @@
 .work-title,
 .work-description
   font-size: 1.7rem
+
+@media (min-width: 550px)
+  .work-description
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
 
 .work-img
   max-width: 100%
