@@ -81,6 +81,7 @@ input#menu-toggle
   letter-spacing: 2px
   font-size: 1.4rem
   color: $nav-text-color
+  transition: font-weight $speed ease
 
 @media (min-width: 850px)
   #nav a,
@@ -90,3 +91,13 @@ input#menu-toggle
   #nav a::after
     content: "."
     padding-left: 2.2rem
+    font-weight: normal
+
+
+.difference #nav a[href="/difference"],
+.process #nav a[href="/process"],
+.work #nav a[href="/work"],
+.team #nav a[href="/team"],
+.find-us #nav a[href="/find-us"]
+  font-weight: bold
+  letter-spacing: 1.6px

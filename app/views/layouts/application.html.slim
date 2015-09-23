@@ -2,12 +2,15 @@
   doctype html
   html
     head
-      title Title
+      - if content_for? :page_title
+        = yield :page_title
+      - else
+        title Mode Set
       link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"
       meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
       = javascript_include_tag "application"
       = stylesheet_link_tag "application"
-    body
+    body[class="sample #{params[:page]}"]
       .container
         header#header
           = link_to "/" do
