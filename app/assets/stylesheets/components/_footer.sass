@@ -12,12 +12,15 @@
 
 
 #footer .binary
-  margin-right: 2rem
-  vertical-align: middle
-
+  margin-right: 1rem
+  vertical-align: top
+  @media (min-width: 860px)
+    margin-right: 2rem
 
 #footer nav
-  display: inline-block
+  display: none
+  @media (min-width: 860px)
+    display: inline-block
 
 #footer nav a::after
   content: " "
@@ -35,7 +38,14 @@
   pointer-events: none
 
 #footer nav a:last-of-type::after
-  display: none
+  content: " "
+  width: 1px
+  background-color: $primary
+  display: block
+  position: absolute
+  right: -1.2rem
+  top: 0
+  height: 100%
 
 #footer nav a,
 #footer nav a:visited
@@ -56,24 +66,15 @@
   position: relative
   padding-left: 0.3rem
 
-#footer-copy::before
-  content: " "
-  width: 1px
-  background-color: $primary
-  display: block
-  position: absolute
-  left: -1rem
-  top: 0
-  height: 100%
-
-
 #footer-info
   display: inline-block
   float: right
 
 #footer-email
   color: $primary
-  margin-right: 2rem
 
 #footer-phone
   @extend %helvetica-family
+  margin-left: 2rem
+  @media (max-width: 380px)
+    display: none
