@@ -5,6 +5,15 @@ Rails app powering [modeset.com](http://www.modeset.com/)
 
 Run `bundle` and `rackup` to run the site.
 
+Pushing
+========
+
+* Set up Heroku:
+  * `heroku login`
+  * `heroku keys:add`
+* Push version2 branch to staging with: `git push -f staging version2:master`
+
+
 TODO
 ========
 
