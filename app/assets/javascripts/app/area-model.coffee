@@ -17,6 +17,7 @@ class AreaModel
       if @curPath != @prevPath
         document.body.classList.remove(@pathToClass(@prevPath)) if @prevPath.length > 1
         document.body.classList.add(@pathToClass(@curPath)) if @curPath.length > 1 # protect against '/' path
+        window.modeset.closeMobileMenu()
         @exitCurSection()
         document.title = @formatDocumentTitle()
     else
