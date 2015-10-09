@@ -15,6 +15,8 @@ class AreaModel
     if !@isTransitioning
       # exit section if path changed
       if @curPath != @prevPath
+        document.body.classList.remove(@pathToClass(@prevPath)) if @prevPath.length > 1
+        document.body.classList.add(@pathToClass(@curPath)) if @curPath.length > 1 # protect against '/' path
         @exitCurSection()
         document.title = @formatDocumentTitle()
     else
@@ -49,7 +51,7 @@ class AreaModel
 
   contentHidden: ->
     # dispose previous area object
-    @curAreaObj.dispose() if( @curAreaObj != null )
+    @curAreaObj?.dispose()
     @curAreaObj = null
     # load new area, since all previous are cleared out now
     @loadAjaxContent( @curPath )
@@ -63,7 +65,7 @@ class AreaModel
     window.reqwest
       url: path,
       success: (data) =>
-        @createMainContentObj( data, true )
+        @createMainContentObj(data, true)
         @showAjaxContent()
 
 
@@ -80,8 +82,7 @@ class AreaModel
 
     # create area object if there is one
     isInitialLoad = !replaceContent
-    if window[pageType]
-      @curAreaObj = new window[pageType]( @contentEl, isInitialLoad )
+    @curAreaObj = new ViewCommon( @contentEl, isInitialLoad )
 
 
   showAjaxContent: ->
@@ -127,6 +128,11 @@ class AreaModel
 
   toTitleCase: (str) ->
     return str.substr(0,1).toUpperCase() + str.substr(1).toLowerCase()
+
+
+  pathToClass: (path) ->
+    path = path.substr(1) if path.indexOf('/') == 0
+    return path
 
 
 window.AreaModel = AreaModel

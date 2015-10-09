@@ -45,3 +45,5 @@
       = javascript_include_tag "application"
 - else
   = yield
+  javascript:
+    if(document.body.classList.length == 0) document.location.reload()
