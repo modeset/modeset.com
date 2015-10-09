@@ -9,9 +9,10 @@ p
 
 p.padded
   font-size: 1.8rem
-  padding: 0 2rem
   max-width: 100%
   transition: padding $speed ease
+  @media (min-width: 400px)
+    padding: 0 2rem
   @media (min-width: $tablet-size)
     padding: 0 8rem
 
