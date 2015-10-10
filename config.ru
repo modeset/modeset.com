@@ -30,6 +30,9 @@ class ApplicationController < ActionController::Base
   def page
     render template: params[:page] || "index"
   end
+  rescue_from ActionView::MissingTemplate do |exception|
+    render template: "error"
+  end
 end
 
 Rails.application.initialize! rescue nil
