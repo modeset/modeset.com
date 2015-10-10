@@ -2,19 +2,23 @@
 p
   color: $base-color
   margin-bottom: 2rem
-  transition: font-size $speed2 ease
   font-size: 1.7rem
   @media (min-width: $tablet-size)
     font-size: 2.3rem
 
+.ready p
+  transition: font-size $speed2 ease
+
 p.padded
   font-size: 1.8rem
   max-width: 100%
-  transition: padding $speed ease
   @media (min-width: 400px)
     padding: 0 2rem
   @media (min-width: $tablet-size)
     padding: 0 8rem
+
+.ready p.padded
+  transition: padding $speed ease
 
 p.sans
   @extend %helvetica-family

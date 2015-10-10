@@ -39,8 +39,10 @@
   margin: 4rem 4rem 0
   text-shadow: 0 1px 0 black
 
-#how-we-work::before
+.ready #how-we-work::before
   transition: left $speed ease
+
+#how-we-work::before
   content: " "
   background-image: url(/assets/how-we-work-arrow.svg)
   background-repeat: no-repeat
@@ -52,5 +54,5 @@
   pointer-events: none
 
 #how-we-work:active::before,
-#how-we-work:hover::before
+.no-touch #how-we-work:hover::before
   left: 9rem

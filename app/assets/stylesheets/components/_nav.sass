@@ -7,8 +7,10 @@
   user-select: none
   transform: translate3d(0,0,0)
 
-#nav > div
+.ready #nav > div
   transition: margin-top $speed ease
+
+#nav > div
   border-bottom: 1px solid $blue
 
 // fancy checkbox toggle for mobile menu
@@ -16,6 +18,9 @@ input#menu-toggle
   display: none
 
 @media (max-width: $tablet-size)
+  .ready label[for=menu-toggle] span
+    transition: transform $speed ease
+
   label[for=menu-toggle]
     position: absolute
     overflow: hidden
@@ -30,7 +35,6 @@ input#menu-toggle
     user-select: none
 
     span
-      transition: transform $speed ease
       display: block
       height: 4px
       margin-bottom: 6px

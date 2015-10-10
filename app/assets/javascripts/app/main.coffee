@@ -2,11 +2,26 @@ class Main
 
   constructor: ->
     @debugOutput()
+    @enableActivePseudoStyles()
+    @addReadyClass()
     @initMinivents()
     @listenForScroll()
     requestAnimationFrame =>
       @areaModel = new AreaModel(document.getElementById('content'))
       # scrollEase(1000, -500)
+
+
+  enableActivePseudoStyles: ->
+    @setTouchStyle = false
+    document.addEventListener 'touchstart', ->
+      if !@setTouchStyle
+        document.body.classList.remove('no-touch')
+        @setTouchStyle = true
+      return # add empty touchstart listener to activate :active pseudo styles on touch
+
+
+  addReadyClass: ->
+    document.body.classList.add('ready')
 
 
   closeMobileMenu: ->
@@ -33,5 +48,6 @@ class Main
 
   onScroll: =>
     @events.emit("scroll", {scrollY: window.scrollY})
+
 
 window.Main = Main
