@@ -1,0 +1,40 @@
+.next-button,
+a.next-button:hover,
+.next-button:visited
+  @extend %italic-family
+  position: relative
+  display: inline-block
+  margin-top: 2rem
+  font-size: 2.3rem
+  text-transform: lowercase
+  color: $primary
+
+#home
+  .next-button,
+  a.next-button:hover,
+  .next-button:visited
+    color: white
+    margin: 4rem 4rem 0
+    text-shadow: 0 1px 0 black
+
+.ready .next-button::before
+  transition: left $speed ease
+
+.next-button::before
+  content: " "
+  background-image: url(/assets/next-button-arrow.svg)
+  background-repeat: no-repeat
+  position: absolute
+  top: -1rem
+  left: 0rem
+  width: 4.5rem
+  height: 0.6rem
+  pointer-events: none
+
+#home
+  .next-button::before
+    background-image: url(/assets/next-button-arrow-white.svg)
+
+.next-button:active::before,
+.no-touch .next-button:hover::before
+  left: calc(100% - 42px)

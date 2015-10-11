@@ -27,32 +27,3 @@
 
 #home ul li:first-of-type
   color: $primary
-
-#how-we-work,
-#how-we-work:visited
-  @extend %italic-family
-  position: relative
-  display: inline-block
-  color: white
-  font-size: 2.3rem
-  text-transform: lowercase
-  margin: 4rem 4rem 0
-  text-shadow: 0 1px 0 black
-
-.ready #how-we-work::before
-  transition: left $speed ease
-
-#how-we-work::before
-  content: " "
-  background-image: url(/assets/how-we-work-arrow.svg)
-  background-repeat: no-repeat
-  position: absolute
-  top: -1rem
-  left: 0rem
-  width: 4.5rem
-  height: 0.6rem
-  pointer-events: none
-
-#how-we-work:active::before,
-.no-touch #how-we-work:hover::before
-  left: 9rem
