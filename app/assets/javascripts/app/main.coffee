@@ -4,6 +4,7 @@ class Main
     @debugOutput()
     @enableActivePseudoStyles()
     @addReadyClass()
+    @initLogo()
     @initMinivents()
     @listenForScroll()
     requestAnimationFrame =>
@@ -22,6 +23,11 @@ class Main
 
   addReadyClass: ->
     document.body.classList.add('ready')
+
+
+  initLogo: ->
+    logoEl = document.getElementById('logo-crest')
+    @logo = new Logo(logoEl, 50)
 
 
   closeMobileMenu: ->

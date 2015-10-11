@@ -1,8 +1,21 @@
 #header
   text-align: right
   user-select: none
+  position: relative
 
 #header img
   margin: 3.6rem 1.6rem
   display: inline-block
   vertical-align: top
+
+
+#logo-crest
+  visibility: hidden
+
+@media (min-width: $tablet-size)
+  #logo-crest
+    visibility: visible
+    padding: 2rem 0 0 2rem
+    position: absolute
+    top: 0
+    left: 0
