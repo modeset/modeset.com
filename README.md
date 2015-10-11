@@ -26,6 +26,9 @@ TODO
 * Add metatags from v1 and from Cacheflowe.com
 * Add a shitty/old browser message
 * Redirect old URLs
+
+Post-launch:
+
 * Fancy/cool 404 page
 * Blog migration
   * modeset.com/what-we-know/feed - Should we keep the blog RSS feed intact?
