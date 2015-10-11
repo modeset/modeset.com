@@ -27,7 +27,7 @@ class Main
 
   initLogo: ->
     logoEl = document.getElementById('logo-crest')
-    @logo = new Logo(logoEl, 50)
+    @logo = new Logo(logoEl, 50 * 2)
 
 
   closeMobileMenu: ->

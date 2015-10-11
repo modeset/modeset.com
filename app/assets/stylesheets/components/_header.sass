@@ -10,12 +10,15 @@
 
 
 #logo-crest
-  visibility: hidden
+  display: none
 
 @media (min-width: $tablet-size)
   #logo-crest
-    visibility: visible
-    padding: 2rem 0 0 2rem
+    display: block
+    padding: 2rem 0 0 1rem
     position: absolute
     top: 0
     left: 0
+    
+  #logo-crest canvas
+    width: 50px

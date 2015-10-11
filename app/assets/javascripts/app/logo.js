@@ -19,11 +19,17 @@ var Logo = function( holder, size ) {
 	// keep track of mouse
 	var _mouseX = -10;
 	var _mouseY = -10;
+	var _frameCount = 0;
+	var _animTimeoutFrames = 120;
+	var offset = _canvas.getBoundingClientRect();
+	window.addEventListener('resize', function(){
+		offset = _canvas.getBoundingClientRect();
+	});
 
 	// displacement properties
 	var _range = _size / 4;
-	var _fric = .65;
-	var _accel = .4;
+	var _fric = .85;
+	var _accel = .1;
 
 	// displacement point class
 	var Point = function( x, y ) {
@@ -67,11 +73,14 @@ var Logo = function( holder, size ) {
 	}
 
 	var onMouseMoved = function(e) {
-		_mouseX = e.clientX;
-		_mouseY = e.clientY;
-		var offset = _canvas.getBoundingClientRect()
-		_mouseX -= offset.left;
-		_mouseY -= offset.top;
+		_mouseX = e.clientX - offset.left;
+		_mouseY = e.clientY - offset.top;
+		_mouseX *= 2;	// for retinfied x2 canvas
+		_mouseY *= 2;
+		if(_mouseX > 0 && _mouseX < size && _mouseY > 0 && _mouseY < size) {
+			if(_frameCount >= _animTimeoutFrames) requestAnimationFrame(draw);
+			_frameCount = 0;
+		}
 	};
 
 	// toggle draw modes
@@ -143,7 +152,6 @@ var Logo = function( holder, size ) {
 		_numTriangles = _subTriangles.length;
 	};
 
-	// updated @ 30fps to draw
 	var draw = function() {
 		_context.clearRect( 0, 0, _size, _size );
 		setDrawProperties();
@@ -151,8 +159,14 @@ var Logo = function( holder, size ) {
 		recalcMouseDisplacement();
 		if( _drawNumbers ) drawPointNumbers();
 
-		// keep timer running
-		requestAnimationFrame(draw);
+		_frameCount++;
+		if(_frameCount > 60) {
+			_mouseX = -10;
+			_mouseY = -10;
+		}
+		if(_frameCount < _animTimeoutFrames) {
+			requestAnimationFrame(draw); // stop animating after interaction
+		}
 	};
 
 	// sets initial canvas drawing props before

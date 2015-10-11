@@ -18,7 +18,6 @@ TODO
 ========
 
 * Add Embetter for videos
-* Add sweet canvas mode set logo for desktop on left side of header
 * add team photos from lefavor
 * unique page metatags
 * Add role/aria attrs from v1
