@@ -50,6 +50,7 @@
 #footer nav a,
 #footer nav a:visited
   @extend %helvetica-family
+  transition: border-bottom $speed ease
   text-transform: uppercase
   text-decoration: none
   display: inline-block
@@ -58,6 +59,12 @@
   position: relative
   margin-right: 1.8rem
 
+.difference #footer nav a[href="/difference"],
+.process #footer nav a[href="/process"],
+.work #footer nav a[href="/work"],
+.team #footer nav a[href="/team"],
+.find-us #footer nav a[href="/find-us"]
+  border-bottom: 1px dotted $binary-color
 
 #footer-copy
   @extend %helvetica-family
