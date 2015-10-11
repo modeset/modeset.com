@@ -1,12 +1,13 @@
 = content_for :page_title do
   title Mode Set | Find Us
+- map_link = "https://www.google.com/maps/place/39°45'18.5\"N+105°00'14.4\"W/@39.7551052,-105.0050992,18z"
 
 section
   h1 Find Us
   div.row.headerbars
     .six.columns
       p
-        a href="https://www.google.com/maps/place/39.75514,-105.003994/"
+        a href="#{map_link}"
           | 1610 Little Raven St., Suite 135
           br
           | Denver, CO 80202
@@ -24,13 +25,14 @@ section
         | See our open source on 
         a href="https://github.com/modeset" GitHub 
 section#map.light.bordered
-  a href="https://www.google.com/maps/place/39.75514,-105.003994/"
+  a href="#{map_link}"
 section
   h2 Upcoming Events
   div.row
     .twelve.columns
       ul
-        li Denver Startup Week 2015
+        li 
+          = link_to "Geekend 2015", "http://www.geek-end.com/speaker/bree-thomas-developer-mode-set/"
   
 section
   h3 Past Events
