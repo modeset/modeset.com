@@ -1,4 +1,9 @@
-a, a:visited
+a
+  transition: color $speed ease
+  background: transparent
+  text-decoration: none
+
+a, a:visited,
 p a, p a:visited
   color: $link-color
   text-decoration: none
@@ -10,12 +15,7 @@ a:hover, a:active
   color: $link-hover
 
 a:active, a.active, .active > a
-  color: $link-color
-
-a
-  background: transparent
-  color: inherit
-  text-decoration: none
+  color: $link-hover
 
 a:focus,
 a:active,
