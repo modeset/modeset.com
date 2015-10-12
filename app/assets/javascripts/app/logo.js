@@ -56,9 +56,9 @@ var Logo = function( holder, size ) {
 	var grayRGB = [85, 87,  89];
 	var blueRGB = [0,  188, 228];
 	var curRGB  = [
-		new EasingFloat(grayRGB[0], 5),
-		new EasingFloat(grayRGB[1], 5),
-		new EasingFloat(grayRGB[2], 5)
+		new EasingFloat(grayRGB[0], 10),
+		new EasingFloat(grayRGB[1], 10),
+		new EasingFloat(grayRGB[2], 10)
 	];
 
 	// keep track of mouse
