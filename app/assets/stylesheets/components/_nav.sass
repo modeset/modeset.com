@@ -78,6 +78,7 @@ input#menu-toggle
 #nav a,
 #nav a:visited
   @extend %helvetica-family
+  transition: text-shadow $speed ease
   text-decoration: none
   padding: 2rem 0.5rem
   display: inline-block
@@ -102,5 +103,4 @@ input#menu-toggle
 .work #nav a[href="/work"],
 .team #nav a[href="/team"],
 .find-us #nav a[href="/find-us"]
-  font-weight: bold
-  letter-spacing: 1.6px
+  text-shadow: 0.6px 0px 0px $nav-text-color
