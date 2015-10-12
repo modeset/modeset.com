@@ -17,17 +17,21 @@ Pushing
 TODO
 ========
 
-* Add metatags from v1 and from Cacheflowe.com
 * add team photos from lefavor
-* unique page metatags
-* Add role/aria attrs from v1
-* Add New Relic & Google Analytics stuff from V1
+* Add role/aria attrs from v1?
+* Add New Relic stuff from V1?
 * Add a shitty/old browser message
 * Redirect old URLs
+  * http://modeset.com/how-we-work -> /process
+  * http://modeset.com/what-we-know ??
+  * http://modeset.com/share-the-love -> /find-us
+  * http://modeset.com/who-we-are -> /team
 
 Post-launch:
 
+* Make sure site is navigable with a keyboard
 * Do something fancy with scrollables from frighteist site
 * Fancy/cool 404 page
 * Blog migration
   * modeset.com/what-we-know/feed - Should we keep the blog RSS feed intact?
+* Unique page metatags?
