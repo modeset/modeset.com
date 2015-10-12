@@ -29,6 +29,7 @@ TODO
 
 Post-launch:
 
+* Re-implement .footerbars on team page with flexbox to make it look right
 * Make sure site is navigable with a keyboard
 * Do something fancy with scrollables from frighteist site
 * Fancy/cool 404 page
