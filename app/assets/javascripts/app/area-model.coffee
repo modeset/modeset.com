@@ -90,7 +90,7 @@ class AreaModel
   showAjaxContent: ->
     # fade it in
     @contentEl.classList.remove('hiding')
-    window.scrollTo(0,0)
+    # window.scrollTo(0,0)
     # store previous paths, set flags
     @prevPath = @curPath
     @isTransitioning = false
@@ -100,9 +100,11 @@ class AreaModel
       hashChanged(@queuedPath)
       @queuedPath = null
     # track it
-    # setTimeout =>
-    #   window.tracking.page([@curPath])
-    # , 200
+    setTimeout =>
+      ga 'send',
+        hitType: 'pageview'
+        page: location.pathname
+    , 200
 
 
   stringToDomElement: (str) ->
