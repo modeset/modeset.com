@@ -17,17 +17,17 @@ Pushing
 TODO
 ========
 
-* Add Embetter for videos
+* Add metatags from v1 and from Cacheflowe.com
 * add team photos from lefavor
 * unique page metatags
 * Add role/aria attrs from v1
 * Add New Relic & Google Analytics stuff from V1
-* Add metatags from v1 and from Cacheflowe.com
 * Add a shitty/old browser message
 * Redirect old URLs
 
 Post-launch:
 
+* Do something fancy with scrollables from frighteist site
 * Fancy/cool 404 page
 * Blog migration
   * modeset.com/what-we-know/feed - Should we keep the blog RSS feed intact?
