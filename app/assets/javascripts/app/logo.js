@@ -1,3 +1,39 @@
+function EasingFloat( value, easeFactor, completeRange ) {
+  this.val = value;
+  this.targetVal = value;
+  this.easeFactor = easeFactor;
+  this.completeRange = completeRange || 0.01;
+};
+
+EasingFloat.prototype.setTarget = function( value ) {
+  if(!isNaN(parseFloat(value))) this.targetVal = value;
+};
+
+EasingFloat.prototype.setValue = function( value ) {
+  this.val = value;
+};
+
+EasingFloat.prototype.setEaseFactor = function( value ) {
+  this.easeFactor = value;
+};
+
+EasingFloat.prototype.value = function() {
+  return this.val;
+};
+
+EasingFloat.prototype.target = function() {
+  return this.targetVal;
+};
+
+EasingFloat.prototype.update = function() {
+  if( this.val == this.targetVal) return;
+  this.val += ( this.targetVal - this.val ) / this.easeFactor;
+  if( Math.abs( this.targetVal - this.val ) < this.completeRange ) {
+    this.val = this.targetVal;
+  }
+};
+
+
 var Logo = function( holder, size ) {
 	// init canvas & properties
 	var _canvas = document.createElement('canvas');
@@ -15,6 +51,15 @@ var Logo = function( holder, size ) {
 	var _numPoints;
 	var _subTriangles = [];
 	var _numTriangles;
+
+	// logo colors
+	var grayRGB = [85, 87,  89];
+	var blueRGB = [0,  188, 228];
+	var curRGB  = [
+		new EasingFloat(grayRGB[0], 5),
+		new EasingFloat(grayRGB[1], 5),
+		new EasingFloat(grayRGB[2], 5)
+	];
 
 	// keep track of mouse
 	var _mouseX = -10;
@@ -80,6 +125,9 @@ var Logo = function( holder, size ) {
 		if(_mouseX > 0 && _mouseX < size && _mouseY > 0 && _mouseY < size) {
 			if(_frameCount >= _animTimeoutFrames) requestAnimationFrame(draw);
 			_frameCount = 0;
+			curRGB[0].setTarget(blueRGB[0]);
+			curRGB[1].setTarget(blueRGB[1]);
+			curRGB[2].setTarget(blueRGB[2]);
 		}
 	};
 
@@ -163,6 +211,9 @@ var Logo = function( holder, size ) {
 		if(_frameCount > 60) {
 			_mouseX = -10;
 			_mouseY = -10;
+			curRGB[0].setTarget(grayRGB[0]);
+			curRGB[1].setTarget(grayRGB[1]);
+			curRGB[2].setTarget(grayRGB[2]);
 		}
 		if(_frameCount < _animTimeoutFrames) {
 			requestAnimationFrame(draw); // stop animating after interaction
@@ -171,9 +222,10 @@ var Logo = function( holder, size ) {
 
 	// sets initial canvas drawing props before
 	var setDrawProperties = function() {
-		_context.fillStyle = 'rgba(0,188,229,255)';
-		_context.strokeStyle = 'rgba(0,188,229,255)';
-		_context.lineWidth = 0.4;
+		for (var i = 0; i < curRGB.length; i++) curRGB[i].update();
+		_context.fillStyle = 'rgb('+ curRGB[0].value() +', '+ curRGB[1].value() +', '+ curRGB[2].value() +')';
+		_context.strokeStyle = 'rgb('+ curRGB[0].value() +', '+ curRGB[1].value() +', '+ curRGB[2].value() +')';
+		_context.lineWidth = 0.6;
 	};
 
 	// loop through all points and recalc their displacement position from the mouse
@@ -202,11 +254,12 @@ var Logo = function( holder, size ) {
 			// base fill color on displacement - make it relative to the size of the canvas
 			triangleDisplaceTotal *= ( 1000 / _size ) * 0.01;
 			// triangleDisplaceTotal *= 0.003;
-			var r = Math.round( 0 + triangleDisplaceDir * triangleDisplaceTotal );
-			var g = Math.round( 188 + triangleDisplaceDir * triangleDisplaceTotal );
-			var b = Math.round( 229 + triangleDisplaceDir * triangleDisplaceTotal );
-			var a = 255;//( triangleDisplaceTotal + 0.1 ) / 100;
-			_context.fillStyle = 'rgba('+r+','+g+','+b+','+a+')';
+			var r = Math.round( curRGB[0].value() + triangleDisplaceDir * triangleDisplaceTotal );
+			var g = Math.round( curRGB[1].value() + triangleDisplaceDir * triangleDisplaceTotal );
+			var b = Math.round( curRGB[2].value() + triangleDisplaceDir * triangleDisplaceTotal );
+			//( triangleDisplaceTotal + 0.1 ) / 100;
+			_context.fillStyle = 'rgb('+r+','+g+','+b+')';
+			_context.strokeStyle = 'rgb('+r+','+g+','+b+')';
 
 			// draw the 3 points
 			_context.beginPath();
