@@ -38,6 +38,10 @@ end
 Rails.application.initialize! rescue nil
 Rails.application.routes.draw do
   match "/(:page)" => "application#page", via: :get
+  get "/how-we-work",    to: redirect("/process")
+  get "/share-the-love", to: redirect("/find-us")
+  get "/who-we-are",     to: redirect("/team")
+  get "/what-we-know",   to: redirect("/")
 end
 
 run Micro::Application rescue nil
