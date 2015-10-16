@@ -17,7 +17,6 @@ Pushing
 TODO
 ========
 
-* Hyperclicking nav links can break area model
 * add team photos from lefavor
 * Add role/aria attrs from v1?
 * Add New Relic stuff from V1?
