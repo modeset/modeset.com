@@ -12,7 +12,9 @@ Pushing
   * `heroku login`
   * `heroku keys:add`
 * Push version2 branch to staging with: `git push -f staging version2:master`
-
+* Pushing master to production:
+  * git remote add modeset git@heroku.com:modeset.git
+  * git push modeset master
 
 TODO
 ========
@@ -21,11 +23,6 @@ TODO
 * Add role/aria attrs from v1?
 * Add New Relic stuff from V1?
 * Add a shitty/old browser message
-* Redirect old URLs
-  * http://modeset.com/how-we-work -> /process
-  * http://modeset.com/what-we-know ??
-  * http://modeset.com/share-the-love -> /find-us
-  * http://modeset.com/who-we-are -> /team
 
 Post-launch:
 
