@@ -11,8 +11,8 @@ class AreaModel
 
 
   index: =>
-    @curPath = page.current
     if !@isTransitioning
+      @curPath = page.current
       # exit section if path changed
       if @curPath != @prevPath
         document.body.classList.remove(@pathToClass(@prevPath)) if @prevPath.length > 1
@@ -22,7 +22,7 @@ class AreaModel
         @exitCurSection()
         document.title = @formatDocumentTitle()
     else
-      @queuedPath = newPath
+      @queuedPath = page.current
 
 
   initRoutes: ->
@@ -95,10 +95,9 @@ class AreaModel
     @prevPath = @curPath
     @isTransitioning = false
     # check to see if the path has changed during destroy/rebuild
-    # TODO: reimplement this
     if @queuedPath
-      hashChanged(@queuedPath)
       @queuedPath = null
+      @index()
     # track it
     setTimeout =>
       ga 'send',
