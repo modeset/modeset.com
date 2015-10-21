@@ -9,19 +9,16 @@
 
 .ready #nav > div
   transition: margin-top $speed ease
+  transform: translate3d(0,0,0)
 
 #nav > div
   border-bottom: 1px solid $blue
 
-// fancy checkbox toggle for mobile menu
-input#menu-toggle
-  display: none
-
 @media (max-width: $tablet-size)
-  .ready label[for=menu-toggle] span
+  .ready button.mobile-toggle span
     transition: transform $speed ease
 
-  label[for=menu-toggle]
+  button.mobile-toggle
     position: absolute
     overflow: hidden
     box-sizing: border-box
@@ -41,13 +38,13 @@ input#menu-toggle
       width: 100%
       background-color: #555759
 
-  input#menu-toggle ~ #nav > div
+  #nav > div
     margin-top: -350px
 
-  input#menu-toggle:checked ~ #nav > div
+  .menu-open #nav > div
     margin-top: 0
 
-  input#menu-toggle:checked ~ label
+  .menu-open button.mobile-toggle
     span:first-of-type
       transform: translate(0, 10px) rotate(45deg)
     span:nth-of-type(2)
@@ -60,7 +57,7 @@ input#menu-toggle
   width: 100%
 
 @media (min-width: $tablet-size)
-  label[for=menu-toggle]
+  button.mobile-toggle
     display: none
 
   #nav a

@@ -5,11 +5,21 @@ class Main
     @enableActivePseudoStyles()
     @addReadyClass()
     @initLogo()
+    @initMobileMenu()
     @initMinivents()
     @listenForScroll()
     requestAnimationFrame =>
       @areaModel = new AreaModel(document.getElementById('content'))
       # scrollEase(1000, -500)
+
+
+  initMobileMenu: ->
+    document.querySelector('.mobile-toggle').addEventListener 'click', ->
+      document.body.classList.toggle('menu-open')
+
+
+  closeMobileMenu: ->
+    document.body.classList.remove('menu-open')
 
 
   enableActivePseudoStyles: ->
@@ -28,10 +38,6 @@ class Main
   initLogo: ->
     logoEl = document.getElementById('logo-crest')
     @logo = new Logo(logoEl, 50 * 2)
-
-
-  closeMobileMenu: ->
-    document.getElementById('menu-toggle').checked = false
 
 
   debugOutput: ->
