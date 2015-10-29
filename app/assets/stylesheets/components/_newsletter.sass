@@ -1,0 +1,73 @@
+html.newsletter
+  height: 100%
+  box-sizing: border-box
+  *, *:before, *:after
+    box-sizing: inherit
+body.newsletter
+  position: relative
+  min-height: 100%
+  padding-bottom: 60px
+
+  .newsletter-content
+    padding: 20px
+    h1
+      color: $primary
+      font-size: 60px
+      text-transform: none
+      text-shadow: none
+
+    .team-description
+      img
+        float: left
+        margin-right: 20px
+
+  .news-title
+    font-size: 1.8rem
+    position: relative
+    margin: 32px 0
+    .row.footerbars .columns::after
+      margin: 0
+
+  .news-title::before
+    content: " "
+    position: absolute
+    left: -5px
+    background: url("office-photo-mode-set.jpg")
+    opacity: 0.25
+    width: 100%
+    height: 30px
+
+  .team-description p
+    font-size: 1.8rem
+
+  .spotlight-images
+    text-align: center
+  .spotlight-image
+    margin-right: 6px
+
+
+  footer
+    position: absolute
+    bottom: 0
+    right: 0
+    left: 0
+    width: 100%
+    height: 60px
+    padding: 15px
+    border-top: 1px dotted #545759
+  footer nav
+    display: block
+    margin: 0
+  footer nav a
+    display: block
+    padding: 0
+
+
+  @media(min-width: 480px)
+    footer nav
+      display: inline-block
+      margin: 0 15px
+    footer nav a
+      display: inline-block
+      padding-right: 20px
+

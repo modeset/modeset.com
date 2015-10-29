@@ -27,9 +27,14 @@ end
 class ApplicationController < ActionController::Base
   prepend_view_path Rails.application.root.join('app/views')
 
+  def newsletter
+    render template: "newsletters/#{params[:page]}" || "index", layout: "newsletter"
+  end
+
   def page
     render template: params[:page] || "index"
   end
+
   rescue_from ActionView::MissingTemplate do |exception|
     render template: "error"
   end
@@ -45,6 +50,9 @@ Rails.application.routes.draw do
 
   # views
   match "/(:page)" => "application#page", via: :get
+
+  # newsletters
+  match "/newsletters/(:page)" => "application#newsletter", via: :get
 end
 
 run Micro::Application rescue nil

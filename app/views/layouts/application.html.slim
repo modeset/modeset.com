@@ -4,7 +4,7 @@
     head
       - description = "A Software Development Consultancy"
       - title = "Mode Set"
-      - if content_for? :page_title 
+      - if content_for? :page_title
         - title = yield :page_title
       - site_image = "http://modeset.com/mode-set-logotype-800.png"
       - site_url = "http://modeset.com/"
@@ -77,6 +77,7 @@
             = link_to "The Team", "/team"
             / = link_to "Talk Nerdy", "/talk-nerdy"
             = link_to "Find Us", "/find-us"
+            = link_to "Newsletter", "/newsletter"
           span#footer-copy<> &copy; #{Time.now.year} Mode Set
           div#footer-info
             = link_to "inquiries@modeset.com", "mailto:inquiries@modeset.com", :id => "footer-email"
