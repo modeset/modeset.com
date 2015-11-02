@@ -34,6 +34,8 @@ html.newsletter
             = link_to "inquiries@modeset.com", "mailto:inquiries@modeset.com", :id => "footer-email"
           li
             = link_to "unsubscribe", "http://modeset.us12.list-manage1.com/unsubscribe?u=f29b80ac7cb5deb71fc009ccd&id=a7d87d0b0b", target: "blank"
+            a.hidden href="*|UNSUB|*" Unsubscribe from this list.
         .copyright-container
         = image_tag "mode-set-binary.svg", :width => "32", :height => "17", :class => "binary", :alt => "011"
         span#footer-copy<> &copy; #{Time.now.year} Mode Set
+
