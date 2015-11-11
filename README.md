@@ -19,17 +19,17 @@ Pushing
 TODO
 ========
 
+* Add a newsletter signup on find-us page
+* Fix this: http://modeset.com/what-we-know/2013/01/30/a-simple-capybara-spider
+* Blog migration
+  * modeset.com/what-we-know/feed - Should we keep the blog RSS feed intact?
 * add team photos from lefavor
+* Update Billy's BaseDirectory video
 * Add role/aria attrs from v1?
 * Add New Relic stuff from V1?
 * Add a shitty/old browser message
-
-Post-launch:
-
 * Re-implement .footerbars on team page with flexbox to make it look right
-* Make sure site is navigable with a keyboard
+* Make sure site is navigable with a keyboard - build nice active states for tabbing around
 * Do something fancy with scrollables from frighteist site
 * Fancy/cool 404 page
-* Blog migration
-  * modeset.com/what-we-know/feed - Should we keep the blog RSS feed intact?
 * Unique page metatags?
