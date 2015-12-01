@@ -67,7 +67,10 @@ var Logo = function( holder, size ) {
 	var _frameCount = 0;
 	var _animTimeoutFrames = 120;
 	var offset = _canvas.getBoundingClientRect();
-	window.addEventListener('resize', function(){
+  window.addEventListener('resize', function(){
+		offset = _canvas.getBoundingClientRect();
+	});
+  window.addEventListener('scroll', function(){
 		offset = _canvas.getBoundingClientRect();
 	});
 
