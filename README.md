@@ -24,7 +24,6 @@ TODO
 * Blog migration
   * modeset.com/what-we-know/feed - Should we keep the blog RSS feed intact?
 * add team photos from lefavor
-* Update Billy's BaseDirectory video
 * Add role/aria attrs from v1?
 * Add New Relic stuff from V1?
 * Add a shitty/old browser message
