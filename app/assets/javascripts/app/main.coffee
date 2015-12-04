@@ -10,7 +10,7 @@ class Main
     @listenForScroll()
     requestAnimationFrame =>
       @areaModel = new AreaModel(document.getElementById('content'))
-      # scrollEase(1000, -500)
+      # easyScroll.scrollByY(1000, -500)
 
 
   initMobileMenu: ->
