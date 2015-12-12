@@ -35,6 +35,10 @@ class ApplicationController < ActionController::Base
     render template: params[:page] || "index"
   end
 
+  def error
+    render template: params[:page] || "error"
+  end
+
   rescue_from ActionView::MissingTemplate do |exception|
     render template: "error"
   end
@@ -53,6 +57,8 @@ Rails.application.routes.draw do
 
   # newsletters
   match "/newsletters/(:page)" => "application#newsletter", via: :get
+
+  match '*unmatched_route', :to => 'application#error', :via => :all
 end
 
 run Micro::Application rescue nil
