@@ -8,6 +8,8 @@ class Logo3d
     @active = true
     @animate()
     window.addEventListener 'resize', @resize
+    window.addEventListener 'mousemove', @pointermoved
+    window.addEventListener 'touchmove', @pointermoved
 
 
   setActive: (@active, @container404) ->
@@ -24,6 +26,10 @@ class Logo3d
 
   clamp: (val, min, max) ->
     return Math.max(min, Math.min(max, val))
+
+
+  pointermoved: =>
+    @pointerMoved = true
 
 
   resize: =>
@@ -156,6 +162,8 @@ class Logo3d
     @renderer.render @scene, @camera
     pointerX = @clamp(window.pointerPos.yPercent(@container404), -0.2, 1.2)
     pointerY = @clamp(window.pointerPos.xPercent(@container404), -0.2, 1.2)
+    if !@pointerMoved
+      pointerX = pointerY = 0.5
     newX = 2 * (pointerX - 0.5)
     newY = Math.PI + 2 * (pointerY - 0.5)
     @modeSetSolid.rotation.x = @lerp(@modeSetSolid.rotation.x, newX, 0.2)
