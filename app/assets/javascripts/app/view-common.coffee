@@ -11,6 +11,8 @@ class ViewCommon
     @initScrollables()
     window.embetter.utils.initMediaPlayers(@el, mediaServices)
     @initMap()
+    @init404()
+
 
   loadRemoteScript: (scriptURL) ->
     tag = document.createElement('script')
@@ -21,11 +23,12 @@ class ViewCommon
 
 
   initMap: ->
-    if window.google
-      @initMapCallback()
-    else
-      window.initMap = @initMapCallback
-      @loadRemoteScript('https://maps.googleapis.com/maps/api/js?callback=initMap')
+    if mapEl = document.getElementById('map')
+      if window.google
+        @initMapCallback()
+      else
+        window.initMap = @initMapCallback
+        @loadRemoteScript('https://maps.googleapis.com/maps/api/js?callback=initMap')
 
 
   initMapCallback: =>
@@ -69,6 +72,33 @@ class ViewCommon
     )
 
 
+  hasWebGL = do ->
+    try
+      canvas = document.createElement('canvas')
+      return ! !(window.WebGLRenderingContext and (canvas.getContext('webgl') or canvas.getContext('experimental-webgl')))
+    catch e
+      return false
+    return
+
+
+  init404: ->
+    if document.getElementById('bummer-404') && hasWebGL
+      if window.Logo3d
+        @init404Callback()
+      else
+        window.init404Callback = @init404Callback
+        @loadRemoteScript('/assets/404.js')
+
+
+  init404Callback: ->
+    # make sure there's only one THREE scene ever created, and stick the canvas back into the DOM if we come back to a 404 page
+    if container404 = document.getElementById('bummer-404')
+      if !window.logo404
+        window.logo404 = new window.Logo3d(container404)
+      else
+        window.logo404.setActive(true, container404)
+
+
   initScrollables: ->
     scrollEls = @el.querySelectorAll('.scrollable')
     # @scrollables = []
@@ -78,6 +108,8 @@ class ViewCommon
 
   dispose: ->
     window.embetter.utils.disposePlayers()
+    if window.logo404 && window.logo404.active == true
+      window.logo404.setActive(false)
     # for scrollable in @scrollables
     #   scrollable.dispose()
     # @scrollables.splice(0)

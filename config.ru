@@ -21,6 +21,7 @@ module Micro
     config.assets.version = "1.0"
     config.assets.debug = ENV['RACK_ENV'] == "development"
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+    config.assets.precompile += %w( 404.js )
   end
 end
 
