@@ -25,6 +25,7 @@ TODO
   * modeset.com/what-we-know/feed - Should we keep the blog RSS feed intact?
 * add team photos from lefavor
 * Add role/aria attrs from v1?
+* Move newsletter images into their own sub-directory
 * Add New Relic stuff from V1?
 * Add a shitty/old browser message
 * Re-implement .footerbars on team page with flexbox to make it look right
