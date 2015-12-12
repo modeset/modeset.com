@@ -16,6 +16,7 @@ class Logo3d
     if @active == true
       @container404.appendChild @containerTHREE
       @animate()
+      @resize()
     else
       @containerTHREE.parentNode.removeChild(@containerTHREE)
 
@@ -33,9 +34,10 @@ class Logo3d
 
 
   resize: =>
-    @camera.aspect = @container404.offsetWidth / @container404.offsetHeight
-    @camera.updateProjectionMatrix()
-    @renderer.setSize @container404.offsetWidth, @container404.offsetHeight
+    if @active == true
+      @camera.aspect = @container404.offsetWidth / @container404.offsetHeight
+      @camera.updateProjectionMatrix()
+      @renderer.setSize @container404.offsetWidth, @container404.offsetHeight
 
 
   buildSceneAndCamera: ->
