@@ -3,7 +3,7 @@ Mode Set
 
 Rails app powering [modeset.com](http://www.modeset.com/)
 
-Run `bundle` and `rackup` to run the site.
+Run `bundle` and `rackup` or `bundle exec rackup` to run the site.
 
 Pushing
 ========
