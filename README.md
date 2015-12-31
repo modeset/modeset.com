@@ -19,6 +19,12 @@ Pushing
 TODO
 ========
 
+* Add awards in Work?
+  * http://www.thefwa.com/profile/mode-set
+  * http://www.awwwards.com/best-websites/build-your-own-boxtroll/
+  * http://www.awwwards.com/web-design-awards/roll-it
+* Press/photos:
+  * http://jamiekripke.com/building-ello/
 * Add a newsletter signup on find-us page
 * Fix this: http://modeset.com/what-we-know/2013/01/30/a-simple-capybara-spider
 * Blog migration
