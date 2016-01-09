@@ -100,18 +100,29 @@ class ViewCommon
 
 
   initScrollables: ->
-    scrollEls = @el.querySelectorAll('.scrollable')
-    # @scrollables = []
-    # for(i=0 i < scrollEls.length i++) {
-    #   @scrollables.push(new Scrollable(scrollEls[i]))
+    window.addEventListener('scroll', @onScroll)
+    scrollEls = @el.querySelectorAll('section')
+    @scrollables = []
+    for el in scrollEls
+      @scrollables.push(new Scrollable(el))
+
+
+  disposeScrollables: ->
+    for scrollable in @scrollables
+      scrollable.dispose()
+    @scrollables.splice(0)
+
+
+  onScroll: =>
+    for scrollable in @scrollables
+      scrollable.updateScroll()
 
 
   dispose: ->
     window.embetter.utils.disposePlayers()
     if window.logo404 && window.logo404.active == true
       window.logo404.setActive(false)
-    # for scrollable in @scrollables
-    #   scrollable.dispose()
-    # @scrollables.splice(0)
+    @disposeScrollables()
+
 
 window.ViewCommon = ViewCommon

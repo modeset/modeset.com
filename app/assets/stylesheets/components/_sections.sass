@@ -62,3 +62,15 @@ section#map
   margin-top: -3rem
   @media (min-width: $tablet-size)
     padding-bottom: 60%
+
+
+
+section
+  transition: opacity 0.75s linear, transform 0.75s linear
+  transform: translate3d(0, 0.4rem, 0) scale(0.99)
+  transform-origin: 50% 0
+  opacity: 0
+
+section.showing
+  transform: translate3d(0, 0, 0) scale(1)
+  opacity: 1
