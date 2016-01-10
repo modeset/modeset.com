@@ -21,7 +21,7 @@
   }
 
   easyScroll.scrollByY = function(duration, scrollAmount) {
-    startScrollY = window.scrollY;
+    startScrollY = easyScroll.scrollY();
     scrollDist = scrollAmount;
     frame = 0;
     frames = Math.floor(duration / 16);
@@ -30,5 +30,9 @@
 
   easyScroll.scrollToEl = function(duration, el, offset) {
     easyScroll.scrollByY(duration, -el.getBoundingClientRect().top + offset);
+  };
+
+  easyScroll.scrollY = function() {
+    return window.scrollY || window.pageYOffset;
   };
 })();
