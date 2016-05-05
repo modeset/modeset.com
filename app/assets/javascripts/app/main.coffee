@@ -2,6 +2,7 @@ class Main
 
   constructor: ->
     @debugOutput()
+    @addRemoteScriptLoading()
     @enableActivePseudoStyles()
     @addReadyClass()
     @initLogo()
@@ -9,6 +10,15 @@ class Main
     requestAnimationFrame =>
       @areaModel = new AreaModel(document.getElementById('content'))
       # easyScroll.scrollByY(1000, -500)
+
+
+  addRemoteScriptLoading: ->
+    window.loadRemoteScript = (scriptURL) ->
+      tag = document.createElement('script')
+      tag.src = scriptURL
+      firstScriptTag = document.getElementsByTagName('script')[0]
+      firstScriptTag.parentNode.insertBefore tag, firstScriptTag
+      return
 
 
   initMobileMenu: ->
