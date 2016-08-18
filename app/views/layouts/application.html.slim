@@ -54,33 +54,11 @@
           #logo-crest
           = link_to "/" do
             = image_tag "mode-set-type.svg", :width => "132", :height => "17", :alt => "Mode Set"
-        button.mobile-toggle
-          span
-          span
-          span
-        nav#nav
-          div
-            = link_to "The Difference", "/difference"
-            = link_to "The Process", "/process"
-            = link_to "The Work", "/work"
-            = link_to "The Team", "/team"
-            / = link_to "Talk Nerdy", "/talk-nerdy"
-            = link_to "Find Us", "/find-us"
         article#content
           = yield
         footer#footer
           = image_tag "mode-set-binary.svg", :width => "32", :height => "17", :class => "binary", :alt => "011"
-          nav
-            = link_to "The Difference", "/difference"
-            = link_to "The Process", "/process"
-            = link_to "The Work", "/work"
-            = link_to "The Team", "/team"
-            / = link_to "Talk Nerdy", "/talk-nerdy"
-            = link_to "Find Us", "/find-us"
           span#footer-copy<> &copy; #{Time.now.year} Mode Set
-          div#footer-info
-            = link_to "inquiries@modeset.com", "mailto:inquiries@modeset.com", :id => "footer-email"
-            span#footer-phone 720.440.BITS
       = javascript_include_tag "application"
 - else
   = yield

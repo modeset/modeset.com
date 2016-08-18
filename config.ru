@@ -48,16 +48,10 @@ end
 Rails.application.initialize! rescue nil
 Rails.application.routes.draw do
   # Redirects
-  get "/how-we-work",    to: redirect("/process")
-  get "/share-the-love", to: redirect("/find-us")
-  get "/who-we-are",     to: redirect("/team")
   get "/what-we-know",   to: redirect("/")
 
   # views
   match "/(:page)" => "application#page", via: :get
-
-  # newsletters
-  match "/newsletters/(:page)" => "application#newsletter", via: :get
 
   match '*unmatched_route', :to => 'application#error', :via => :all
 end

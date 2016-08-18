@@ -6,7 +6,6 @@ class Main
     @enableActivePseudoStyles()
     @addReadyClass()
     @initLogo()
-    @initMobileMenu()
     requestAnimationFrame =>
       @areaModel = new AreaModel(document.getElementById('content'))
       # easyScroll.scrollByY(1000, -500)
@@ -19,16 +18,6 @@ class Main
       firstScriptTag = document.getElementsByTagName('script')[0]
       firstScriptTag.parentNode.insertBefore tag, firstScriptTag
       return
-
-
-  initMobileMenu: ->
-    document.querySelector('.mobile-toggle').addEventListener 'click', ->
-      document.body.classList.toggle('menu-open')
-
-
-  closeMobileMenu: ->
-    document.body.classList.remove('menu-open')
-
 
   enableActivePseudoStyles: ->
     @setTouchStyle = false
